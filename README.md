@@ -1,7 +1,7 @@
 -- RX ALMAHRI --
 OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "سكربت عربي", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-
+local Window = OrionLib:MakeWindow({Name = "👾 سكربت عربي", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+ 
 --[[
 Name = <string> - The name of the UI.
 HidePremium = <bool> - Whether or not the user details shows Premium status or not.
@@ -173,6 +173,64 @@ Icon = <string> - The icon of the tab.
 PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]local Section = Tab:AddSection({
 	Name = "👑🔥 سكربتات"
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]local Section = Tab:AddSection({
+	Name = "👏 سكربتات ماب الكفوف"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]Tab:AddButton({
+	Name = "👏(1) سكربت ماب الكفوف",
+	Callback = function()
+      		print("button pressed")loadstring(game:HttpGet("https://raw.githubusercontent.com/castycheat/abilitywars/main/Protected%20(29).lua"))()
+			end
+})
+
+--[[
+Name = <string> - The name of the section.
+]]Tab:AddButton({
+	Name = "👏(2) سكربت ماب الكفوف",
+	Callback = function()
+      		print("button pressed")loadstring(game:HttpGet("https://pastefy.app/Y8ViznwR/raw"))()
+			end
+})
+--[[
+Name = <string> - The name of the section.
+]]Tab:AddButton({
+	Name = "👏(3) سكربت ماب  الكفوف قتل الكل",
+	Callback = function()
+      		print("button pressed")for i,v in pairs (game:GetService("Players"):GetPlayers()) do
+				pcall(function()
+			   local A_1 = v.Character.Humanoid
+			   local A_2 = 0
+			   local Event = game:GetService("Players").LocalPlayer.Character.HitEvent
+			   Event:FireServer(A_1, A_2)
+			   end)
+			   end
+			end
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]local Section = Tab:AddSection({
+	Name = "🐱🐶 سكربتات ادوبت مي للماب"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]Tab:AddButton({
+	Name = "🐱🐶(1) سكربت ماب ادوبت مي",
+	Callback = function()
+      		print("button pressed")loadstring(game:HttpGet("https://raw.githubusercontent.com/JulHubz/JulHub/main/JulHub"))()
+			end
 })
 
 --[[
