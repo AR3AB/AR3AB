@@ -1,7 +1,7 @@
 -- RX ALMAHRI --
 OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "🤤 سكربت فنتر لاند", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
- 
+local Window = OrionLib:MakeWindow({Name = "سكربت عربي", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
 --[[
 Name = <string> - The name of the UI.
 HidePremium = <bool> - Whether or not the user details shows Premium status or not.
