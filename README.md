@@ -1,4 +1,13 @@
 -- RX ALMAHRI --
+
+--[[
+Name = <string> - The name of the section.
+]]OrionLib:MakeNotification({
+	Name = "👾 SC ON TOP تم تفعيل السكربت",
+	Content = "👾 SC ON TOP تم تفعيل السكربت بنجاح",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
 OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "👾 سكربت عربي", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
  
@@ -704,6 +713,17 @@ Callback = <function> - The function of the button.
 Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]Tab:AddButton({
+	Name = "👑🔥سكربت اوتو كلك🔥👑",
+	Callback = function()
+      		print("button pressed")getgenv().key = "Hostile"
+			  loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/The-telligence/main/MC%20KSystem%202"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]Tab:AddButton({
 	Name = "👑🔥سكربت تلبورت🔥👑",
 	Callback = function()
       		print("button pressed")loadstring(game:HttpGet(("https://pastebin.com/raw/YNVbeqPy")))()
@@ -1257,8 +1277,8 @@ Name = <string> - The name of the section.
 --[[
 Name = <string> - The name of the section.
 ]]OrionLib:MakeNotification({
-	Name = "👑🔥لاتفعيل الاسكربت 🔥👑",
-	Content = "👑🔥شكرا لك لاتفعيل الاسكربت🔥👑",
+	Name = "👑🔥 شكرا لك 🔥👑",
+	Content = "👑🔥شكرا لك لتفعيل سكربت🔥👑",
 	Image = "rbxassetid://4483345998",
 	Time = 10
 })
