@@ -2,7 +2,13 @@
 
 OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "👾 سكربت عربي", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
- 
+
+ OrionLib:MakeNotification({
+	Name = "سكربت عربي 👾",
+	Content = "سكربت عربي / تم تشغيله بنجاح 👾",
+	Image = "rbxassetid://4483345998",
+	Time = 8
+})
 --[[
 Name = <string> - The name of the UI.
 HidePremium = <bool> - Whether or not the user details shows Premium status or not.
