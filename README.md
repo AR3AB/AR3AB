@@ -1,13 +1,5 @@
 -- RX ALMAHRI --
 
---[[
-Name = <string> - The name of the section.
-]]OrionLib:MakeNotification({
-	Name = "👾 SC ON TOP تم تفعيل السكربت",
-	Content = "👾 SC ON TOP تم تفعيل السكربت بنجاح",
-	Image = "rbxassetid://4483345998",
-	Time = 10
-})
 OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "👾 سكربت عربي", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
  
