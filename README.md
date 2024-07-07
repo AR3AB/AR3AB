@@ -1,5436 +1,3472 @@
---[=[
-
-    ___      _  _     __     _         _         ____   
-  ,"___".   FJ  L]    FJ    FJ        FJ        [__  '. 
-  FJ---L]  J |__| L  J  L  J |       J |        `--7 .' 
- J |   LJ  |  __  |  |  |  | |       | |         .'.'.' 
- | \___--. F L__J J  F  J  F L_____  F L_____  .' (_(__ 
- J\_____/FJ__L  J__LJ____LJ________LJ________LJ________L
-  J_____F |__L  J__||____||________||________||________|
-                                                        
- 
-]=]
-
---Huge thanks for Bread for good textbox and remake the sliders :D
---GuiToLua By Creator of Backdoor.exe
-
--- Arceus X v3 Remake
-local AZY = {};
-
--- StarterGui.ArceusXV3
-AZY["1"] = Instance.new("ScreenGui", game.CoreGui);
-AZY["1"]["Name"] = [[AL ARAB]];
-AZY["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-AZY["1"]["ResetOnSpawn"] = false;
-
--- StarterGui.ArceusXV3.Welcome
-AZY["2"] = Instance.new("Folder", AZY["1"]);
-AZY["2"]["Name"] = [[Welcome]];
-
--- StarterGui.ArceusXV3.Welcome.Frame
-AZY["3"] = Instance.new("Frame", AZY["2"]);
-AZY["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["3"]["BackgroundTransparency"] = 0.699999988079071;
-AZY["3"]["Size"] = UDim2.new(100.58300018310547, 0, 10.576000213623047, 0);
-AZY["3"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-AZY["3"]["Position"] = UDim2.new(-0.012608751654624939, 0, -1.0678343772888184, 0);
-
--- StarterGui.ArceusXV3.Welcome.Frame.UIAspectRatioConstraint
-AZY["4"] = Instance.new("UIAspectRatioConstraint", AZY["3"]);
-AZY["4"]["AspectRatio"] = 2.0052521228790283;
-
--- StarterGui.ArceusXV3.Welcome.Welcome
-AZY["5"] = Instance.new("Frame", AZY["2"]);
-AZY["5"]["BackgroundColor3"] = Color3.fromRGB(52, 52, 52);
-AZY["5"]["Size"] = UDim2.new(0.666020393371582, 0, 0.8211921453475952, 0);
-AZY["5"]["Position"] = UDim2.new(0.17622511088848114, 0, 0.0894039198756218, 0);
-AZY["5"]["Name"] = [[Welcome]];
-
--- StarterGui.ArceusXV3.Welcome.Welcome.UIAspectRatioConstraint
-AZY["6"] = Instance.new("UIAspectRatioConstraint", AZY["5"]);
-AZY["6"]["AspectRatio"] = 1.6193960905075073;
-
--- StarterGui.ArceusXV3.Welcome.Welcome.ScrollingFrame
-AZY["7"] = Instance.new("ScrollingFrame", AZY["5"]);
-AZY["7"]["Active"] = true;
-AZY["7"]["CanvasSize"] = UDim2.new(0, 0, 1.2000000476837158, 0);
-AZY["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["7"]["BackgroundTransparency"] = 1;
-AZY["7"]["Size"] = UDim2.new(1.0180450677871704, 0, 1, 0);
-AZY["7"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["7"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["7"]["ScrollBarThickness"] = 7;
-
--- StarterGui.ArceusXV3.Welcome.Welcome.ScrollingFrame.Text
-AZY["8"] = Instance.new("TextLabel", AZY["7"]);
-AZY["8"]["TextWrapped"] = true;
-AZY["8"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-AZY["8"]["TextScaled"] = true;
-AZY["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["8"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["8"]["TextSize"] = 29;
-AZY["8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["8"]["Size"] = UDim2.new(0.8902860283851624, 0, 0.6482642889022827, 0);
-AZY["8"]["Text"] = [[Dear User,
-
-We are writing to welcome you as one of you first bete testers of Arceus X!
-We are thrilled to have your collaboration and to offer you the oppoturnity
-to try out the new features we are developing.
-
-We are confident that your experience and creativity will help us make
-Arceus X an even more effective and user-friendly application.
-Please feel free to share any feedback and suggestion that can help us further
-improve our platform.
-
-Thank you so much your support, and we look forward to working with
-you in this exciting journey!
-
-Best regards,
-SPDM Team]];
-AZY["8"]["Name"] = [[Text]];
-AZY["8"]["BackgroundTransparency"] = 1;
-AZY["8"]["Position"] = UDim2.new(0.04280221089720726, 0, 0.14032021164894104, 0);
-
--- StarterGui.ArceusXV3.Welcome.Welcome.ScrollingFrame.Text.LocalScript
-AZY["9"] = Instance.new("LocalScript", AZY["8"]);
-
-
--- StarterGui.ArceusXV3.Welcome.Welcome.ScrollingFrame.TextButton
-AZY["a"] = Instance.new("TextButton", AZY["7"]);
-AZY["a"]["TextWrapped"] = true;
-AZY["a"]["TextScaled"] = true;
-AZY["a"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["a"]["TextSize"] = 24;
-AZY["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["a"]["Size"] = UDim2.new(0.2372465580701828, 0, 0.10296772420406342, 0);
-AZY["a"]["Text"] = [[Get started]];
-AZY["a"]["Position"] = UDim2.new(0.3705448806285858, 0, 0.8786289095878601, 0);
-
--- StarterGui.ArceusXV3.Welcome.Welcome.ScrollingFrame.TextButton.UICorner
-AZY["b"] = Instance.new("UICorner", AZY["a"]);
-AZY["b"]["CornerRadius"] = UDim.new(0, 12);
-
--- StarterGui.ArceusXV3.Welcome.Welcome.ScrollingFrame.TextButton.UITextSizeConstraint
-AZY["c"] = Instance.new("UITextSizeConstraint", AZY["a"]);
-AZY["c"]["MaxTextSize"] = 24;
-
--- StarterGui.ArceusXV3.Welcome.Welcome.ScrollingFrame.TextButton.LocalScriptNew
-AZY["d"] = Instance.new("LocalScript", AZY["a"]);
-AZY["d"]["Name"] = [[LocalScriptNew]];
-
--- StarterGui.ArceusXV3.Welcome.Welcome.ScrollingFrame.Title
-AZY["e"] = Instance.new("TextLabel", AZY["7"]);
-AZY["e"]["TextWrapped"] = true;
-AZY["e"]["TextScaled"] = true;
-AZY["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["e"]["TextSize"] = 45;
-AZY["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["e"]["Size"] = UDim2.new(0.624912440776825, 0, 0.12905988097190857, 0);
-AZY["e"]["Text"] = [[Welcome to Arceus X 3.0!]];
-AZY["e"]["Name"] = [[Title]];
-AZY["e"]["BackgroundTransparency"] = 1;
-AZY["e"]["Position"] = UDim2.new(0.1773233860731125, 0, 0.011320043355226517, 0);
-
--- StarterGui.ArceusXV3.Welcome.Welcome.ScrollingFrame.Title.UITextSizeConstraint
-AZY["f"] = Instance.new("UITextSizeConstraint", AZY["e"]);
-AZY["f"]["MaxTextSize"] = 45;
-
--- StarterGui.ArceusXV3.Welcome.Welcome.UICorner
-AZY["10"] = Instance.new("UICorner", AZY["5"]);
-AZY["10"]["CornerRadius"] = UDim.new(0, 40);
-
--- StarterGui.ArceusXV3.AnimationIntro
-AZY["11"] = Instance.new("Folder", AZY["1"]);
-AZY["11"]["Name"] = [[AnimationIntro]];
-
--- StarterGui.ArceusXV3.AnimationIntro.Background
-AZY["12"] = Instance.new("Frame", AZY["11"]);
-AZY["12"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
-AZY["12"]["Size"] = UDim2.new(0, 1806, 0, 1604);
-AZY["12"]["Position"] = UDim2.new(-0.11024535447359085, 0, -0.16887417435646057, 0);
-AZY["12"]["Visible"] = false;
-AZY["12"]["Name"] = [[Background]];
-
--- StarterGui.ArceusXV3.AnimationIntro.Frame
-AZY["13"] = Instance.new("Frame", AZY["11"]);
-AZY["13"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["13"]["Size"] = UDim2.new(0.03313452750444412, 0, 0.06622516363859177, 0);
-AZY["13"]["Position"] = UDim2.new(0.48293575644493103, 0, 0.4668874144554138, 0);
-AZY["13"]["Visible"] = false;
-
--- StarterGui.ArceusXV3.AnimationIntro.Frame.UICorner
-AZY["14"] = Instance.new("UICorner", AZY["13"]);
-AZY["14"]["CornerRadius"] = UDim.new(1, 100);
-
--- StarterGui.ArceusXV3.AnimationIntro.ImageLabel
-AZY["15"] = Instance.new("ImageLabel", AZY["11"]);
-AZY["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["15"]["ImageTransparency"] = 1;
-AZY["15"]["Visible"] = false;
-AZY["15"]["Image"] = [[rbxassetid://12564267060]];
-AZY["15"]["Size"] = UDim2.new(0.09526176750659943, 0, 0.27649006247520447, 0);
-AZY["15"]["BackgroundTransparency"] = 1;
-AZY["15"]["Position"] = UDim2.new(0.4423459470272064, 0, 0.36092716455459595, 0);
-
--- StarterGui.ArceusXV3.AnimationIntro.NameLogo
-AZY["16"] = Instance.new("TextLabel", AZY["11"]);
-AZY["16"]["TextWrapped"] = true;
-AZY["16"]["TextScaled"] = true;
-AZY["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["16"]["TextTransparency"] = 1;
-AZY["16"]["TextSize"] = 50;
-AZY["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["16"]["Size"] = UDim2.new(0.13893571496009827, 0, 0.09271523356437683, 0);
-AZY["16"]["Text"] = [[Arceus X]];
-AZY["16"]["Name"] = [[NameLogo]];
-AZY["16"]["Visible"] = false;
-AZY["16"]["BackgroundTransparency"] = 1;
-AZY["16"]["Position"] = UDim2.new(0.3928734362125397, 0, 0.4523245096206665, 0);
-
--- StarterGui.ArceusXV3.AnimationIntro.NameLogo.UITextSizeConstraint
-AZY["17"] = Instance.new("UITextSizeConstraint", AZY["16"]);
-AZY["17"]["MaxTextSize"] = 50;
-
--- StarterGui.ArceusXV3.MainUI
-AZY["18"] = Instance.new("Folder", AZY["1"]);
-AZY["18"]["Name"] = [[MainUI]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame
-AZY["19"] = Instance.new("Frame", AZY["18"]);
-AZY["19"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["19"]["BackgroundTransparency"] = 0.44999998807907104;
-AZY["19"]["Size"] = UDim2.new(0, 459, 0, 276);
-AZY["19"]["Position"] = UDim2.new(0.1498919129371643, 0, 0.12086091935634613, 0);
-AZY["19"]["Visible"] = false;
-AZY["19"]["Name"] = [[MainFrame]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.UICorner
-AZY["1a"] = Instance.new("UICorner", AZY["19"]);
-AZY["1a"]["CornerRadius"] = UDim.new(0, 15);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel
-AZY["1b"] = Instance.new("Frame", AZY["19"]);
-AZY["1b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["1b"]["BackgroundTransparency"] = 0.550000011920929;
-AZY["1b"]["Size"] = UDim2.new(0.9417322874069214, 0, 0.11706378310918808, 0);
-AZY["1b"]["Position"] = UDim2.new(0.03099355846643448, 0, 0.0474083386361599, 0);
-AZY["1b"]["Name"] = [[Panel]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.UICorner
-AZY["1c"] = Instance.new("UICorner", AZY["1b"]);
-AZY["1c"]["CornerRadius"] = UDim.new(0, 14);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.Logo
-AZY["1d"] = Instance.new("ImageLabel", AZY["1b"]);
-AZY["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["1d"]["Image"] = [[rbxassetid://12564267060]];
-AZY["1d"]["Size"] = UDim2.new(0.05029655620455742, 0, 0.9125484824180603, 0);
-AZY["1d"]["Name"] = [[Logo]];
-AZY["1d"]["BackgroundTransparency"] = 1;
-AZY["1d"]["Position"] = UDim2.new(0.4099465012550354, 0, 0.03155198320746422, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.TextLogo
-AZY["1e"] = Instance.new("TextLabel", AZY["1b"]);
-AZY["1e"]["TextWrapped"] = true;
-AZY["1e"]["TextScaled"] = true;
-AZY["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["1e"]["TextSize"] = 85;
-AZY["1e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["1e"]["Size"] = UDim2.new(0.1371736377477646, 0, 0.6307170391082764, 0);
-AZY["1e"]["Text"] = [[Arceus X]];
-AZY["1e"]["Name"] = [[TextLogo]];
-AZY["1e"]["BackgroundTransparency"] = 1;
-AZY["1e"]["Position"] = UDim2.new(0.4679349362850189, 0, 0.16660596430301666, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.TextLogo.UITextSizeConstraint
-AZY["1f"] = Instance.new("UITextSizeConstraint", AZY["1e"]);
-AZY["1f"]["MaxTextSize"] = 25;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.Close
-AZY["20"] = Instance.new("ImageButton", AZY["1b"]);
-AZY["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["20"]["Image"] = [[rbxassetid://12566509152]];
-AZY["20"]["Size"] = UDim2.new(0.06670181453227997, 0, 1, 0);
-AZY["20"]["Name"] = [[Close]];
-AZY["20"]["Position"] = UDim2.new(0.9171510338783264, 0, 0, 0);
-AZY["20"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.Close.LocalScript
-AZY["21"] = Instance.new("LocalScript", AZY["20"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.Expand
-AZY["22"] = Instance.new("ImageButton", AZY["1b"]);
-AZY["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["22"]["Image"] = [[rbxassetid://12566545357]];
-AZY["22"]["Size"] = UDim2.new(0.06901533156633377, 0, 1, 0);
-AZY["22"]["Name"] = [[Expand]];
-AZY["22"]["Position"] = UDim2.new(0.8481356501579285, 0, -0.024522678926587105, 0);
-AZY["22"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.Expand.LocalScript
-AZY["23"] = Instance.new("LocalScript", AZY["22"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.TimeLeft
-AZY["24"] = Instance.new("TextLabel", AZY["1b"]);
-AZY["24"]["TextWrapped"] = true;
-AZY["24"]["TextScaled"] = true;
-AZY["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["24"]["TextSize"] = 35;
-AZY["24"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["24"]["Size"] = UDim2.new(0.13600000739097595, 0, 0.38600000739097595, 0);
-AZY["24"]["Text"] = [[24h 00m left]];
-AZY["24"]["Name"] = [[TimeLeft]];
-AZY["24"]["BackgroundTransparency"] = 1;
-AZY["24"]["Position"] = UDim2.new(0.07365596294403076, 0, 0.28405851125717163, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.TimeLeft.LocalScript
-AZY["25"] = Instance.new("LocalScript", AZY["24"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.Restore
-AZY["26"] = Instance.new("TextButton", AZY["1b"]);
-AZY["26"]["TextWrapped"] = true;
-AZY["26"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["26"]["TextSize"] = 12;
-AZY["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["26"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["26"]["Size"] = UDim2.new(0.10400000214576721, 0, 0.503000020980835, 0);
-AZY["26"]["Name"] = [[Restore]];
-AZY["26"]["Text"] = [[Restore]];
-AZY["26"]["Position"] = UDim2.new(0.21463949978351593, 0, 0.22850705683231354, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.Restore.UICorner
-AZY["27"] = Instance.new("UICorner", AZY["26"]);
-AZY["27"]["CornerRadius"] = UDim.new(0, 6);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.Restore.LocalScript
-AZY["28"] = Instance.new("LocalScript", AZY["26"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.Icon
-AZY["29"] = Instance.new("ImageButton", AZY["1b"]);
-AZY["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["29"]["Image"] = [[rbxassetid://12584810787]];
-AZY["29"]["Size"] = UDim2.new(0.05783621221780777, 0, 0.7737637162208557, 0);
-AZY["29"]["Name"] = [[Icon]];
-AZY["29"]["Position"] = UDim2.new(0.01600000075995922, 0, 0.09300000220537186, 0);
-AZY["29"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.Icon.LocalScript
-AZY["2a"] = Instance.new("LocalScript", AZY["29"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs
-AZY["2b"] = Instance.new("Folder", AZY["19"]);
-AZY["2b"]["Name"] = [[Tabs]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home
-AZY["2c"] = Instance.new("Frame", AZY["2b"]);
-AZY["2c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["2c"]["BackgroundTransparency"] = 1;
-AZY["2c"]["Size"] = UDim2.new(0.831805408000946, 0, 0.7336452603340149, 0);
-AZY["2c"]["Position"] = UDim2.new(0.1409204602241516, 0, 0.18711426854133606, 0);
-AZY["2c"]["Name"] = [[Home]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.UserPage
-AZY["2d"] = Instance.new("Frame", AZY["2c"]);
-AZY["2d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["2d"]["BackgroundTransparency"] = 0.550000011920929;
-AZY["2d"]["Size"] = UDim2.new(0.37270405888557434, 0, 0.2492256611585617, 0);
-AZY["2d"]["Position"] = UDim2.new(-0.0007835610886104405, 0, 0.025084324181079865, 0);
-AZY["2d"]["Name"] = [[UserPage]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.UserPage.UICorner
-AZY["2e"] = Instance.new("UICorner", AZY["2d"]);
-AZY["2e"]["CornerRadius"] = UDim.new(0, 15);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.UserPage.ImageLabel
-AZY["2f"] = Instance.new("ImageLabel", AZY["2d"]);
-AZY["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["2f"]["Image"] = [[rbxassetid://12566434374]];
-AZY["2f"]["Size"] = UDim2.new(0.3031076192855835, 0, 0.8659517168998718, 0);
-AZY["2f"]["BackgroundTransparency"] = 1;
-AZY["2f"]["Position"] = UDim2.new(0.22370131313800812, 0, 0.0670241266489029, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.UserPage.TextLabel
-AZY["30"] = Instance.new("TextLabel", AZY["2d"]);
-AZY["30"]["TextWrapped"] = true;
-AZY["30"]["TextScaled"] = true;
-AZY["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["30"]["TextSize"] = 25;
-AZY["30"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["30"]["Size"] = UDim2.new(0.20524734258651733, 0, 0.3535553812980652, 0);
-AZY["30"]["Text"] = [[Hi,]];
-AZY["30"]["BackgroundTransparency"] = 1;
-AZY["30"]["Position"] = UDim2.new(0.5262826681137085, 0, 0.14745301008224487, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.UserPage.TextLabel
-AZY["31"] = Instance.new("TextLabel", AZY["2d"]);
-AZY["31"]["TextWrapped"] = true;
-AZY["31"]["TextScaled"] = true;
-AZY["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["31"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["31"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["31"]["TextSize"] = 25;
-AZY["31"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["31"]["Size"] = UDim2.new(0.3468869626522064, 0, 0.3007456660270691, 0);
-AZY["31"]["Text"] = [[User]];
-AZY["31"]["BackgroundTransparency"] = 1;
-AZY["31"]["Position"] = UDim2.new(0.5669999122619629, 0, 0.5350000262260437, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.UserPage.TextLabel.UITextSizeConstraint
-AZY["32"] = Instance.new("UITextSizeConstraint", AZY["31"]);
-AZY["32"]["MaxTextSize"] = 25;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.UserPage.TextLabel.LocalScript
-AZY["33"] = Instance.new("LocalScript", AZY["31"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage
-AZY["34"] = Instance.new("Frame", AZY["2c"]);
-AZY["34"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["34"]["BackgroundTransparency"] = 0.550000011920929;
-AZY["34"]["Size"] = UDim2.new(0.374349445104599, 0, 0.7526744604110718, 0);
-AZY["34"]["Position"] = UDim2.new(-0.002428855048492551, 0, 0.3016669452190399, 0);
-AZY["34"]["Name"] = [[KeySystemPage]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.UICorner
-AZY["35"] = Instance.new("UICorner", AZY["34"]);
-AZY["35"]["CornerRadius"] = UDim.new(0, 15);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.TextLabel
-AZY["36"] = Instance.new("TextLabel", AZY["34"]);
-AZY["36"]["TextWrapped"] = true;
-AZY["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["36"]["TextSize"] = 16;
-AZY["36"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["36"]["Size"] = UDim2.new(0.8114322423934937, 0, 0.15531843900680542, 0);
-AZY["36"]["Text"] = [[Key System Status]];
-AZY["36"]["BackgroundTransparency"] = 1;
-AZY["36"]["Position"] = UDim2.new(0.05482717230916023, 0, 0.06104206293821335, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.TextLabel
-AZY["37"] = Instance.new("TextLabel", AZY["34"]);
-AZY["37"]["TextWrapped"] = true;
-AZY["37"]["TextScaled"] = true;
-AZY["37"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["37"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["37"]["TextSize"] = 35;
-AZY["37"]["TextColor3"] = Color3.fromRGB(0, 255, 0);
-AZY["37"]["Size"] = UDim2.new(0.30206844210624695, 0, 0.09149397909641266, 0);
-AZY["37"]["Text"] = [[Online]];
-AZY["37"]["BackgroundTransparency"] = 1;
-AZY["37"]["Position"] = UDim2.new(0.08498311042785645, 0, 0.1731228232383728, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.TextLabel
-AZY["38"] = Instance.new("TextLabel", AZY["34"]);
-AZY["38"]["TextWrapped"] = true;
-AZY["38"]["TextScaled"] = true;
-AZY["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["38"]["TextSize"] = 35;
-AZY["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["38"]["Size"] = UDim2.new(0.423105388879776, 0, 0.0994054526090622, 0);
-AZY["38"]["Text"] = [[Expires In:]];
-AZY["38"]["BackgroundTransparency"] = 1;
-AZY["38"]["Position"] = UDim2.new(0.054827168583869934, 0, 0.31500908732414246, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.TimeLeft
-AZY["39"] = Instance.new("TextLabel", AZY["34"]);
-AZY["39"]["TextWrapped"] = true;
-AZY["39"]["TextScaled"] = true;
-AZY["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["39"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["39"]["TextSize"] = 35;
-AZY["39"]["TextColor3"] = Color3.fromRGB(0, 255, 0);
-AZY["39"]["Size"] = UDim2.new(0.30206844210624695, 0, 0.0994054526090622, 0);
-AZY["39"]["Text"] = [[24h 00m]];
-AZY["39"]["Name"] = [[TimeLeft]];
-AZY["39"]["BackgroundTransparency"] = 1;
-AZY["39"]["Position"] = UDim2.new(0.49440309405326843, 0, 0.31500908732414246, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.TimeLeft.LocalScript
-AZY["3a"] = Instance.new("LocalScript", AZY["39"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.Bar
-AZY["3b"] = Instance.new("Frame", AZY["34"]);
-AZY["3b"]["BackgroundColor3"] = Color3.fromRGB(0, 255, 0);
-AZY["3b"]["Size"] = UDim2.new(0.8291789293289185, 0, 0.07132068276405334, 0);
-AZY["3b"]["Position"] = UDim2.new(0.05709991604089737, 0, 0.44679027795791626, 0);
-AZY["3b"]["Name"] = [[Bar]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.Bar.UICorner
-AZY["3c"] = Instance.new("UICorner", AZY["3b"]);
-AZY["3c"]["CornerRadius"] = UDim.new(0, 4);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.Bar.TextLabel
-AZY["3d"] = Instance.new("TextLabel", AZY["3b"]);
-AZY["3d"]["TextWrapped"] = true;
-AZY["3d"]["TextScaled"] = true;
-AZY["3d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["3d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["3d"]["TextTransparency"] = 0.6000000238418579;
-AZY["3d"]["TextSize"] = 35;
-AZY["3d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["3d"]["Size"] = UDim2.new(0.2189580649137497, 0, 0.9389510154724121, 0);
-AZY["3d"]["Text"] = [[100%]];
-AZY["3d"]["BackgroundTransparency"] = 1;
-AZY["3d"]["Position"] = UDim2.new(0.7810419201850891, 0, 0.061042893677949905, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.TextLabel
-AZY["3e"] = Instance.new("TextLabel", AZY["34"]);
-AZY["3e"]["TextWrapped"] = true;
-AZY["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["3e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["3e"]["TextSize"] = 12;
-AZY["3e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["3e"]["Size"] = UDim2.new(0.5709924697875977, 0, 0.11561357975006104, 0);
-AZY["3e"]["Text"] = [[Last activation:]];
-AZY["3e"]["BackgroundTransparency"] = 1;
-AZY["3e"]["Position"] = UDim2.new(0.05010330677032471, 0, 0.5460530519485474, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.Time
-AZY["3f"] = Instance.new("TextLabel", AZY["34"]);
-AZY["3f"]["TextWrapped"] = true;
-AZY["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["3f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["3f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["3f"]["TextSize"] = 12;
-AZY["3f"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-AZY["3f"]["Size"] = UDim2.new(0.6227233409881592, 0, 0.09644854068756104, 0);
-AZY["3f"]["Text"] = [[Today, HH:MM AM]];
-AZY["3f"]["Name"] = [[Time]];
-AZY["3f"]["BackgroundTransparency"] = 1;
-AZY["3f"]["Position"] = UDim2.new(0.08199998736381531, 0, 0.6469999551773071, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.Time.LocalScript
-AZY["40"] = Instance.new("LocalScript", AZY["3f"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.Restore
-AZY["41"] = Instance.new("TextButton", AZY["34"]);
-AZY["41"]["TextWrapped"] = true;
-AZY["41"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["41"]["TextSize"] = 15;
-AZY["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["41"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["41"]["Size"] = UDim2.new(0.7855679988861084, 0, 0.17807699739933014, 0);
-AZY["41"]["Name"] = [[Restore]];
-AZY["41"]["Text"] = [[Restore]];
-AZY["41"]["Position"] = UDim2.new(0.10590747743844986, 0, 0.7775270342826843, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.Restore.UICorner
-AZY["42"] = Instance.new("UICorner", AZY["41"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.Restore.LocalScript
-AZY["43"] = Instance.new("LocalScript", AZY["41"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage
-AZY["44"] = Instance.new("Frame", AZY["2c"]);
-AZY["44"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["44"]["BackgroundTransparency"] = 0.550000011920929;
-AZY["44"]["Size"] = UDim2.new(0.6116291880607605, 0, 1.0292569398880005, 0);
-AZY["44"]["Position"] = UDim2.new(0.3883708119392395, 0, 0.025084195658564568, 0);
-AZY["44"]["Name"] = [[HaxPage]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.UICorner
-AZY["45"] = Instance.new("UICorner", AZY["44"]);
-AZY["45"]["CornerRadius"] = UDim.new(0, 15);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.TextLabel
-AZY["46"] = Instance.new("TextLabel", AZY["44"]);
-AZY["46"]["TextWrapped"] = true;
-AZY["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["46"]["TextSize"] = 18;
-AZY["46"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["46"]["Size"] = UDim2.new(0.3717169165611267, 0, 0.10439325869083405, 0);
-AZY["46"]["Text"] = [[Quick Hacks]];
-AZY["46"]["BackgroundTransparency"] = 1;
-AZY["46"]["Position"] = UDim2.new(0.01899999938905239, 0, 0.03400000184774399, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Grav
-AZY["47"] = Instance.new("BoolValue", AZY["44"]);
-AZY["47"]["Name"] = [[Grav]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts
-AZY["48"] = Instance.new("Folder", AZY["44"]);
-AZY["48"]["Name"] = [[Scripts]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Aimbot
-AZY["49"] = Instance.new("TextButton", AZY["48"]);
-AZY["49"]["TextWrapped"] = true;
-AZY["49"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["49"]["TextSize"] = 11;
-AZY["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["49"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["49"]["Size"] = UDim2.new(0.2588447332382202, 0, 0.0958060473203659, 0);
-AZY["49"]["Name"] = [[Aimbot]];
-AZY["49"]["Text"] = [[AimBot]];
-AZY["49"]["Position"] = UDim2.new(0.04600000008940697, 0, 0.5989999771118164, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Aimbot.UICorner
-AZY["4a"] = Instance.new("UICorner", AZY["49"]);
-AZY["4a"]["CornerRadius"] = UDim.new(0, 5);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Aimbot.LocalScript
-AZY["4b"] = Instance.new("LocalScript", AZY["49"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Btools
-AZY["4c"] = Instance.new("TextButton", AZY["48"]);
-AZY["4c"]["TextWrapped"] = true;
-AZY["4c"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["4c"]["TextSize"] = 11;
-AZY["4c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["4c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["4c"]["Size"] = UDim2.new(0.2588447332382202, 0, 0.0958060473203659, 0);
-AZY["4c"]["Name"] = [[Btools]];
-AZY["4c"]["Text"] = [[Btools]];
-AZY["4c"]["Position"] = UDim2.new(0.04600000008940697, 0, 0.4830000102519989, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Btools.UICorner
-AZY["4d"] = Instance.new("UICorner", AZY["4c"]);
-AZY["4d"]["CornerRadius"] = UDim.new(0, 5);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Btools.LocalScript
-AZY["4e"] = Instance.new("LocalScript", AZY["4c"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Dex
-AZY["4f"] = Instance.new("TextButton", AZY["48"]);
-AZY["4f"]["TextWrapped"] = true;
-AZY["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["4f"]["TextSize"] = 11;
-AZY["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["4f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["4f"]["Size"] = UDim2.new(0.2588447332382202, 0, 0.0958060473203659, 0);
-AZY["4f"]["Name"] = [[Dex]];
-AZY["4f"]["Text"] = [[DEX Explorer]];
-AZY["4f"]["Position"] = UDim2.new(0.04600000008940697, 0, 0.2564218044281006, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Dex.UICorner
-AZY["50"] = Instance.new("UICorner", AZY["4f"]);
-AZY["50"]["CornerRadius"] = UDim.new(0, 5);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Dex.LocalScript
-AZY["51"] = Instance.new("LocalScript", AZY["4f"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.FatesESP
-AZY["52"] = Instance.new("TextButton", AZY["48"]);
-AZY["52"]["TextWrapped"] = true;
-AZY["52"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["52"]["TextSize"] = 11;
-AZY["52"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["52"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["52"]["Size"] = UDim2.new(0.2588447332382202, 0, 0.0958060473203659, 0);
-AZY["52"]["Name"] = [[FatesESP]];
-AZY["52"]["Text"] = [[Fates ESP]];
-AZY["52"]["Position"] = UDim2.new(0.04600000008940697, 0, 0.3709999918937683, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.FatesESP.UICorner
-AZY["53"] = Instance.new("UICorner", AZY["52"]);
-AZY["53"]["CornerRadius"] = UDim.new(0, 5);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.FatesESP.LocalScript
-AZY["54"] = Instance.new("LocalScript", AZY["52"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Fly
-AZY["55"] = Instance.new("TextButton", AZY["48"]);
-AZY["55"]["TextWrapped"] = true;
-AZY["55"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["55"]["TextSize"] = 11;
-AZY["55"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["55"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["55"]["Size"] = UDim2.new(0.2588447332382202, 0, 0.0958060473203659, 0);
-AZY["55"]["Name"] = [[Fly]];
-AZY["55"]["Text"] = [[Fly]];
-AZY["55"]["Position"] = UDim2.new(0.04600000008940697, 0, 0.7070000171661377, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Fly.UICorner
-AZY["56"] = Instance.new("UICorner", AZY["55"]);
-AZY["56"]["CornerRadius"] = UDim.new(0, 5);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Fly.LocalScript
-AZY["57"] = Instance.new("LocalScript", AZY["55"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.IY
-AZY["58"] = Instance.new("TextButton", AZY["48"]);
-AZY["58"]["TextWrapped"] = true;
-AZY["58"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["58"]["TextSize"] = 11;
-AZY["58"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["58"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["58"]["Size"] = UDim2.new(0.2588447332382202, 0, 0.0958060473203659, 0);
-AZY["58"]["Name"] = [[IY]];
-AZY["58"]["Text"] = [[Infinite Yield]];
-AZY["58"]["Position"] = UDim2.new(0.04595530033111572, 0, 0.13954126834869385, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.IY.UICorner
-AZY["59"] = Instance.new("UICorner", AZY["58"]);
-AZY["59"]["CornerRadius"] = UDim.new(0, 5);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.IY.LocalScript
-AZY["5a"] = Instance.new("LocalScript", AZY["58"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.PwnHub
-AZY["5b"] = Instance.new("TextButton", AZY["48"]);
-AZY["5b"]["TextWrapped"] = true;
-AZY["5b"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["5b"]["TextSize"] = 11;
-AZY["5b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["5b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["5b"]["Size"] = UDim2.new(0.2588447332382202, 0, 0.0958060473203659, 0);
-AZY["5b"]["Name"] = [[PwnHub]];
-AZY["5b"]["Text"] = [[Pwner Hub]];
-AZY["5b"]["Position"] = UDim2.new(0.04600000008940697, 0, 0.8209999799728394, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.PwnHub.UICorner
-AZY["5c"] = Instance.new("UICorner", AZY["5b"]);
-AZY["5c"]["CornerRadius"] = UDim.new(0, 5);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.PwnHub.LocalScript
-AZY["5d"] = Instance.new("LocalScript", AZY["5b"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.TextGrav
-AZY["5e"] = Instance.new("TextLabel", AZY["44"]);
-AZY["5e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["5e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["5e"]["TextSize"] = 12;
-AZY["5e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["5e"]["Size"] = UDim2.new(0, 50, 0, 11);
-AZY["5e"]["Text"] = [[Gravity]];
-AZY["5e"]["Name"] = [[TextGrav]];
-AZY["5e"]["BackgroundTransparency"] = 1;
-AZY["5e"]["Position"] = UDim2.new(0.3269999921321869, 0, 0.8930000066757202, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.TextWs
-AZY["5f"] = Instance.new("TextLabel", AZY["44"]);
-AZY["5f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["5f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["5f"]["TextSize"] = 12;
-AZY["5f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["5f"]["Size"] = UDim2.new(0, 50, 0, 11);
-AZY["5f"]["Text"] = [[Speed]];
-AZY["5f"]["Name"] = [[TextWs]];
-AZY["5f"]["BackgroundTransparency"] = 1;
-AZY["5f"]["Position"] = UDim2.new(0.5411151647567749, 0, 0.8930000066757202, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.TextJp
-AZY["60"] = Instance.new("TextLabel", AZY["44"]);
-AZY["60"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["60"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["60"]["TextSize"] = 12;
-AZY["60"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["60"]["Size"] = UDim2.new(0, 50, 0, 11);
-AZY["60"]["Text"] = [[Jump]];
-AZY["60"]["Name"] = [[TextJp]];
-AZY["60"]["BackgroundTransparency"] = 1;
-AZY["60"]["Position"] = UDim2.new(0.7466657161712646, 0, 0.8930000066757202, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Ws
-AZY["61"] = Instance.new("BoolValue", AZY["44"]);
-AZY["61"]["Name"] = [[Ws]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Jp
-AZY["62"] = Instance.new("BoolValue", AZY["44"]);
-AZY["62"]["Name"] = [[Jp]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.ToggleGrav
-AZY["63"] = Instance.new("TextButton", AZY["44"]);
-AZY["63"]["BackgroundColor3"] = Color3.fromRGB(146, 0, 0);
-AZY["63"]["TextSize"] = 14;
-AZY["63"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["63"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["63"]["Size"] = UDim2.new(0, 15, 0, 15);
-AZY["63"]["Name"] = [[ToggleGrav]];
-AZY["63"]["Text"] = [[]];
-AZY["63"]["Position"] = UDim2.new(0.40253645181655884, 0, 0.801304280757904, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.ToggleGrav.UICorner
-AZY["64"] = Instance.new("UICorner", AZY["63"]);
-AZY["64"]["CornerRadius"] = UDim.new(100, 100);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.ToggleGrav.LocalScript
-AZY["65"] = Instance.new("LocalScript", AZY["63"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.ToggleWs
-AZY["66"] = Instance.new("TextButton", AZY["44"]);
-AZY["66"]["BackgroundColor3"] = Color3.fromRGB(146, 0, 0);
-AZY["66"]["TextSize"] = 14;
-AZY["66"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["66"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["66"]["Size"] = UDim2.new(0, 15, 0, 15);
-AZY["66"]["Name"] = [[ToggleWs]];
-AZY["66"]["Text"] = [[]];
-AZY["66"]["Position"] = UDim2.new(0.6166515946388245, 0, 0.801304280757904, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.ToggleWs.UICorner
-AZY["67"] = Instance.new("UICorner", AZY["66"]);
-AZY["67"]["CornerRadius"] = UDim.new(100, 100);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.ToggleWs.LocalScript
-AZY["68"] = Instance.new("LocalScript", AZY["66"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.ToggleJp
-AZY["69"] = Instance.new("TextButton", AZY["44"]);
-AZY["69"]["BackgroundColor3"] = Color3.fromRGB(146, 0, 0);
-AZY["69"]["TextSize"] = 14;
-AZY["69"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["69"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["69"]["Size"] = UDim2.new(0, 15, 0, 15);
-AZY["69"]["Name"] = [[ToggleJp]];
-AZY["69"]["Text"] = [[]];
-AZY["69"]["Position"] = UDim2.new(0.8222021460533142, 0, 0.801304280757904, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.ToggleJp.UICorner
-AZY["6a"] = Instance.new("UICorner", AZY["69"]);
-AZY["6a"]["CornerRadius"] = UDim.new(100, 100);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.ToggleJp.LocalScript
-AZY["6b"] = Instance.new("LocalScript", AZY["69"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.JpS
-AZY["6c"] = Instance.new("ImageButton", AZY["44"]);
-AZY["6c"]["Active"] = false;
-AZY["6c"]["BorderSizePixel"] = 0;
-AZY["6c"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["6c"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["6c"]["SliceScale"] = 0.11999999731779099;
-AZY["6c"]["ImageTransparency"] = 1;
-AZY["6c"]["BackgroundColor3"] = Color3.fromRGB(22, 22, 22);
-AZY["6c"]["ImageColor3"] = Color3.fromRGB(32, 32, 32);
-AZY["6c"]["Selectable"] = false;
-AZY["6c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-AZY["6c"]["Image"] = [[rbxassetid://3570695787]];
-AZY["6c"]["Size"] = UDim2.new(0, 119, 0, 31);
-AZY["6c"]["Name"] = [[JpS]];
-AZY["6c"]["Rotation"] = -90;
-AZY["6c"]["Position"] = UDim2.new(0.8600000143051147, 0, 0.4399999976158142, 0);
-AZY["6c"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.JpS.SliderButton
-AZY["6d"] = Instance.new("ImageLabel", AZY["6c"]);
-AZY["6d"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["6d"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["6d"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71);
-AZY["6d"]["ImageColor3"] = Color3.fromRGB(146, 0, 0);
-AZY["6d"]["SliceScale"] = 0.11999999731779099;
-AZY["6d"]["Selectable"] = true;
-AZY["6d"]["Image"] = [[rbxassetid://3570695787]];
-AZY["6d"]["Size"] = UDim2.new(0, 25, 1, 0);
-AZY["6d"]["Active"] = true;
-AZY["6d"]["Name"] = [[SliderButton]];
-AZY["6d"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.JpS.SliderButton.LocalScript
-AZY["6e"] = Instance.new("LocalScript", AZY["6d"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.JpS.Border
-AZY["6f"] = Instance.new("ImageLabel", AZY["6c"]);
-AZY["6f"]["ZIndex"] = -1;
-AZY["6f"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["6f"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["6f"]["BackgroundColor3"] = Color3.fromRGB(62, 62, 62);
-AZY["6f"]["ImageColor3"] = Color3.fromRGB(71, 71, 71);
-AZY["6f"]["SliceScale"] = 0.23999999463558197;
-AZY["6f"]["ImageTransparency"] = 1;
-AZY["6f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-AZY["6f"]["Image"] = [[rbxassetid://3570695787]];
-AZY["6f"]["Size"] = UDim2.new(1, 12, 1, 12);
-AZY["6f"]["Name"] = [[Border]];
-AZY["6f"]["BackgroundTransparency"] = 0.6000000238418579;
-AZY["6f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.JpS.Border.UICorner
-AZY["70"] = Instance.new("UICorner", AZY["6f"]);
-AZY["70"]["CornerRadius"] = UDim.new(0, 12);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.JpS.StripedPattern
-AZY["71"] = Instance.new("ImageLabel", AZY["6c"]);
-AZY["71"]["BorderSizePixel"] = 0;
-AZY["71"]["ScaleType"] = Enum.ScaleType.Tile;
-AZY["71"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["71"]["ImageColor3"] = Color3.fromRGB(32, 32, 32);
-AZY["71"]["ImageTransparency"] = 1;
-AZY["71"]["AnchorPoint"] = Vector2.new(0.5, 0);
-AZY["71"]["Image"] = [[rbxassetid://4925116997]];
-AZY["71"]["TileSize"] = UDim2.new(0, 25, 1, 0);
-AZY["71"]["Size"] = UDim2.new(1, -25, 1, 0);
-AZY["71"]["Name"] = [[StripedPattern]];
-AZY["71"]["BackgroundTransparency"] = 1;
-AZY["71"]["Position"] = UDim2.new(0.5, 0, 0, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.JpS.StripedPattern.UIGradient
-AZY["72"] = Instance.new("UIGradient", AZY["71"]);
-AZY["72"]["Rotation"] = 90;
-AZY["72"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.JpS.ImageLabel
-AZY["73"] = Instance.new("ImageLabel", AZY["6c"]);
-AZY["73"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["73"]["Image"] = [[rbxassetid://12582573514]];
-AZY["73"]["Size"] = UDim2.new(0, 35, 0, 35);
-AZY["73"]["Rotation"] = 90;
-AZY["73"]["BackgroundTransparency"] = 1;
-AZY["73"]["Position"] = UDim2.new(-0.017000000923871994, 0, -0.10000000149011612, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.JpS.TextLabel
-AZY["74"] = Instance.new("TextBox", AZY["6c"]);
-AZY["74"]["ZIndex"] = 2;
-AZY["74"]["TextSize"] = 13;
-AZY["74"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["74"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["74"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["74"]["AnchorPoint"] = Vector2.new(1, 0);
-AZY["74"]["BackgroundTransparency"] = 1;
-AZY["74"]["Size"] = UDim2.new(0, 50, 1, 0);
-AZY["74"]["Text"] = [[0%]];
-AZY["74"]["Position"] = UDim2.new(0, 137, 0, 0);
-AZY["74"]["Rotation"] = 90;
-AZY["74"]["Name"] = [[TextLabel]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.WsS
-AZY["75"] = Instance.new("ImageButton", AZY["44"]);
-AZY["75"]["Active"] = false;
-AZY["75"]["BorderSizePixel"] = 0;
-AZY["75"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["75"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["75"]["SliceScale"] = 0.11999999731779099;
-AZY["75"]["ImageTransparency"] = 1;
-AZY["75"]["BackgroundColor3"] = Color3.fromRGB(22, 22, 22);
-AZY["75"]["ImageColor3"] = Color3.fromRGB(32, 32, 32);
-AZY["75"]["Selectable"] = false;
-AZY["75"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-AZY["75"]["Image"] = [[rbxassetid://3570695787]];
-AZY["75"]["Size"] = UDim2.new(0, 119, 0, 31);
-AZY["75"]["Name"] = [[WsS]];
-AZY["75"]["Rotation"] = -90;
-AZY["75"]["Position"] = UDim2.new(0.6499999761581421, 0, 0.4399999976158142, 0);
-AZY["75"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.WsS.SliderButton
-AZY["76"] = Instance.new("ImageLabel", AZY["75"]);
-AZY["76"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["76"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["76"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71);
-AZY["76"]["ImageColor3"] = Color3.fromRGB(146, 0, 0);
-AZY["76"]["SliceScale"] = 0.11999999731779099;
-AZY["76"]["Selectable"] = true;
-AZY["76"]["Image"] = [[rbxassetid://3570695787]];
-AZY["76"]["Size"] = UDim2.new(0, 25, 1, 0);
-AZY["76"]["Active"] = true;
-AZY["76"]["Name"] = [[SliderButton]];
-AZY["76"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.WsS.SliderButton.LocalScript
-AZY["77"] = Instance.new("LocalScript", AZY["76"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.WsS.Border
-AZY["78"] = Instance.new("ImageLabel", AZY["75"]);
-AZY["78"]["ZIndex"] = -1;
-AZY["78"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["78"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["78"]["BackgroundColor3"] = Color3.fromRGB(62, 62, 62);
-AZY["78"]["ImageColor3"] = Color3.fromRGB(71, 71, 71);
-AZY["78"]["SliceScale"] = 0.23999999463558197;
-AZY["78"]["ImageTransparency"] = 1;
-AZY["78"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-AZY["78"]["Image"] = [[rbxassetid://3570695787]];
-AZY["78"]["Size"] = UDim2.new(1, 12, 1, 12);
-AZY["78"]["Name"] = [[Border]];
-AZY["78"]["BackgroundTransparency"] = 0.6000000238418579;
-AZY["78"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.WsS.Border.UICorner
-AZY["79"] = Instance.new("UICorner", AZY["78"]);
-AZY["79"]["CornerRadius"] = UDim.new(0, 12);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.WsS.StripedPattern
-AZY["7a"] = Instance.new("ImageLabel", AZY["75"]);
-AZY["7a"]["BorderSizePixel"] = 0;
-AZY["7a"]["ScaleType"] = Enum.ScaleType.Tile;
-AZY["7a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["7a"]["ImageColor3"] = Color3.fromRGB(32, 32, 32);
-AZY["7a"]["ImageTransparency"] = 1;
-AZY["7a"]["AnchorPoint"] = Vector2.new(0.5, 0);
-AZY["7a"]["Image"] = [[rbxassetid://4925116997]];
-AZY["7a"]["TileSize"] = UDim2.new(0, 25, 1, 0);
-AZY["7a"]["Size"] = UDim2.new(1, -25, 1, 0);
-AZY["7a"]["Name"] = [[StripedPattern]];
-AZY["7a"]["BackgroundTransparency"] = 1;
-AZY["7a"]["Position"] = UDim2.new(0.5, 0, 0, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.WsS.StripedPattern.UIGradient
-AZY["7b"] = Instance.new("UIGradient", AZY["7a"]);
-AZY["7b"]["Rotation"] = 90;
-AZY["7b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.WsS.ImageLabel
-AZY["7c"] = Instance.new("ImageLabel", AZY["75"]);
-AZY["7c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["7c"]["Image"] = [[rbxassetid://12572149271]];
-AZY["7c"]["Size"] = UDim2.new(0, 35, 0, 35);
-AZY["7c"]["Rotation"] = 90;
-AZY["7c"]["BackgroundTransparency"] = 1;
-AZY["7c"]["Position"] = UDim2.new(-0.017000000923871994, 0, -0.10000000149011612, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.WsS.TextLabel
-AZY["7d"] = Instance.new("TextBox", AZY["75"]);
-AZY["7d"]["ZIndex"] = 2;
-AZY["7d"]["TextSize"] = 13;
-AZY["7d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["7d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["7d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["7d"]["AnchorPoint"] = Vector2.new(1, 0);
-AZY["7d"]["BackgroundTransparency"] = 1;
-AZY["7d"]["Size"] = UDim2.new(0, 50, 1, 0);
-AZY["7d"]["Text"] = [[0%]];
-AZY["7d"]["Position"] = UDim2.new(0, 137, 0, 0);
-AZY["7d"]["Rotation"] = 90;
-AZY["7d"]["Name"] = [[TextLabel]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.GravS
-AZY["7e"] = Instance.new("ImageButton", AZY["44"]);
-AZY["7e"]["Active"] = false;
-AZY["7e"]["BorderSizePixel"] = 0;
-AZY["7e"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["7e"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["7e"]["SliceScale"] = 0.11999999731779099;
-AZY["7e"]["ImageTransparency"] = 1;
-AZY["7e"]["BackgroundColor3"] = Color3.fromRGB(22, 22, 22);
-AZY["7e"]["ImageColor3"] = Color3.fromRGB(32, 32, 32);
-AZY["7e"]["Selectable"] = false;
-AZY["7e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-AZY["7e"]["Image"] = [[rbxassetid://3570695787]];
-AZY["7e"]["Size"] = UDim2.new(0, 119, 0, 31);
-AZY["7e"]["Name"] = [[GravS]];
-AZY["7e"]["Rotation"] = -90;
-AZY["7e"]["Position"] = UDim2.new(0.4359999895095825, 0, 0.4399999976158142, 0);
-AZY["7e"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.GravS.SliderButton
-AZY["7f"] = Instance.new("ImageLabel", AZY["7e"]);
-AZY["7f"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["7f"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["7f"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71);
-AZY["7f"]["ImageColor3"] = Color3.fromRGB(146, 0, 0);
-AZY["7f"]["SliceScale"] = 0.11999999731779099;
-AZY["7f"]["Selectable"] = true;
-AZY["7f"]["Image"] = [[rbxassetid://3570695787]];
-AZY["7f"]["Size"] = UDim2.new(0, 25, 1, 0);
-AZY["7f"]["Active"] = true;
-AZY["7f"]["Name"] = [[SliderButton]];
-AZY["7f"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.GravS.SliderButton.LocalScript
-AZY["80"] = Instance.new("LocalScript", AZY["7f"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.GravS.Border
-AZY["81"] = Instance.new("ImageLabel", AZY["7e"]);
-AZY["81"]["ZIndex"] = -1;
-AZY["81"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["81"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["81"]["BackgroundColor3"] = Color3.fromRGB(62, 62, 62);
-AZY["81"]["ImageColor3"] = Color3.fromRGB(71, 71, 71);
-AZY["81"]["SliceScale"] = 0.23999999463558197;
-AZY["81"]["ImageTransparency"] = 1;
-AZY["81"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-AZY["81"]["Image"] = [[rbxassetid://3570695787]];
-AZY["81"]["Size"] = UDim2.new(1, 12, 1, 12);
-AZY["81"]["Name"] = [[Border]];
-AZY["81"]["BackgroundTransparency"] = 0.6000000238418579;
-AZY["81"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.GravS.Border.UICorner
-AZY["82"] = Instance.new("UICorner", AZY["81"]);
-AZY["82"]["CornerRadius"] = UDim.new(0, 12);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.GravS.StripedPattern
-AZY["83"] = Instance.new("ImageLabel", AZY["7e"]);
-AZY["83"]["BorderSizePixel"] = 0;
-AZY["83"]["ScaleType"] = Enum.ScaleType.Tile;
-AZY["83"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["83"]["ImageColor3"] = Color3.fromRGB(32, 32, 32);
-AZY["83"]["ImageTransparency"] = 1;
-AZY["83"]["AnchorPoint"] = Vector2.new(0.5, 0);
-AZY["83"]["Image"] = [[rbxassetid://4925116997]];
-AZY["83"]["TileSize"] = UDim2.new(0, 25, 1, 0);
-AZY["83"]["Size"] = UDim2.new(1, -25, 1, 0);
-AZY["83"]["Name"] = [[StripedPattern]];
-AZY["83"]["BackgroundTransparency"] = 1;
-AZY["83"]["Position"] = UDim2.new(0.5, 0, 0, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.GravS.StripedPattern.UIGradient
-AZY["84"] = Instance.new("UIGradient", AZY["83"]);
-AZY["84"]["Rotation"] = 90;
-AZY["84"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.GravS.ImageLabel
-AZY["85"] = Instance.new("ImageLabel", AZY["7e"]);
-AZY["85"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["85"]["Image"] = [[rbxassetid://12582575947]];
-AZY["85"]["Size"] = UDim2.new(0, 35, 0, 35);
-AZY["85"]["Rotation"] = 90;
-AZY["85"]["BackgroundTransparency"] = 1;
-AZY["85"]["Position"] = UDim2.new(-0.017000000923871994, 0, -0.10000000149011612, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.GravS.TextLabel
-AZY["86"] = Instance.new("TextBox", AZY["7e"]);
-AZY["86"]["ZIndex"] = 2;
-AZY["86"]["TextSize"] = 13;
-AZY["86"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["86"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["86"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["86"]["AnchorPoint"] = Vector2.new(1, 0);
-AZY["86"]["BackgroundTransparency"] = 1;
-AZY["86"]["Size"] = UDim2.new(0, 50, 1, 0);
-AZY["86"]["Text"] = [[0%]];
-AZY["86"]["Position"] = UDim2.new(0, 137, 0, 0);
-AZY["86"]["Rotation"] = 90;
-AZY["86"]["Name"] = [[TextLabel]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs
-AZY["87"] = Instance.new("Frame", AZY["2b"]);
-AZY["87"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["87"]["BackgroundTransparency"] = 1;
-AZY["87"]["Size"] = UDim2.new(0.831805408000946, 0, 0.7735126614570618, 0);
-AZY["87"]["Position"] = UDim2.new(0.1409205049276352, 0, 0.18711429834365845, 0);
-AZY["87"]["Visible"] = false;
-AZY["87"]["Name"] = [[Changelogs]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.TitlePage
-AZY["88"] = Instance.new("Frame", AZY["87"]);
-AZY["88"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["88"]["BackgroundTransparency"] = 0.550000011920929;
-AZY["88"]["Size"] = UDim2.new(0.47281256318092346, 0, 0.2235966920852661, 0);
-AZY["88"]["Position"] = UDim2.new(0.0059703318402171135, 0, 0.020400146022439003, 0);
-AZY["88"]["Name"] = [[TitlePage]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.TitlePage.UICorner
-AZY["89"] = Instance.new("UICorner", AZY["88"]);
-AZY["89"]["CornerRadius"] = UDim.new(0, 15);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.TitlePage.ImageLabel
-AZY["8a"] = Instance.new("ImageLabel", AZY["88"]);
-AZY["8a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["8a"]["Image"] = [[rbxassetid://12585006598]];
-AZY["8a"]["Size"] = UDim2.new(0, 48, 0, 48);
-AZY["8a"]["BackgroundTransparency"] = 1;
-AZY["8a"]["Position"] = UDim2.new(0.16064772009849548, 0, -0.020948588848114014, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.TitlePage.TextLogo
-AZY["8b"] = Instance.new("TextLabel", AZY["88"]);
-AZY["8b"]["TextWrapped"] = true;
-AZY["8b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["8b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["8b"]["TextSize"] = 17;
-AZY["8b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["8b"]["Size"] = UDim2.new(0.48227599263191223, 0, 0.442178338766098, 0);
-AZY["8b"]["Text"] = [[SPDM Team]];
-AZY["8b"]["Name"] = [[TextLogo]];
-AZY["8b"]["BackgroundTransparency"] = 1;
-AZY["8b"]["Position"] = UDim2.new(0.3840000033378601, 0, 0.2709999978542328, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.TitlePage.TextLogo.UITextSizeConstraint
-AZY["8c"] = Instance.new("UITextSizeConstraint", AZY["8b"]);
-AZY["8c"]["MaxTextSize"] = 25;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits
-AZY["8d"] = Instance.new("Frame", AZY["87"]);
-AZY["8d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["8d"]["BackgroundTransparency"] = 0.550000011920929;
-AZY["8d"]["Size"] = UDim2.new(0.47281256318092346, 0, 0.7172916531562805, 0);
-AZY["8d"]["Position"] = UDim2.new(0.0059703318402171135, 0, 0.28270816802978516, 0);
-AZY["8d"]["Name"] = [[Credits]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.UICorner
-AZY["8e"] = Instance.new("UICorner", AZY["8d"]);
-AZY["8e"]["CornerRadius"] = UDim.new(0, 15);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.Title
-AZY["8f"] = Instance.new("TextLabel", AZY["8d"]);
-AZY["8f"]["TextWrapped"] = true;
-AZY["8f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["8f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["8f"]["TextSize"] = 17;
-AZY["8f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["8f"]["Size"] = UDim2.new(0.32700005173683167, 0, 0.14513146877288818, 0);
-AZY["8f"]["Text"] = [[About us]];
-AZY["8f"]["Name"] = [[Title]];
-AZY["8f"]["BackgroundTransparency"] = 1;
-AZY["8f"]["Position"] = UDim2.new(0.056999966502189636, 0, 0.048999954015016556, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.Title.UITextSizeConstraint
-AZY["90"] = Instance.new("UITextSizeConstraint", AZY["8f"]);
-AZY["90"]["MaxTextSize"] = 25;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame
-AZY["91"] = Instance.new("ScrollingFrame", AZY["8d"]);
-AZY["91"]["Active"] = true;
-AZY["91"]["CanvasSize"] = UDim2.new(0, 0, 1.5, 0);
-AZY["91"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["91"]["BackgroundTransparency"] = 1;
-AZY["91"]["Size"] = UDim2.new(0, 175, 0, 110);
-AZY["91"]["ScrollBarImageColor3"] = Color3.fromRGB(255, 0, 14);
-AZY["91"]["BorderColor3"] = Color3.fromRGB(54, 0, 2);
-AZY["91"]["ScrollBarThickness"] = 5;
-AZY["91"]["Position"] = UDim2.new(-4.226361483006258e-08, 0, 0.20896700024604797, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person
-AZY["92"] = Instance.new("Frame", AZY["91"]);
-AZY["92"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["92"]["BackgroundTransparency"] = 1;
-AZY["92"]["Size"] = UDim2.new(0, 144, 0, 44);
-AZY["92"]["Position"] = UDim2.new(0.11400000005960464, 0, 0, 0);
-AZY["92"]["Name"] = [[Person]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person.ImageLabel
-AZY["93"] = Instance.new("ImageLabel", AZY["92"]);
-AZY["93"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["93"]["Image"] = [[rbxassetid://12585390334]];
-AZY["93"]["Size"] = UDim2.new(0, 41, 0, 41);
-AZY["93"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person.TextLogo
-AZY["94"] = Instance.new("TextLabel", AZY["92"]);
-AZY["94"]["TextWrapped"] = true;
-AZY["94"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["94"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["94"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["94"]["TextSize"] = 13;
-AZY["94"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["94"]["Size"] = UDim2.new(0.6571568250656128, 0, 0.37654438614845276, 0);
-AZY["94"]["Text"] = [[Chillz]];
-AZY["94"]["Name"] = [[TextLogo]];
-AZY["94"]["BackgroundTransparency"] = 1;
-AZY["94"]["Position"] = UDim2.new(0.34299999475479126, 0, 0.16500000655651093, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person.TextLogo.UITextSizeConstraint
-AZY["95"] = Instance.new("UITextSizeConstraint", AZY["94"]);
-AZY["95"]["MaxTextSize"] = 25;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person.Desc
-AZY["96"] = Instance.new("TextLabel", AZY["92"]);
-AZY["96"]["TextWrapped"] = true;
-AZY["96"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["96"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["96"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["96"]["TextSize"] = 11;
-AZY["96"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["96"]["Size"] = UDim2.new(0.657156765460968, 0, 0.3310898244380951, 0);
-AZY["96"]["Text"] = [[UI Everything]];
-AZY["96"]["Name"] = [[Desc]];
-AZY["96"]["BackgroundTransparency"] = 1;
-AZY["96"]["Position"] = UDim2.new(0.34299999475479126, 0, 0.4300000071525574, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person.Desc.UITextSizeConstraint
-AZY["97"] = Instance.new("UITextSizeConstraint", AZY["96"]);
-AZY["97"]["MaxTextSize"] = 25;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person
-AZY["98"] = Instance.new("Frame", AZY["91"]);
-AZY["98"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["98"]["BackgroundTransparency"] = 1;
-AZY["98"]["Size"] = UDim2.new(0, 144, 0, 44);
-AZY["98"]["Position"] = UDim2.new(0.11400000005960464, 0, 0.19155307114124298, 0);
-AZY["98"]["Name"] = [[Person]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person.ImageLabel
-AZY["99"] = Instance.new("ImageLabel", AZY["98"]);
-AZY["99"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["99"]["Image"] = [[rbxassetid://12585434446]];
-AZY["99"]["Size"] = UDim2.new(0, 41, 0, 41);
-AZY["99"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person.TextLogo
-AZY["9a"] = Instance.new("TextLabel", AZY["98"]);
-AZY["9a"]["TextWrapped"] = true;
-AZY["9a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["9a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["9a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["9a"]["TextSize"] = 13;
-AZY["9a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["9a"]["Size"] = UDim2.new(0.6571568250656128, 0, 0.37654438614845276, 0);
-AZY["9a"]["Text"] = [[Ash01#0947]];
-AZY["9a"]["Name"] = [[TextLogo]];
-AZY["9a"]["BackgroundTransparency"] = 1;
-AZY["9a"]["Position"] = UDim2.new(0.34299999475479126, 0, 0.16500000655651093, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person.TextLogo.UITextSizeConstraint
-AZY["9b"] = Instance.new("UITextSizeConstraint", AZY["9a"]);
-AZY["9b"]["MaxTextSize"] = 25;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person.Desc
-AZY["9c"] = Instance.new("TextLabel", AZY["98"]);
-AZY["9c"]["TextWrapped"] = true;
-AZY["9c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["9c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["9c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["9c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["9c"]["Size"] = UDim2.new(0.657156765460968, 0, 0.3310898244380951, 0);
-AZY["9c"]["Text"] = [[Pwner Hub Owner / Creator]];
-AZY["9c"]["Name"] = [[Desc]];
-AZY["9c"]["BackgroundTransparency"] = 1;
-AZY["9c"]["Position"] = UDim2.new(0.34299999475479126, 0, 0.4300000071525574, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person.Desc.UITextSizeConstraint
-AZY["9d"] = Instance.new("UITextSizeConstraint", AZY["9c"]);
-AZY["9d"]["MaxTextSize"] = 25;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person
-AZY["9e"] = Instance.new("Frame", AZY["91"]);
-AZY["9e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["9e"]["BackgroundTransparency"] = 1;
-AZY["9e"]["Size"] = UDim2.new(0, 144, 0, 44);
-AZY["9e"]["Position"] = UDim2.new(0.11400000005960464, 0, 0.38310614228248596, 0);
-AZY["9e"]["Name"] = [[Person]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person.ImageLabel
-AZY["9f"] = Instance.new("ImageLabel", AZY["9e"]);
-AZY["9f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["9f"]["Image"] = [[http://www.roblox.com/asset/?id=12642988505]];
-AZY["9f"]["Size"] = UDim2.new(0, 41, 0, 41);
-AZY["9f"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person.TextLogo
-AZY["a0"] = Instance.new("TextLabel", AZY["9e"]);
-AZY["a0"]["TextWrapped"] = true;
-AZY["a0"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["a0"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["a0"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["a0"]["TextSize"] = 13;
-AZY["a0"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["a0"]["Size"] = UDim2.new(0.6571568250656128, 0, 0.37654438614845276, 0);
-AZY["a0"]["Text"] = [[Bread!]];
-AZY["a0"]["Name"] = [[TextLogo]];
-AZY["a0"]["BackgroundTransparency"] = 1;
-AZY["a0"]["Position"] = UDim2.new(0.34299999475479126, 0, 0.16500000655651093, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person.TextLogo.UITextSizeConstraint
-AZY["a1"] = Instance.new("UITextSizeConstraint", AZY["a0"]);
-AZY["a1"]["MaxTextSize"] = 25;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person.Desc
-AZY["a2"] = Instance.new("TextLabel", AZY["9e"]);
-AZY["a2"]["TextWrapped"] = true;
-AZY["a2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["a2"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["a2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["a2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["a2"]["Size"] = UDim2.new(0.657156765460968, 0, 0.3310898244380951, 0);
-AZY["a2"]["Text"] = [[UI Slider Fixes And Textbox]];
-AZY["a2"]["Name"] = [[Desc]];
-AZY["a2"]["BackgroundTransparency"] = 1;
-AZY["a2"]["Position"] = UDim2.new(0.34299999475479126, 0, 0.4300000071525574, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Credits.ScrollingFrame.Person.Desc.UITextSizeConstraint
-AZY["a3"] = Instance.new("UITextSizeConstraint", AZY["a2"]);
-AZY["a3"]["MaxTextSize"] = 25;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog
-AZY["a4"] = Instance.new("Frame", AZY["87"]);
-AZY["a4"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["a4"]["BackgroundTransparency"] = 0.550000011920929;
-AZY["a4"]["Size"] = UDim2.new(0.47281256318092346, 0, 0.7172916531562805, 0);
-AZY["a4"]["Position"] = UDim2.new(0.5088531970977783, 0, 0.020400196313858032, 0);
-AZY["a4"]["Name"] = [[Changelog]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.UICorner
-AZY["a5"] = Instance.new("UICorner", AZY["a4"]);
-AZY["a5"]["CornerRadius"] = UDim.new(0, 15);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.TextLogo
-AZY["a6"] = Instance.new("TextLabel", AZY["a4"]);
-AZY["a6"]["TextWrapped"] = true;
-AZY["a6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["a6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["a6"]["TextSize"] = 19;
-AZY["a6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["a6"]["Size"] = UDim2.new(0.39918234944343567, 0, 0.14513146877288818, 0);
-AZY["a6"]["Text"] = [[Changelog]];
-AZY["a6"]["Name"] = [[TextLogo]];
-AZY["a6"]["BackgroundTransparency"] = 1;
-AZY["a6"]["Position"] = UDim2.new(0.05700000002980232, 0, 0.04899999871850014, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.TextLogo.UITextSizeConstraint
-AZY["a7"] = Instance.new("UITextSizeConstraint", AZY["a6"]);
-AZY["a7"]["MaxTextSize"] = 25;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.Ver
-AZY["a8"] = Instance.new("TextLabel", AZY["a4"]);
-AZY["a8"]["TextWrapped"] = true;
-AZY["a8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["a8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["a8"]["TextSize"] = 13;
-AZY["a8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["a8"]["Size"] = UDim2.new(0.240515798330307, 0, 0.14513146877288818, 0);
-AZY["a8"]["Text"] = [[v3.0.1]];
-AZY["a8"]["Name"] = [[Ver]];
-AZY["a8"]["BackgroundTransparency"] = 1;
-AZY["a8"]["Position"] = UDim2.new(0.6331158876419067, 0, 0.04900005832314491, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.Ver.UITextSizeConstraint
-AZY["a9"] = Instance.new("UITextSizeConstraint", AZY["a8"]);
-AZY["a9"]["MaxTextSize"] = 25;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.Ver
-AZY["aa"] = Instance.new("TextLabel", AZY["a4"]);
-AZY["aa"]["TextWrapped"] = true;
-AZY["aa"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["aa"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["aa"]["TextSize"] = 9;
-AZY["aa"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["aa"]["Size"] = UDim2.new(0.0997123271226883, 0, 0.08936085551977158, 0);
-AZY["aa"]["Text"] = [[beta]];
-AZY["aa"]["Name"] = [[Ver]];
-AZY["aa"]["BackgroundTransparency"] = 1;
-AZY["aa"]["Position"] = UDim2.new(0.8399999737739563, 0, 0.0820000022649765, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.Ver.UITextSizeConstraint
-AZY["ab"] = Instance.new("UITextSizeConstraint", AZY["aa"]);
-AZY["ab"]["MaxTextSize"] = 25;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame
-AZY["ac"] = Instance.new("ScrollingFrame", AZY["a4"]);
-AZY["ac"]["Active"] = true;
-AZY["ac"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["ac"]["BackgroundTransparency"] = 1;
-AZY["ac"]["Size"] = UDim2.new(0, 165, 0, 113);
-AZY["ac"]["ScrollBarImageColor3"] = Color3.fromRGB(255, 0, 14);
-AZY["ac"]["BorderColor3"] = Color3.fromRGB(54, 0, 2);
-AZY["ac"]["ScrollBarThickness"] = 5;
-AZY["ac"]["Position"] = UDim2.new(0.05699992552399635, 0, 0.20896704494953156, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab
-AZY["ad"] = Instance.new("Frame", AZY["ac"]);
-AZY["ad"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["ad"]["BackgroundTransparency"] = 1;
-AZY["ad"]["Size"] = UDim2.new(0.8838858008384705, 0, 0.41258352994918823, 0);
-AZY["ad"]["Position"] = UDim2.new(-0.001135505735874176, 0, 0.008439034223556519, 0);
-AZY["ad"]["Name"] = [[ChangelogTab]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab.UICorner
-AZY["ae"] = Instance.new("UICorner", AZY["ad"]);
-AZY["ae"]["CornerRadius"] = UDim.new(0, 15);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab.TextLabel
-AZY["af"] = Instance.new("TextLabel", AZY["ad"]);
-AZY["af"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["af"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["af"]["TextSize"] = 56;
-AZY["af"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["af"]["Size"] = UDim2.new(0, 18, 0, 20);
-AZY["af"]["Text"] = [[.]];
-AZY["af"]["BackgroundTransparency"] = 1;
-AZY["af"]["Position"] = UDim2.new(-0.00024911601212807, 0, -0.08813343942165375, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab.TextLabel
-AZY["b0"] = Instance.new("TextLabel", AZY["ad"]);
-AZY["b0"]["BackgroundColor3"] = Color3.fromRGB(0, 187, 7);
-AZY["b0"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["b0"]["TextSize"] = 14;
-AZY["b0"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["b0"]["Size"] = UDim2.new(0, 29, 0, 14);
-AZY["b0"]["Text"] = [[New]];
-AZY["b0"]["Position"] = UDim2.new(0.10899999737739563, 0, 0.05000000074505806, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab.TextLabel.UICorner
-AZY["b1"] = Instance.new("UICorner", AZY["b0"]);
-AZY["b1"]["CornerRadius"] = UDim.new(0, 4);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab.TextLabel
-AZY["b2"] = Instance.new("TextLabel", AZY["ad"]);
-AZY["b2"]["TextWrapped"] = true;
-AZY["b2"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-AZY["b2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["b2"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["b2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["b2"]["TextSize"] = 11;
-AZY["b2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["b2"]["Size"] = UDim2.new(0, 109, 0, 60);
-AZY["b2"]["Text"] = [[Floating icon now with addec functionality! In addition to opening the mod menu, holding it down will take you directly to your desired page]];
-AZY["b2"]["BackgroundTransparency"] = 1;
-AZY["b2"]["Position"] = UDim2.new(0.34079205989837646, 0, 0.04748288542032242, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab1
-AZY["b3"] = Instance.new("Frame", AZY["ac"]);
-AZY["b3"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["b3"]["BackgroundTransparency"] = 1;
-AZY["b3"]["Size"] = UDim2.new(0.8838858008384705, 0, 0.41258352994918823, 0);
-AZY["b3"]["Position"] = UDim2.new(-0.0071961116045713425, 0, 0.20108048617839813, 0);
-AZY["b3"]["Name"] = [[ChangelogTab1]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab1.UICorner
-AZY["b4"] = Instance.new("UICorner", AZY["b3"]);
-AZY["b4"]["CornerRadius"] = UDim.new(0, 15);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab1.TextLabel
-AZY["b5"] = Instance.new("TextLabel", AZY["b3"]);
-AZY["b5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["b5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["b5"]["TextSize"] = 56;
-AZY["b5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["b5"]["Size"] = UDim2.new(0, 18, 0, 20);
-AZY["b5"]["Text"] = [[.]];
-AZY["b5"]["BackgroundTransparency"] = 1;
-AZY["b5"]["Position"] = UDim2.new(-0.00024911601212807, 0, -0.08813343942165375, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab1.TextLabel
-AZY["b6"] = Instance.new("TextLabel", AZY["b3"]);
-AZY["b6"]["BackgroundColor3"] = Color3.fromRGB(0, 187, 7);
-AZY["b6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["b6"]["TextSize"] = 14;
-AZY["b6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["b6"]["Size"] = UDim2.new(0, 29, 0, 14);
-AZY["b6"]["Text"] = [[New]];
-AZY["b6"]["Position"] = UDim2.new(0.10899999737739563, 0, 0.05000000074505806, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab1.TextLabel.UICorner
-AZY["b7"] = Instance.new("UICorner", AZY["b6"]);
-AZY["b7"]["CornerRadius"] = UDim.new(0, 4);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab1.TextLabel
-AZY["b8"] = Instance.new("TextLabel", AZY["b3"]);
-AZY["b8"]["TextWrapped"] = true;
-AZY["b8"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-AZY["b8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["b8"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["b8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["b8"]["TextSize"] = 11;
-AZY["b8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["b8"]["Size"] = UDim2.new(0, 109, 0, 60);
-AZY["b8"]["Text"] = [[Stunning Design with breathtaking graphical elements, animations, colors and beautiful icons!]];
-AZY["b8"]["BackgroundTransparency"] = 1;
-AZY["b8"]["Position"] = UDim2.new(0.34079205989837646, 0, 0.04748288542032242, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab2
-AZY["b9"] = Instance.new("Frame", AZY["ac"]);
-AZY["b9"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["b9"]["BackgroundTransparency"] = 1;
-AZY["b9"]["Size"] = UDim2.new(0.8838858008384705, 0, 0.41258352994918823, 0);
-AZY["b9"]["Position"] = UDim2.new(-0.0010000000474974513, 0, 0.3869999945163727, 0);
-AZY["b9"]["Name"] = [[ChangelogTab2]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab2.UICorner
-AZY["ba"] = Instance.new("UICorner", AZY["b9"]);
-AZY["ba"]["CornerRadius"] = UDim.new(0, 15);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab2.TextLabel
-AZY["bb"] = Instance.new("TextLabel", AZY["b9"]);
-AZY["bb"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["bb"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["bb"]["TextSize"] = 56;
-AZY["bb"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["bb"]["Size"] = UDim2.new(0, 18, 0, 20);
-AZY["bb"]["Text"] = [[.]];
-AZY["bb"]["BackgroundTransparency"] = 1;
-AZY["bb"]["Position"] = UDim2.new(-0.00024911601212807, 0, -0.08813343942165375, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab2.TextLabel
-AZY["bc"] = Instance.new("TextLabel", AZY["b9"]);
-AZY["bc"]["BackgroundColor3"] = Color3.fromRGB(0, 187, 7);
-AZY["bc"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["bc"]["TextSize"] = 14;
-AZY["bc"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["bc"]["Size"] = UDim2.new(0, 29, 0, 14);
-AZY["bc"]["Text"] = [[New]];
-AZY["bc"]["Position"] = UDim2.new(0.10899999737739563, 0, 0.05000000074505806, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab2.TextLabel.UICorner
-AZY["bd"] = Instance.new("UICorner", AZY["bc"]);
-AZY["bd"]["CornerRadius"] = UDim.new(0, 4);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab2.TextLabel
-AZY["be"] = Instance.new("TextLabel", AZY["b9"]);
-AZY["be"]["TextWrapped"] = true;
-AZY["be"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-AZY["be"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["be"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["be"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["be"]["TextSize"] = 11;
-AZY["be"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["be"]["Size"] = UDim2.new(0, 109, 0, 60);
-AZY["be"]["Text"] = [[Window design with comfortable UI movement and a semi-transparent mod menu for a less intrusive gaming experience!]];
-AZY["be"]["BackgroundTransparency"] = 1;
-AZY["be"]["Position"] = UDim2.new(0.34079205989837646, 0, 0.04748288542032242, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab3
-AZY["bf"] = Instance.new("Frame", AZY["ac"]);
-AZY["bf"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["bf"]["BackgroundTransparency"] = 1;
-AZY["bf"]["Size"] = UDim2.new(0.8838858008384705, 0, 0.41258352994918823, 0);
-AZY["bf"]["Position"] = UDim2.new(0.005060605704784393, 0, 0.5927019119262695, 0);
-AZY["bf"]["Name"] = [[ChangelogTab3]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab3.UICorner
-AZY["c0"] = Instance.new("UICorner", AZY["bf"]);
-AZY["c0"]["CornerRadius"] = UDim.new(0, 15);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab3.TextLabel
-AZY["c1"] = Instance.new("TextLabel", AZY["bf"]);
-AZY["c1"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["c1"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["c1"]["TextSize"] = 56;
-AZY["c1"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["c1"]["Size"] = UDim2.new(0, 18, 0, 20);
-AZY["c1"]["Text"] = [[.]];
-AZY["c1"]["BackgroundTransparency"] = 1;
-AZY["c1"]["Position"] = UDim2.new(-0.00024911601212807, 0, -0.08813343942165375, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab3.TextLabel
-AZY["c2"] = Instance.new("TextLabel", AZY["bf"]);
-AZY["c2"]["BackgroundColor3"] = Color3.fromRGB(0, 187, 7);
-AZY["c2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["c2"]["TextSize"] = 14;
-AZY["c2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["c2"]["Size"] = UDim2.new(0, 29, 0, 14);
-AZY["c2"]["Text"] = [[New]];
-AZY["c2"]["Position"] = UDim2.new(0.10899999737739563, 0, 0.05000000074505806, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab3.TextLabel.UICorner
-AZY["c3"] = Instance.new("UICorner", AZY["c2"]);
-AZY["c3"]["CornerRadius"] = UDim.new(0, 4);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Changelog.ScrollingFrame.ChangelogTab3.TextLabel
-AZY["c4"] = Instance.new("TextLabel", AZY["bf"]);
-AZY["c4"]["TextWrapped"] = true;
-AZY["c4"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-AZY["c4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["c4"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["c4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["c4"]["TextSize"] = 11;
-AZY["c4"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["c4"]["Size"] = UDim2.new(0, 109, 0, 60);
-AZY["c4"]["Text"] = [[Info page with all information about our team and our social media! Plus an intuitive and well-designed changelog.]];
-AZY["c4"]["BackgroundTransparency"] = 1;
-AZY["c4"]["Position"] = UDim2.new(0.34079205989837646, 0, 0.04748288542032242, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Communications
-AZY["c5"] = Instance.new("Frame", AZY["87"]);
-AZY["c5"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["c5"]["BackgroundTransparency"] = 0.550000011920929;
-AZY["c5"]["Size"] = UDim2.new(0.47281256318092346, 0, 0.2235966920852661, 0);
-AZY["c5"]["Position"] = UDim2.new(0.5088531970977783, 0, 0.774535596370697, 0);
-AZY["c5"]["Name"] = [[Communications]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Communications.UICorner
-AZY["c6"] = Instance.new("UICorner", AZY["c5"]);
-AZY["c6"]["CornerRadius"] = UDim.new(0, 15);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Communications.Copy
-AZY["c7"] = Instance.new("TextButton", AZY["c5"]);
-AZY["c7"]["TextWrapped"] = true;
-AZY["c7"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["c7"]["TextSize"] = 12;
-AZY["c7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["c7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["c7"]["Size"] = UDim2.new(0.41421639919281006, 0, 0.503000020980835, 0);
-AZY["c7"]["Name"] = [[Copy]];
-AZY["c7"]["Text"] = [[Copy Link]];
-AZY["c7"]["Position"] = UDim2.new(0.03737286850810051, 0, 0.22850681841373444, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Communications.Copy.UICorner
-AZY["c8"] = Instance.new("UICorner", AZY["c7"]);
-AZY["c8"]["CornerRadius"] = UDim.new(0, 6);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Communications.Copy.LocalScript
-AZY["c9"] = Instance.new("LocalScript", AZY["c7"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Communications.TextLogo
-AZY["ca"] = Instance.new("TextLabel", AZY["c5"]);
-AZY["ca"]["TextWrapped"] = true;
-AZY["ca"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["ca"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["ca"]["TextSize"] = 19;
-AZY["ca"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["ca"]["Size"] = UDim2.new(0.14990141987800598, 0, 0.2844810485839844, 0);
-AZY["ca"]["Text"] = [[Or]];
-AZY["ca"]["Name"] = [[TextLogo]];
-AZY["ca"]["BackgroundTransparency"] = 1;
-AZY["ca"]["Position"] = UDim2.new(0.45584943890571594, 0, 0.30038517713546753, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Communications.TextLogo.UITextSizeConstraint
-AZY["cb"] = Instance.new("UITextSizeConstraint", AZY["ca"]);
-AZY["cb"]["MaxTextSize"] = 25;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Communications.TextLogo
-AZY["cc"] = Instance.new("TextLabel", AZY["c5"]);
-AZY["cc"]["TextWrapped"] = true;
-AZY["cc"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["cc"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["cc"]["TextSize"] = 19;
-AZY["cc"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["cc"]["Size"] = UDim2.new(0.4056611955165863, 0, 0.2844810485839844, 0);
-AZY["cc"]["Text"] = [[AZY#0348]];
-AZY["cc"]["Name"] = [[TextLogo]];
-AZY["cc"]["BackgroundTransparency"] = 1;
-AZY["cc"]["Position"] = UDim2.new(0.5839999914169312, 0, 0.29899999499320984, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Communications.TextLogo.UITextSizeConstraint
-AZY["cd"] = Instance.new("UITextSizeConstraint", AZY["cc"]);
-AZY["cd"]["MaxTextSize"] = 25;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax
-AZY["ce"] = Instance.new("Frame", AZY["2b"]);
-AZY["ce"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["ce"]["BackgroundTransparency"] = 0.550000011920929;
-AZY["ce"]["Size"] = UDim2.new(0.831805408000946, 0, 0.7551097869873047, 0);
-AZY["ce"]["Position"] = UDim2.new(0.1409205049276352, 0, 0.20551720261573792, 0);
-AZY["ce"]["Visible"] = false;
-AZY["ce"]["Name"] = [[BuiltInHax]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.UICorner
-AZY["cf"] = Instance.new("UICorner", AZY["ce"]);
-AZY["cf"]["CornerRadius"] = UDim.new(0, 15);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage
-AZY["d0"] = Instance.new("Frame", AZY["ce"]);
-AZY["d0"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["d0"]["BackgroundTransparency"] = 1;
-AZY["d0"]["Size"] = UDim2.new(0.6116291880607605, 0, 1.0292569398880005, 0);
-AZY["d0"]["Position"] = UDim2.new(0.3700365424156189, 0, -0.03249453008174896, 0);
-AZY["d0"]["Name"] = [[HaxPage]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.TextWs
-AZY["d1"] = Instance.new("TextLabel", AZY["d0"]);
-AZY["d1"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["d1"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["d1"]["TextSize"] = 12;
-AZY["d1"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["d1"]["Size"] = UDim2.new(0, 50, 0, 11);
-AZY["d1"]["Text"] = [[Speed]];
-AZY["d1"]["Name"] = [[TextWs]];
-AZY["d1"]["BackgroundTransparency"] = 1;
-AZY["d1"]["Position"] = UDim2.new(0.5411151647567749, 0, 0.8930000066757202, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.TextJp
-AZY["d2"] = Instance.new("TextLabel", AZY["d0"]);
-AZY["d2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["d2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["d2"]["TextSize"] = 12;
-AZY["d2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["d2"]["Size"] = UDim2.new(0, 50, 0, 11);
-AZY["d2"]["Text"] = [[Jump]];
-AZY["d2"]["Name"] = [[TextJp]];
-AZY["d2"]["BackgroundTransparency"] = 1;
-AZY["d2"]["Position"] = UDim2.new(0.7466657161712646, 0, 0.8930000066757202, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.TextGrav
-AZY["d3"] = Instance.new("TextLabel", AZY["d0"]);
-AZY["d3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["d3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["d3"]["TextSize"] = 12;
-AZY["d3"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["d3"]["Size"] = UDim2.new(0, 50, 0, 11);
-AZY["d3"]["Text"] = [[Gravity]];
-AZY["d3"]["Name"] = [[TextGrav]];
-AZY["d3"]["BackgroundTransparency"] = 1;
-AZY["d3"]["Position"] = UDim2.new(0.3269999921321869, 0, 0.8930000066757202, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.ToggleGrav
-AZY["d4"] = Instance.new("TextButton", AZY["d0"]);
-AZY["d4"]["BackgroundColor3"] = Color3.fromRGB(146, 0, 0);
-AZY["d4"]["TextSize"] = 14;
-AZY["d4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["d4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["d4"]["Size"] = UDim2.new(0, 15, 0, 15);
-AZY["d4"]["Name"] = [[ToggleGrav]];
-AZY["d4"]["Text"] = [[]];
-AZY["d4"]["Position"] = UDim2.new(0.40253645181655884, 0, 0.801304280757904, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.ToggleGrav.UICorner
-AZY["d5"] = Instance.new("UICorner", AZY["d4"]);
-AZY["d5"]["CornerRadius"] = UDim.new(100, 100);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.ToggleGrav.LocalScript
-AZY["d6"] = Instance.new("LocalScript", AZY["d4"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.ToggleJp
-AZY["d7"] = Instance.new("TextButton", AZY["d0"]);
-AZY["d7"]["BackgroundColor3"] = Color3.fromRGB(146, 0, 0);
-AZY["d7"]["TextSize"] = 14;
-AZY["d7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["d7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["d7"]["Size"] = UDim2.new(0, 15, 0, 15);
-AZY["d7"]["Name"] = [[ToggleJp]];
-AZY["d7"]["Text"] = [[]];
-AZY["d7"]["Position"] = UDim2.new(0.8222021460533142, 0, 0.801304280757904, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.ToggleJp.UICorner
-AZY["d8"] = Instance.new("UICorner", AZY["d7"]);
-AZY["d8"]["CornerRadius"] = UDim.new(100, 100);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.ToggleJp.LocalScript
-AZY["d9"] = Instance.new("LocalScript", AZY["d7"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.ToggleWs
-AZY["da"] = Instance.new("TextButton", AZY["d0"]);
-AZY["da"]["BackgroundColor3"] = Color3.fromRGB(146, 0, 0);
-AZY["da"]["TextSize"] = 14;
-AZY["da"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["da"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["da"]["Size"] = UDim2.new(0, 15, 0, 15);
-AZY["da"]["Name"] = [[ToggleWs]];
-AZY["da"]["Text"] = [[]];
-AZY["da"]["Position"] = UDim2.new(0.6166515946388245, 0, 0.801304280757904, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.ToggleWs.UICorner
-AZY["db"] = Instance.new("UICorner", AZY["da"]);
-AZY["db"]["CornerRadius"] = UDim.new(100, 100);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.ToggleWs.LocalScript
-AZY["dc"] = Instance.new("LocalScript", AZY["da"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.WsS
-AZY["dd"] = Instance.new("ImageButton", AZY["d0"]);
-AZY["dd"]["Active"] = false;
-AZY["dd"]["BorderSizePixel"] = 0;
-AZY["dd"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["dd"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["dd"]["SliceScale"] = 0.11999999731779099;
-AZY["dd"]["ImageTransparency"] = 1;
-AZY["dd"]["BackgroundColor3"] = Color3.fromRGB(22, 22, 22);
-AZY["dd"]["ImageColor3"] = Color3.fromRGB(32, 32, 32);
-AZY["dd"]["Selectable"] = false;
-AZY["dd"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-AZY["dd"]["Image"] = [[rbxassetid://3570695787]];
-AZY["dd"]["Size"] = UDim2.new(0, 119, 0, 31);
-AZY["dd"]["Name"] = [[WsS]];
-AZY["dd"]["Rotation"] = -90;
-AZY["dd"]["Position"] = UDim2.new(0.6499999761581421, 0, 0.4399999976158142, 0);
-AZY["dd"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.WsS.SliderButton
-AZY["de"] = Instance.new("ImageLabel", AZY["dd"]);
-AZY["de"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["de"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["de"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71);
-AZY["de"]["ImageColor3"] = Color3.fromRGB(146, 0, 0);
-AZY["de"]["SliceScale"] = 0.11999999731779099;
-AZY["de"]["Selectable"] = true;
-AZY["de"]["Image"] = [[rbxassetid://3570695787]];
-AZY["de"]["Size"] = UDim2.new(0, 25, 1, 0);
-AZY["de"]["Active"] = true;
-AZY["de"]["Name"] = [[SliderButton]];
-AZY["de"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.WsS.SliderButton.LocalScript
-AZY["df"] = Instance.new("LocalScript", AZY["de"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.WsS.Border
-AZY["e0"] = Instance.new("ImageLabel", AZY["dd"]);
-AZY["e0"]["ZIndex"] = -1;
-AZY["e0"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["e0"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["e0"]["BackgroundColor3"] = Color3.fromRGB(62, 62, 62);
-AZY["e0"]["ImageColor3"] = Color3.fromRGB(71, 71, 71);
-AZY["e0"]["SliceScale"] = 0.23999999463558197;
-AZY["e0"]["ImageTransparency"] = 1;
-AZY["e0"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-AZY["e0"]["Image"] = [[rbxassetid://3570695787]];
-AZY["e0"]["Size"] = UDim2.new(1, 12, 1, 12);
-AZY["e0"]["Name"] = [[Border]];
-AZY["e0"]["BackgroundTransparency"] = 0.6000000238418579;
-AZY["e0"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.WsS.Border.UICorner
-AZY["e1"] = Instance.new("UICorner", AZY["e0"]);
-AZY["e1"]["CornerRadius"] = UDim.new(0, 12);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.WsS.StripedPattern
-AZY["e2"] = Instance.new("ImageLabel", AZY["dd"]);
-AZY["e2"]["BorderSizePixel"] = 0;
-AZY["e2"]["ScaleType"] = Enum.ScaleType.Tile;
-AZY["e2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["e2"]["ImageColor3"] = Color3.fromRGB(32, 32, 32);
-AZY["e2"]["ImageTransparency"] = 1;
-AZY["e2"]["AnchorPoint"] = Vector2.new(0.5, 0);
-AZY["e2"]["Image"] = [[rbxassetid://4925116997]];
-AZY["e2"]["TileSize"] = UDim2.new(0, 25, 1, 0);
-AZY["e2"]["Size"] = UDim2.new(1, -25, 1, 0);
-AZY["e2"]["Name"] = [[StripedPattern]];
-AZY["e2"]["BackgroundTransparency"] = 1;
-AZY["e2"]["Position"] = UDim2.new(0.5, 0, 0, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.WsS.StripedPattern.UIGradient
-AZY["e3"] = Instance.new("UIGradient", AZY["e2"]);
-AZY["e3"]["Rotation"] = 90;
-AZY["e3"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.WsS.ImageLabel
-AZY["e4"] = Instance.new("ImageLabel", AZY["dd"]);
-AZY["e4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["e4"]["Image"] = [[rbxassetid://12572149271]];
-AZY["e4"]["Size"] = UDim2.new(0, 35, 0, 35);
-AZY["e4"]["Rotation"] = 90;
-AZY["e4"]["BackgroundTransparency"] = 1;
-AZY["e4"]["Position"] = UDim2.new(-0.017000000923871994, 0, -0.10000000149011612, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.WsS.TextLabel
-AZY["e5"] = Instance.new("TextBox", AZY["dd"]);
-AZY["e5"]["CursorPosition"] = -1;
-AZY["e5"]["ZIndex"] = 2;
-AZY["e5"]["TextSize"] = 13;
-AZY["e5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["e5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["e5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["e5"]["AnchorPoint"] = Vector2.new(1, 0);
-AZY["e5"]["BackgroundTransparency"] = 1;
-AZY["e5"]["Size"] = UDim2.new(0, 50, 1, 0);
-AZY["e5"]["Text"] = [[0%]];
-AZY["e5"]["Position"] = UDim2.new(0, 137, 0, 0);
-AZY["e5"]["Rotation"] = 90;
-AZY["e5"]["Name"] = [[TextLabel]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.JpS
-AZY["e6"] = Instance.new("ImageButton", AZY["d0"]);
-AZY["e6"]["Active"] = false;
-AZY["e6"]["BorderSizePixel"] = 0;
-AZY["e6"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["e6"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["e6"]["SliceScale"] = 0.11999999731779099;
-AZY["e6"]["ImageTransparency"] = 1;
-AZY["e6"]["BackgroundColor3"] = Color3.fromRGB(22, 22, 22);
-AZY["e6"]["ImageColor3"] = Color3.fromRGB(32, 32, 32);
-AZY["e6"]["Selectable"] = false;
-AZY["e6"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-AZY["e6"]["Image"] = [[rbxassetid://3570695787]];
-AZY["e6"]["Size"] = UDim2.new(0, 119, 0, 31);
-AZY["e6"]["Name"] = [[JpS]];
-AZY["e6"]["Rotation"] = -90;
-AZY["e6"]["Position"] = UDim2.new(0.8600000143051147, 0, 0.4399999976158142, 0);
-AZY["e6"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.JpS.SliderButton
-AZY["e7"] = Instance.new("ImageLabel", AZY["e6"]);
-AZY["e7"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["e7"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["e7"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71);
-AZY["e7"]["ImageColor3"] = Color3.fromRGB(146, 0, 0);
-AZY["e7"]["SliceScale"] = 0.11999999731779099;
-AZY["e7"]["Selectable"] = true;
-AZY["e7"]["Image"] = [[rbxassetid://3570695787]];
-AZY["e7"]["Size"] = UDim2.new(0, 25, 1, 0);
-AZY["e7"]["Active"] = true;
-AZY["e7"]["Name"] = [[SliderButton]];
-AZY["e7"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.JpS.SliderButton.LocalScript
-AZY["e8"] = Instance.new("LocalScript", AZY["e7"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.JpS.Border
-AZY["e9"] = Instance.new("ImageLabel", AZY["e6"]);
-AZY["e9"]["ZIndex"] = -1;
-AZY["e9"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["e9"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["e9"]["BackgroundColor3"] = Color3.fromRGB(62, 62, 62);
-AZY["e9"]["ImageColor3"] = Color3.fromRGB(71, 71, 71);
-AZY["e9"]["SliceScale"] = 0.23999999463558197;
-AZY["e9"]["ImageTransparency"] = 1;
-AZY["e9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-AZY["e9"]["Image"] = [[rbxassetid://3570695787]];
-AZY["e9"]["Size"] = UDim2.new(1, 12, 1, 12);
-AZY["e9"]["Name"] = [[Border]];
-AZY["e9"]["BackgroundTransparency"] = 0.6000000238418579;
-AZY["e9"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.JpS.Border.UICorner
-AZY["ea"] = Instance.new("UICorner", AZY["e9"]);
-AZY["ea"]["CornerRadius"] = UDim.new(0, 12);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.JpS.StripedPattern
-AZY["eb"] = Instance.new("ImageLabel", AZY["e6"]);
-AZY["eb"]["BorderSizePixel"] = 0;
-AZY["eb"]["ScaleType"] = Enum.ScaleType.Tile;
-AZY["eb"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["eb"]["ImageColor3"] = Color3.fromRGB(32, 32, 32);
-AZY["eb"]["ImageTransparency"] = 1;
-AZY["eb"]["AnchorPoint"] = Vector2.new(0.5, 0);
-AZY["eb"]["Image"] = [[rbxassetid://4925116997]];
-AZY["eb"]["TileSize"] = UDim2.new(0, 25, 1, 0);
-AZY["eb"]["Size"] = UDim2.new(1, -25, 1, 0);
-AZY["eb"]["Name"] = [[StripedPattern]];
-AZY["eb"]["BackgroundTransparency"] = 1;
-AZY["eb"]["Position"] = UDim2.new(0.5, 0, 0, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.JpS.StripedPattern.UIGradient
-AZY["ec"] = Instance.new("UIGradient", AZY["eb"]);
-AZY["ec"]["Rotation"] = 90;
-AZY["ec"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.JpS.ImageLabel
-AZY["ed"] = Instance.new("ImageLabel", AZY["e6"]);
-AZY["ed"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["ed"]["Image"] = [[rbxassetid://12582573514]];
-AZY["ed"]["Size"] = UDim2.new(0, 35, 0, 35);
-AZY["ed"]["Rotation"] = 90;
-AZY["ed"]["BackgroundTransparency"] = 1;
-AZY["ed"]["Position"] = UDim2.new(-0.017000000923871994, 0, -0.10000000149011612, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.JpS.TextLabel
-AZY["ee"] = Instance.new("TextBox", AZY["e6"]);
-AZY["ee"]["ZIndex"] = 2;
-AZY["ee"]["TextSize"] = 13;
-AZY["ee"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["ee"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["ee"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["ee"]["AnchorPoint"] = Vector2.new(1, 0);
-AZY["ee"]["BackgroundTransparency"] = 1;
-AZY["ee"]["Size"] = UDim2.new(0, 50, 1, 0);
-AZY["ee"]["Text"] = [[0%]];
-AZY["ee"]["Position"] = UDim2.new(0, 137, 0, 0);
-AZY["ee"]["Rotation"] = 90;
-AZY["ee"]["Name"] = [[TextLabel]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.GravS
-AZY["ef"] = Instance.new("ImageButton", AZY["d0"]);
-AZY["ef"]["Active"] = false;
-AZY["ef"]["BorderSizePixel"] = 0;
-AZY["ef"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["ef"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["ef"]["SliceScale"] = 0.11999999731779099;
-AZY["ef"]["ImageTransparency"] = 1;
-AZY["ef"]["BackgroundColor3"] = Color3.fromRGB(22, 22, 22);
-AZY["ef"]["ImageColor3"] = Color3.fromRGB(32, 32, 32);
-AZY["ef"]["Selectable"] = false;
-AZY["ef"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-AZY["ef"]["Image"] = [[rbxassetid://3570695787]];
-AZY["ef"]["Size"] = UDim2.new(0, 119, 0, 31);
-AZY["ef"]["Name"] = [[GravS]];
-AZY["ef"]["Rotation"] = -90;
-AZY["ef"]["Position"] = UDim2.new(0.4359999895095825, 0, 0.4399999976158142, 0);
-AZY["ef"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.GravS.SliderButton
-AZY["f0"] = Instance.new("ImageLabel", AZY["ef"]);
-AZY["f0"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["f0"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["f0"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71);
-AZY["f0"]["ImageColor3"] = Color3.fromRGB(146, 0, 0);
-AZY["f0"]["SliceScale"] = 0.11999999731779099;
-AZY["f0"]["Selectable"] = true;
-AZY["f0"]["Image"] = [[rbxassetid://3570695787]];
-AZY["f0"]["Size"] = UDim2.new(0, 25, 1, 0);
-AZY["f0"]["Active"] = true;
-AZY["f0"]["Name"] = [[SliderButton]];
-AZY["f0"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.GravS.SliderButton.LocalScript
-AZY["f1"] = Instance.new("LocalScript", AZY["f0"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.GravS.Border
-AZY["f2"] = Instance.new("ImageLabel", AZY["ef"]);
-AZY["f2"]["ZIndex"] = -1;
-AZY["f2"]["SliceCenter"] = Rect.new(100, 100, 100, 100);
-AZY["f2"]["ScaleType"] = Enum.ScaleType.Slice;
-AZY["f2"]["BackgroundColor3"] = Color3.fromRGB(62, 62, 62);
-AZY["f2"]["ImageColor3"] = Color3.fromRGB(71, 71, 71);
-AZY["f2"]["SliceScale"] = 0.23999999463558197;
-AZY["f2"]["ImageTransparency"] = 1;
-AZY["f2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-AZY["f2"]["Image"] = [[rbxassetid://3570695787]];
-AZY["f2"]["Size"] = UDim2.new(1, 12, 1, 12);
-AZY["f2"]["Name"] = [[Border]];
-AZY["f2"]["BackgroundTransparency"] = 0.6000000238418579;
-AZY["f2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.GravS.Border.UICorner
-AZY["f3"] = Instance.new("UICorner", AZY["f2"]);
-AZY["f3"]["CornerRadius"] = UDim.new(0, 12);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.GravS.StripedPattern
-AZY["f4"] = Instance.new("ImageLabel", AZY["ef"]);
-AZY["f4"]["BorderSizePixel"] = 0;
-AZY["f4"]["ScaleType"] = Enum.ScaleType.Tile;
-AZY["f4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["f4"]["ImageColor3"] = Color3.fromRGB(32, 32, 32);
-AZY["f4"]["ImageTransparency"] = 1;
-AZY["f4"]["AnchorPoint"] = Vector2.new(0.5, 0);
-AZY["f4"]["Image"] = [[rbxassetid://4925116997]];
-AZY["f4"]["TileSize"] = UDim2.new(0, 25, 1, 0);
-AZY["f4"]["Size"] = UDim2.new(1, -25, 1, 0);
-AZY["f4"]["Name"] = [[StripedPattern]];
-AZY["f4"]["BackgroundTransparency"] = 1;
-AZY["f4"]["Position"] = UDim2.new(0.5, 0, 0, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.GravS.StripedPattern.UIGradient
-AZY["f5"] = Instance.new("UIGradient", AZY["f4"]);
-AZY["f5"]["Rotation"] = 90;
-AZY["f5"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.GravS.ImageLabel
-AZY["f6"] = Instance.new("ImageLabel", AZY["ef"]);
-AZY["f6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["f6"]["Image"] = [[rbxassetid://12582575947]];
-AZY["f6"]["Size"] = UDim2.new(0, 35, 0, 35);
-AZY["f6"]["Rotation"] = 90;
-AZY["f6"]["BackgroundTransparency"] = 1;
-AZY["f6"]["Position"] = UDim2.new(-0.017000000923871994, 0, -0.10000000149011612, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.GravS.TextLabel
-AZY["f7"] = Instance.new("TextBox", AZY["ef"]);
-AZY["f7"]["ZIndex"] = 2;
-AZY["f7"]["TextSize"] = 13;
-AZY["f7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["f7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["f7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["f7"]["AnchorPoint"] = Vector2.new(1, 0);
-AZY["f7"]["BackgroundTransparency"] = 1;
-AZY["f7"]["Size"] = UDim2.new(0, 50, 1, 0);
-AZY["f7"]["Text"] = [[0%]];
-AZY["f7"]["Position"] = UDim2.new(0, 137, 0, 0);
-AZY["f7"]["Rotation"] = 90;
-AZY["f7"]["Name"] = [[TextLabel]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.Grav
-AZY["f8"] = Instance.new("BoolValue", AZY["d0"]);
-AZY["f8"]["Name"] = [[Grav]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.Jp
-AZY["f9"] = Instance.new("BoolValue", AZY["d0"]);
-AZY["f9"]["Name"] = [[Jp]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.Ws
-AZY["fa"] = Instance.new("BoolValue", AZY["d0"]);
-AZY["fa"]["Name"] = [[Ws]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts
-AZY["fb"] = Instance.new("Folder", AZY["ce"]);
-AZY["fb"]["Name"] = [[Scripts]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Aimbot
-AZY["fc"] = Instance.new("TextButton", AZY["fb"]);
-AZY["fc"]["TextWrapped"] = true;
-AZY["fc"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["fc"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["fc"]["TextSize"] = 13;
-AZY["fc"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["fc"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["fc"]["Size"] = UDim2.new(0.2280000001192093, 0, 0.09600000083446503, 0);
-AZY["fc"]["Name"] = [[Aimbot]];
-AZY["fc"]["Text"] = [[       AimBot]];
-AZY["fc"]["Position"] = UDim2.new(0.030552715063095093, 0, 0.3302992284297943, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Aimbot.UICorner
-AZY["fd"] = Instance.new("UICorner", AZY["fc"]);
-AZY["fd"]["CornerRadius"] = UDim.new(0, 5);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Aimbot.LocalScript
-AZY["fe"] = Instance.new("LocalScript", AZY["fc"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Aimbot.Info
-AZY["ff"] = Instance.new("ImageLabel", AZY["fc"]);
-AZY["ff"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["ff"]["Image"] = [[rbxassetid://12585776892]];
-AZY["ff"]["Size"] = UDim2.new(0, 16, 0, 16);
-AZY["ff"]["Name"] = [[Info]];
-AZY["ff"]["BackgroundTransparency"] = 1;
-AZY["ff"]["Position"] = UDim2.new(0.7910000085830688, 0, 0.09000000357627869, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Btools
-AZY["100"] = Instance.new("TextButton", AZY["fb"]);
-AZY["100"]["TextWrapped"] = true;
-AZY["100"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["100"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["100"]["TextSize"] = 13;
-AZY["100"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["100"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["100"]["Size"] = UDim2.new(0.2280000001192093, 0, 0.09600000083446503, 0);
-AZY["100"]["Name"] = [[Btools]];
-AZY["100"]["Text"] = [[         BTools]];
-AZY["100"]["Position"] = UDim2.new(0.2924708425998688, 0, 0.18550994992256165, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Btools.UICorner
-AZY["101"] = Instance.new("UICorner", AZY["100"]);
-AZY["101"]["CornerRadius"] = UDim.new(0, 5);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Btools.LocalScript
-AZY["102"] = Instance.new("LocalScript", AZY["100"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Btools.Info
-AZY["103"] = Instance.new("ImageLabel", AZY["100"]);
-AZY["103"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["103"]["Image"] = [[rbxassetid://12585776892]];
-AZY["103"]["Size"] = UDim2.new(0, 16, 0, 16);
-AZY["103"]["Name"] = [[Info]];
-AZY["103"]["BackgroundTransparency"] = 1;
-AZY["103"]["Position"] = UDim2.new(0.7910000085830688, 0, 0.09000000357627869, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Dex
-AZY["104"] = Instance.new("TextButton", AZY["fb"]);
-AZY["104"]["TextWrapped"] = true;
-AZY["104"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["104"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["104"]["TextSize"] = 13;
-AZY["104"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["104"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["104"]["Size"] = UDim2.new(0.2280000001192093, 0, 0.09600000083446503, 0);
-AZY["104"]["Name"] = [[Dex]];
-AZY["104"]["Text"] = [[  DEX Explorer]];
-AZY["104"]["Position"] = UDim2.new(0.2938356399536133, 0, 0.04143177345395088, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Dex.UICorner
-AZY["105"] = Instance.new("UICorner", AZY["104"]);
-AZY["105"]["CornerRadius"] = UDim.new(0, 5);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Dex.LocalScript
-AZY["106"] = Instance.new("LocalScript", AZY["104"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Dex.Info
-AZY["107"] = Instance.new("ImageLabel", AZY["104"]);
-AZY["107"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["107"]["Image"] = [[rbxassetid://12585776892]];
-AZY["107"]["Size"] = UDim2.new(0, 16, 0, 16);
-AZY["107"]["Name"] = [[Info]];
-AZY["107"]["BackgroundTransparency"] = 1;
-AZY["107"]["Position"] = UDim2.new(0.7910000085830688, 0, 0.09000000357627869, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.FatesESP
-AZY["108"] = Instance.new("TextButton", AZY["fb"]);
-AZY["108"]["TextWrapped"] = true;
-AZY["108"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["108"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["108"]["TextSize"] = 13;
-AZY["108"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["108"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["108"]["Size"] = UDim2.new(0.2280000001192093, 0, 0.09600000083446503, 0);
-AZY["108"]["Name"] = [[FatesESP]];
-AZY["108"]["Text"] = [[      Fates ESP]];
-AZY["108"]["Position"] = UDim2.new(0.0331718735396862, 0, 0.18866735696792603, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.FatesESP.UICorner
-AZY["109"] = Instance.new("UICorner", AZY["108"]);
-AZY["109"]["CornerRadius"] = UDim.new(0, 5);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.FatesESP.LocalScript
-AZY["10a"] = Instance.new("LocalScript", AZY["108"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.FatesESP.Info
-AZY["10b"] = Instance.new("ImageLabel", AZY["108"]);
-AZY["10b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["10b"]["Image"] = [[rbxassetid://12585776892]];
-AZY["10b"]["Size"] = UDim2.new(0, 16, 0, 16);
-AZY["10b"]["Name"] = [[Info]];
-AZY["10b"]["BackgroundTransparency"] = 1;
-AZY["10b"]["Position"] = UDim2.new(0.7910000085830688, 0, 0.09000000357627869, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Fly
-AZY["10c"] = Instance.new("TextButton", AZY["fb"]);
-AZY["10c"]["TextWrapped"] = true;
-AZY["10c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["10c"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["10c"]["TextSize"] = 13;
-AZY["10c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["10c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["10c"]["Size"] = UDim2.new(0.2280000001192093, 0, 0.09600000083446503, 0);
-AZY["10c"]["Name"] = [[Fly]];
-AZY["10c"]["Text"] = [[           Fly]];
-AZY["10c"]["Position"] = UDim2.new(0.28985166549682617, 0, 0.3375365436077118, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Fly.UICorner
-AZY["10d"] = Instance.new("UICorner", AZY["10c"]);
-AZY["10d"]["CornerRadius"] = UDim.new(0, 5);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Fly.LocalScript
-AZY["10e"] = Instance.new("LocalScript", AZY["10c"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Fly.Info
-AZY["10f"] = Instance.new("ImageLabel", AZY["10c"]);
-AZY["10f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["10f"]["Image"] = [[rbxassetid://12585776892]];
-AZY["10f"]["Size"] = UDim2.new(0, 16, 0, 16);
-AZY["10f"]["Name"] = [[Info]];
-AZY["10f"]["BackgroundTransparency"] = 1;
-AZY["10f"]["Position"] = UDim2.new(0.7910000085830688, 0, 0.09000000357627869, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.IY
-AZY["110"] = Instance.new("TextButton", AZY["fb"]);
-AZY["110"]["TextWrapped"] = true;
-AZY["110"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["110"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["110"]["TextSize"] = 13;
-AZY["110"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["110"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["110"]["Size"] = UDim2.new(0.22804169356822968, 0, 0.0958060473203659, 0);
-AZY["110"]["Name"] = [[IY]];
-AZY["110"]["Text"] = [[  Infinite Yield]];
-AZY["110"]["Position"] = UDim2.new(0.03485134616494179, 0, 0.04589534550905228, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.IY.UICorner
-AZY["111"] = Instance.new("UICorner", AZY["110"]);
-AZY["111"]["CornerRadius"] = UDim.new(0, 5);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.IY.LocalScript
-AZY["112"] = Instance.new("LocalScript", AZY["110"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.IY.Info
-AZY["113"] = Instance.new("ImageLabel", AZY["110"]);
-AZY["113"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["113"]["Image"] = [[rbxassetid://12585776892]];
-AZY["113"]["Size"] = UDim2.new(0, 16, 0, 16);
-AZY["113"]["Name"] = [[Info]];
-AZY["113"]["BackgroundTransparency"] = 1;
-AZY["113"]["Position"] = UDim2.new(0.7910000085830688, 0, 0.09000000357627869, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.PwnHub
-AZY["114"] = Instance.new("TextButton", AZY["fb"]);
-AZY["114"]["TextWrapped"] = true;
-AZY["114"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["114"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["114"]["TextSize"] = 13;
-AZY["114"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["114"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["114"]["Size"] = UDim2.new(0.2280000001192093, 0, 0.09600000083446503, 0);
-AZY["114"]["Name"] = [[PwnHub]];
-AZY["114"]["Text"] = [[    Pwner Hub]];
-AZY["114"]["Position"] = UDim2.new(0.03055272251367569, 0, 0.4659311771392822, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.PwnHub.UICorner
-AZY["115"] = Instance.new("UICorner", AZY["114"]);
-AZY["115"]["CornerRadius"] = UDim.new(0, 5);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.PwnHub.LocalScript
-AZY["116"] = Instance.new("LocalScript", AZY["114"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.PwnHub.Info
-AZY["117"] = Instance.new("ImageLabel", AZY["114"]);
-AZY["117"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["117"]["Image"] = [[rbxassetid://12585776892]];
-AZY["117"]["Size"] = UDim2.new(0, 16, 0, 16);
-AZY["117"]["Name"] = [[Info]];
-AZY["117"]["BackgroundTransparency"] = 1;
-AZY["117"]["Position"] = UDim2.new(0.7910000085830688, 0, 0.09000000357627869, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Title
-AZY["118"] = Instance.new("TextLabel", AZY["ce"]);
-AZY["118"]["TextWrapped"] = true;
-AZY["118"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["118"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["118"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["118"]["TextSize"] = 12;
-AZY["118"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["118"]["Size"] = UDim2.new(0.5070894360542297, 0, 0.10439325869083405, 0);
-AZY["118"]["Text"] = [[Welcome in the Built-In Hacks section!]];
-AZY["118"]["Name"] = [[Title]];
-AZY["118"]["BackgroundTransparency"] = 1;
-AZY["118"]["Position"] = UDim2.new(0.033080533146858215, 0, 0.7568540573120117, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Title
-AZY["119"] = Instance.new("TextLabel", AZY["ce"]);
-AZY["119"]["TextWrapped"] = true;
-AZY["119"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-AZY["119"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["119"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["119"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["119"]["TextSize"] = 10;
-AZY["119"]["TextColor3"] = Color3.fromRGB(171, 171, 171);
-AZY["119"]["Size"] = UDim2.new(0.5410764813423157, 0, 0.10439325869083405, 0);
-AZY["119"]["Text"] = [[Here you can easily change your player gravity, speed and jump power. You can execute our built-in scripts too!]];
-AZY["119"]["Name"] = [[Title]];
-AZY["119"]["BackgroundTransparency"] = 1;
-AZY["119"]["Position"] = UDim2.new(0.030461372807621956, 0, 0.862415075302124, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor
-AZY["11a"] = Instance.new("Frame", AZY["2b"]);
-AZY["11a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["11a"]["BackgroundTransparency"] = 0.550000011920929;
-AZY["11a"]["Size"] = UDim2.new(0.831805408000946, 0, 0.7551097869873047, 0);
-AZY["11a"]["Position"] = UDim2.new(0.1409205049276352, 0, 0.20551720261573792, 0);
-AZY["11a"]["Visible"] = false;
-AZY["11a"]["Name"] = [[Executor]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.UICorner
-AZY["11b"] = Instance.new("UICorner", AZY["11a"]);
-AZY["11b"]["CornerRadius"] = UDim.new(0, 15);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Execute
-AZY["11c"] = Instance.new("TextButton", AZY["11a"]);
-AZY["11c"]["TextWrapped"] = true;
-AZY["11c"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["11c"]["TextSize"] = 18;
-AZY["11c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["11c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["11c"]["Size"] = UDim2.new(0.22599999606609344, 0, 0.13500000536441803, 0);
-AZY["11c"]["Name"] = [[Execute]];
-AZY["11c"]["Text"] = [[Execute]];
-AZY["11c"]["Position"] = UDim2.new(0.026000000536441803, 0, 0.8319999575614929, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Execute.UICorner
-AZY["11d"] = Instance.new("UICorner", AZY["11c"]);
-AZY["11d"]["CornerRadius"] = UDim.new(0, 9);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Execute.LocalScript
-AZY["11e"] = Instance.new("LocalScript", AZY["11c"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Clear
-AZY["11f"] = Instance.new("TextButton", AZY["11a"]);
-AZY["11f"]["TextWrapped"] = true;
-AZY["11f"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["11f"]["TextSize"] = 18;
-AZY["11f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["11f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["11f"]["Size"] = UDim2.new(0.22599999606609344, 0, 0.13500000536441803, 0);
-AZY["11f"]["Name"] = [[Clear]];
-AZY["11f"]["Text"] = [[Clear]];
-AZY["11f"]["Position"] = UDim2.new(0.2630000114440918, 0, 0.8320000171661377, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Clear.UICorner
-AZY["120"] = Instance.new("UICorner", AZY["11f"]);
-AZY["120"]["CornerRadius"] = UDim.new(0, 9);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Clear.LocalScript
-AZY["121"] = Instance.new("LocalScript", AZY["11f"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Copy
-AZY["122"] = Instance.new("TextButton", AZY["11a"]);
-AZY["122"]["TextWrapped"] = true;
-AZY["122"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["122"]["TextSize"] = 18;
-AZY["122"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["122"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["122"]["Size"] = UDim2.new(0.22599999606609344, 0, 0.13500000536441803, 0);
-AZY["122"]["Name"] = [[Copy]];
-AZY["122"]["Text"] = [[Copy]];
-AZY["122"]["Position"] = UDim2.new(0.5009999871253967, 0, 0.8320000171661377, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Copy.UICorner
-AZY["123"] = Instance.new("UICorner", AZY["122"]);
-AZY["123"]["CornerRadius"] = UDim.new(0, 9);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Copy.LocalScript
-AZY["124"] = Instance.new("LocalScript", AZY["122"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Paste
-AZY["125"] = Instance.new("TextButton", AZY["11a"]);
-AZY["125"]["TextWrapped"] = true;
-AZY["125"]["TextScaled"] = true;
-AZY["125"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["125"]["TextSize"] = 18;
-AZY["125"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["125"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["125"]["Size"] = UDim2.new(0.22599999606609344, 0, 0.13500000536441803, 0);
-AZY["125"]["Name"] = [[Paste]];
-AZY["125"]["Text"] = [[Paste]];
-AZY["125"]["Position"] = UDim2.new(0.7360000014305115, 0, 0.8320000171661377, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Paste.UICorner
-AZY["126"] = Instance.new("UICorner", AZY["125"]);
-AZY["126"]["CornerRadius"] = UDim.new(0, 9);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Paste.LocalScript
-AZY["127"] = Instance.new("LocalScript", AZY["125"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Paste.UITextSizeConstraint
-AZY["128"] = Instance.new("UITextSizeConstraint", AZY["125"]);
-AZY["128"]["MaxTextSize"] = 18;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar
-AZY["129"] = Instance.new("Frame", AZY["11a"]);
-AZY["129"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["129"]["BackgroundTransparency"] = 1;
-AZY["129"]["Size"] = UDim2.new(0.9533820152282715, 0, 0.7485234141349792, 0);
-AZY["129"]["Position"] = UDim2.new(0.026000019162893295, 0, 0.04687291383743286, 0);
-AZY["129"]["Name"] = [[TextboxBar]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript
-AZY["12a"] = Instance.new("LocalScript", AZY["129"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor
-AZY["12b"] = Instance.new("ModuleScript", AZY["12a"]);
-AZY["12b"]["Name"] = [[ScriptEditor]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Syntax
-AZY["12c"] = Instance.new("ModuleScript", AZY["12b"]);
-AZY["12c"]["Name"] = [[Syntax]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Theme
-AZY["12d"] = Instance.new("ModuleScript", AZY["12b"]);
-AZY["12d"]["Name"] = [[Theme]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.GetLines
-AZY["12e"] = Instance.new("ModuleScript", AZY["12b"]);
-AZY["12e"]["Name"] = [[GetLines]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.FakeEditor
-AZY["12f"] = Instance.new("ModuleScript", AZY["12b"]);
-AZY["12f"]["Name"] = [[FakeEditor]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.GetLine
-AZY["130"] = Instance.new("ModuleScript", AZY["12b"]);
-AZY["130"]["Name"] = [[GetLine]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.TweenLibrary
-AZY["131"] = Instance.new("ModuleScript", AZY["12b"]);
-AZY["131"]["Name"] = [[TweenLibrary]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.GetWord
-AZY["132"] = Instance.new("ModuleScript", AZY["12b"]);
-AZY["132"]["Name"] = [[GetWord]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Lexer
-AZY["133"] = Instance.new("ModuleScript", AZY["12b"]);
-AZY["133"]["Name"] = [[Lexer]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Suggestions
-AZY["134"] = Instance.new("ModuleScript", AZY["12b"]);
-AZY["134"]["Name"] = [[Suggestions]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Words
-AZY["135"] = Instance.new("ModuleScript", AZY["12b"]);
-AZY["135"]["Name"] = [[Words]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor
-AZY["136"] = Instance.new("Frame", AZY["12b"]);
-AZY["136"]["BorderSizePixel"] = 0;
-AZY["136"]["BackgroundColor3"] = Color3.fromRGB(23, 27, 23);
-AZY["136"]["BackgroundTransparency"] = 0.4000000059604645;
-AZY["136"]["Size"] = UDim2.new(1, 0, 1, 0);
-AZY["136"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-AZY["136"]["Name"] = [[Editor]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll
-AZY["137"] = Instance.new("ScrollingFrame", AZY["136"]);
-AZY["137"]["Active"] = true;
-AZY["137"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
-AZY["137"]["ElasticBehavior"] = Enum.ElasticBehavior.Always;
-AZY["137"]["TopImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
-AZY["137"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["137"]["AutomaticCanvasSize"] = Enum.AutomaticSize.XY;
-AZY["137"]["BackgroundTransparency"] = 0.9990000128746033;
-AZY["137"]["Size"] = UDim2.new(1, 0, 1, 0);
-AZY["137"]["ScrollBarImageColor3"] = Color3.fromRGB(64, 64, 64);
-AZY["137"]["BorderColor3"] = Color3.fromRGB(53, 53, 53);
-AZY["137"]["Name"] = [[Scroll]];
-AZY["137"]["BottomImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Source
-AZY["138"] = Instance.new("TextBox", AZY["137"]);
-AZY["138"]["TextSize"] = 17;
-AZY["138"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["138"]["TextStrokeColor3"] = Color3.fromRGB(41, 41, 41);
-AZY["138"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-AZY["138"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["138"]["TextColor3"] = Color3.fromRGB(239, 239, 239);
-AZY["138"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["138"]["MultiLine"] = true;
-AZY["138"]["BackgroundTransparency"] = 0.9990000128746033;
-AZY["138"]["Size"] = UDim2.new(1, -44, 1, -5);
-AZY["138"]["Text"] = [[]];
-AZY["138"]["Position"] = UDim2.new(0, 44, 0, 5);
-AZY["138"]["AutomaticSize"] = Enum.AutomaticSize.XY;
-AZY["138"]["Name"] = [[Source]];
-AZY["138"]["ClearTextOnFocus"] = false;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Source.LineHighlight
-AZY["139"] = Instance.new("Frame", AZY["138"]);
-AZY["139"]["BorderSizePixel"] = 0;
-AZY["139"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["139"]["AnchorPoint"] = Vector2.new(0, 0.5);
-AZY["139"]["BackgroundTransparency"] = 0.9399999976158142;
-AZY["139"]["Size"] = UDim2.new(1, 0, 0, 17);
-AZY["139"]["Position"] = UDim2.new(0, -10, 0, 9);
-AZY["139"]["Name"] = [[LineHighlight]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Source.Hidden
-AZY["13a"] = Instance.new("TextLabel", AZY["138"]);
-AZY["13a"]["BorderSizePixel"] = 0;
-AZY["13a"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-AZY["13a"]["BackgroundColor3"] = Color3.fromRGB(27, 32, 27);
-AZY["13a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["13a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["13a"]["TextSize"] = 22;
-AZY["13a"]["TextColor3"] = Color3.fromRGB(249, 66, 164);
-AZY["13a"]["Size"] = UDim2.new(1, 0, 1, 0);
-AZY["13a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["13a"]["Text"] = [[*script hidden*]];
-AZY["13a"]["Name"] = [[Hidden]];
-AZY["13a"]["Visible"] = false;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Source.Suggestion
-AZY["13b"] = Instance.new("TextButton", AZY["138"]);
-AZY["13b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["13b"]["BackgroundColor3"] = Color3.fromRGB(40, 40, 40);
-AZY["13b"]["TextSize"] = 17;
-AZY["13b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["13b"]["TextColor3"] = Color3.fromRGB(244, 244, 244);
-AZY["13b"]["Visible"] = false;
-AZY["13b"]["Size"] = UDim2.new(0, 130, 0, 26);
-AZY["13b"]["Name"] = [[Suggestion]];
-AZY["13b"]["BorderColor3"] = Color3.fromRGB(60, 60, 60);
-AZY["13b"]["Text"] = [[keyword]];
-AZY["13b"]["AutomaticSize"] = Enum.AutomaticSize.X;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Source.Suggestion.TextPadding
-AZY["13c"] = Instance.new("UIPadding", AZY["13b"]);
-AZY["13c"]["Name"] = [[TextPadding]];
-AZY["13c"]["PaddingLeft"] = UDim.new(0, 30);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Source.Suggestion.Icon
-AZY["13d"] = Instance.new("ImageLabel", AZY["13b"]);
-AZY["13d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["13d"]["Image"] = [[rbxassetid://413365069]];
-AZY["13d"]["Size"] = UDim2.new(0, 26, 0, 26);
-AZY["13d"]["Name"] = [[Icon]];
-AZY["13d"]["BackgroundTransparency"] = 1;
-AZY["13d"]["Position"] = UDim2.new(0, -30, 0, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Source.Suggestion.Icon.UIAspectRatioConstraint
-AZY["13e"] = Instance.new("UIAspectRatioConstraint", AZY["13d"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Left
-AZY["13f"] = Instance.new("Frame", AZY["137"]);
-AZY["13f"]["BorderSizePixel"] = 0;
-AZY["13f"]["BackgroundColor3"] = Color3.fromRGB(30, 30, 30);
-AZY["13f"]["BackgroundTransparency"] = 0.4000000059604645;
-AZY["13f"]["Size"] = UDim2.new(0, 27, 1, 0);
-AZY["13f"]["AutomaticSize"] = Enum.AutomaticSize.Y;
-AZY["13f"]["Name"] = [[Left]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Left.Right
-AZY["140"] = Instance.new("Frame", AZY["13f"]);
-AZY["140"]["BorderSizePixel"] = 0;
-AZY["140"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
-AZY["140"]["BackgroundTransparency"] = 0.4000000059604645;
-AZY["140"]["Size"] = UDim2.new(0, 8, 1, 0);
-AZY["140"]["Position"] = UDim2.new(1, 0, 0, 0);
-AZY["140"]["AutomaticSize"] = Enum.AutomaticSize.Y;
-AZY["140"]["Name"] = [[Right]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Left.Right.BottomFade
-AZY["141"] = Instance.new("UIGradient", AZY["140"]);
-AZY["141"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.931, 0),NumberSequenceKeypoint.new(1.000, 1)};
-AZY["141"]["Name"] = [[BottomFade]];
-AZY["141"]["Rotation"] = 90;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Left.Right.Shadow
-AZY["142"] = Instance.new("Frame", AZY["140"]);
-AZY["142"]["BorderSizePixel"] = 0;
-AZY["142"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["142"]["BackgroundTransparency"] = 0.800000011920929;
-AZY["142"]["Size"] = UDim2.new(0, 5, 1, 0);
-AZY["142"]["Position"] = UDim2.new(1, 0, 0, 0);
-AZY["142"]["AutomaticSize"] = Enum.AutomaticSize.Y;
-AZY["142"]["Name"] = [[Shadow]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Left.Right.Shadow.UIGradient
-AZY["143"] = Instance.new("UIGradient", AZY["142"]);
-AZY["143"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(1.000, 1)};
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Left.Lines
-AZY["144"] = Instance.new("TextLabel", AZY["13f"]);
-AZY["144"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-AZY["144"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["144"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-AZY["144"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-AZY["144"]["TextSize"] = 17;
-AZY["144"]["TextColor3"] = Color3.fromRGB(242, 242, 242);
-AZY["144"]["AutomaticSize"] = Enum.AutomaticSize.X;
-AZY["144"]["Size"] = UDim2.new(1, -5, 1, -7);
-AZY["144"]["Text"] = [[1]];
-AZY["144"]["Name"] = [[Lines]];
-AZY["144"]["BackgroundTransparency"] = 0.9990000128746033;
-AZY["144"]["Position"] = UDim2.new(0, 5, 0, 7);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Left.Lines.BottomFade
-AZY["145"] = Instance.new("UIGradient", AZY["144"]);
-AZY["145"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.931, 0),NumberSequenceKeypoint.new(1.000, 1)};
-AZY["145"]["Name"] = [[BottomFade]];
-AZY["145"]["Rotation"] = 90;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Left.AdaptSize
-AZY["146"] = Instance.new("LocalScript", AZY["13f"]);
-AZY["146"]["Name"] = [[AdaptSize]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Left.BottomFade
-AZY["147"] = Instance.new("UIGradient", AZY["13f"]);
-AZY["147"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.931, 0),NumberSequenceKeypoint.new(1.000, 1)};
-AZY["147"]["Name"] = [[BottomFade]];
-AZY["147"]["Rotation"] = 90;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.TextFixer
-AZY["148"] = Instance.new("ModuleScript", AZY["12b"]);
-AZY["148"]["Name"] = [[TextFixer]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.ResetTextBox
-AZY["149"] = Instance.new("TextButton", AZY["11a"]);
-AZY["149"]["TextWrapped"] = true;
-AZY["149"]["TextTransparency"] = 0.699999988079071;
-AZY["149"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["149"]["TextSize"] = 18;
-AZY["149"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-AZY["149"]["TextColor3"] = Color3.fromRGB(25, 25, 25);
-AZY["149"]["Size"] = UDim2.new(0.04265729710459709, 0, 0.054356444627046585, 0);
-AZY["149"]["Name"] = [[ResetTextBox]];
-AZY["149"]["Text"] = [[*]];
-AZY["149"]["Position"] = UDim2.new(0.005046568810939789, 0, -0.011172410100698471, 0);
-AZY["149"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.ResetTextBox.UICorner
-AZY["14a"] = Instance.new("UICorner", AZY["149"]);
-AZY["14a"]["CornerRadius"] = UDim.new(0, 9);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.ResetTextBox.LocalScript
-AZY["14b"] = Instance.new("LocalScript", AZY["149"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar
-AZY["14c"] = Instance.new("Frame", AZY["19"]);
-AZY["14c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-AZY["14c"]["BackgroundTransparency"] = 0.550000011920929;
-AZY["14c"]["Size"] = UDim2.new(0.09215505421161652, 0, 0.7551097273826599, 0);
-AZY["14c"]["Position"] = UDim2.new(0.02942327782511711, 0, 0.2055172324180603, 0);
-AZY["14c"]["Name"] = [[TabBar]];
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.UICorner
-AZY["14d"] = Instance.new("UICorner", AZY["14c"]);
-AZY["14d"]["CornerRadius"] = UDim.new(0, 12);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.Changelogs
-AZY["14e"] = Instance.new("ImageButton", AZY["14c"]);
-AZY["14e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["14e"]["Image"] = [[rbxassetid://12582706243]];
-AZY["14e"]["Size"] = UDim2.new(0.7092337608337402, 0, 0.1439468413591385, 0);
-AZY["14e"]["Name"] = [[Changelogs]];
-AZY["14e"]["Position"] = UDim2.new(0.14184674620628357, 0, 0.04798227921128273, 0);
-AZY["14e"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.Changelogs.Frame
-AZY["14f"] = Instance.new("Frame", AZY["14e"]);
-AZY["14f"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["14f"]["Size"] = UDim2.new(0, 3, 0, 25);
-AZY["14f"]["Position"] = UDim2.new(-0.20000001788139343, 0, 0.06666667014360428, 0);
-AZY["14f"]["Visible"] = false;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.Changelogs.Frame.UICorner
-AZY["150"] = Instance.new("UICorner", AZY["14f"]);
-AZY["150"]["CornerRadius"] = UDim.new(1, 1);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.Changelogs.LocalScript
-AZY["151"] = Instance.new("LocalScript", AZY["14e"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.Home
-AZY["152"] = Instance.new("ImageButton", AZY["14c"]);
-AZY["152"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["152"]["Image"] = [[rbxassetid://12582723040]];
-AZY["152"]["Size"] = UDim2.new(0.9692861437797546, 0, 0.19672733545303345, 0);
-AZY["152"]["Name"] = [[Home]];
-AZY["152"]["Position"] = UDim2.new(0, 0, 0.30228832364082336, 0);
-AZY["152"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.Home.Frame
-AZY["153"] = Instance.new("Frame", AZY["152"]);
-AZY["153"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["153"]["Size"] = UDim2.new(0, 3, 0, 25);
-AZY["153"]["Position"] = UDim2.new(0.004999999888241291, 0, 0.1889999955892563, 0);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.Home.Frame.UICorner
-AZY["154"] = Instance.new("UICorner", AZY["153"]);
-AZY["154"]["CornerRadius"] = UDim.new(1, 1);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.Home.LocalScript
-AZY["155"] = Instance.new("LocalScript", AZY["152"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.BuiltInHax
-AZY["156"] = Instance.new("ImageButton", AZY["14c"]);
-AZY["156"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["156"]["Image"] = [[rbxassetid://12582724778]];
-AZY["156"]["Size"] = UDim2.new(0.9692861437797546, 0, 0.19672733545303345, 0);
-AZY["156"]["Name"] = [[BuiltInHax]];
-AZY["156"]["Position"] = UDim2.new(0, 0, 0.537401556968689, 0);
-AZY["156"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.BuiltInHax.Frame
-AZY["157"] = Instance.new("Frame", AZY["156"]);
-AZY["157"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["157"]["Size"] = UDim2.new(0, 3, 0, 25);
-AZY["157"]["Position"] = UDim2.new(0, 0, 0.18700000643730164, 0);
-AZY["157"]["Visible"] = false;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.BuiltInHax.Frame.UICorner
-AZY["158"] = Instance.new("UICorner", AZY["157"]);
-AZY["158"]["CornerRadius"] = UDim.new(1, 1);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.BuiltInHax.LocalScript
-AZY["159"] = Instance.new("LocalScript", AZY["156"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.Executor
-AZY["15a"] = Instance.new("ImageButton", AZY["14c"]);
-AZY["15a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["15a"]["Image"] = [[rbxassetid://12582726730]];
-AZY["15a"]["Size"] = UDim2.new(0.8274393677711487, 0, 0.1679379791021347, 0);
-AZY["15a"]["Name"] = [[Executor]];
-AZY["15a"]["Position"] = UDim2.new(0.07092338800430298, 0, 0.7821111679077148, 0);
-AZY["15a"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.Executor.Frame
-AZY["15b"] = Instance.new("Frame", AZY["15a"]);
-AZY["15b"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-AZY["15b"]["Size"] = UDim2.new(0, 3, 0, 25);
-AZY["15b"]["Position"] = UDim2.new(-0.10000000149011612, 1, 0.06700000166893005, 0);
-AZY["15b"]["Visible"] = false;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.Executor.Frame.UICorner
-AZY["15c"] = Instance.new("UICorner", AZY["15b"]);
-AZY["15c"]["CornerRadius"] = UDim.new(1, 1);
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.Executor.LocalScript
-AZY["15d"] = Instance.new("LocalScript", AZY["15a"]);
-
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.UIAspectRatioConstraint
-AZY["15e"] = Instance.new("UIAspectRatioConstraint", AZY["19"]);
-AZY["15e"]["AspectRatio"] = 1.66304349899292;
-
--- StarterGui.ArceusXV3.MainUI.MainFrame.LocalScript
-AZY["15f"] = Instance.new("LocalScript", AZY["19"]);
-
-
--- StarterGui.ArceusXV3.MainUI.FloatingUI
-AZY["160"] = Instance.new("ImageButton", AZY["18"]);
-AZY["160"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-AZY["160"]["Image"] = [[rbxassetid://12586647828]];
-AZY["160"]["Size"] = UDim2.new(0, 65, 0, 65);
-AZY["160"]["Name"] = [[FloatingUI]];
-AZY["160"]["Visible"] = false;
-AZY["160"]["Position"] = UDim2.new(0.47328877449035645, 0, 0.44602859020233154, 0);
-AZY["160"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ArceusXV3.MainUI.FloatingUI.UICorner
-AZY["161"] = Instance.new("UICorner", AZY["160"]);
-
-
--- StarterGui.ArceusXV3.MainUI.FloatingUI.LocalScript
-AZY["162"] = Instance.new("LocalScript", AZY["160"]);
-
-
--- StarterGui.ArceusXV3.MainUI.FloatingUI.UIAspectRatioConstraint
-AZY["163"] = Instance.new("UIAspectRatioConstraint", AZY["160"]);
-
-
--- Require AZY wrapper
-local AZY_REQUIRE = require;
-local AZY_MODULES = {};
+-- Synapse X Remake made by @chillz_azy (yt)
+
+local synversion = "2.23.11"
+
+-- this shit function makes my script fucked
+--[[pcall(function()
+    local HttpService = game:GetService("HttpService")
+    local response = game:HttpGet("https://api.whatexploitsare.online/status")
+    local data = HttpService:JSONDecode(response)
+
+    for _, item in pairs(data) do
+        if item.Synapse then
+            synversion = item.Synapse.exploit_version
+	end
+    end
+end)]]
+
+-- Instances: 150 | Scripts: 8 | Modules: 4
+local G2L = {};
+-- StarterGui.SynapseX
+G2L["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"));
+G2L["1"]["Name"] = [[SynapseX]];
+G2L["1"]["ResetOnSpawn"] = false;
+
+-- StarterGui.SynapseX.FloatingIcon
+G2L["2"] = Instance.new("ImageButton", G2L["1"]);
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["2"]["Size"] = UDim2.new(0, 36, 0, 36);
+G2L["2"]["Name"] = [[FloatingIcon]];
+G2L["2"].Visible = false
+G2L["2"]["Position"] = UDim2.new(0.7019911956787109, 0, 0.7092568278312683, 0);
+
+-- StarterGui.SynapseX.FloatingIcon. 
+G2L["3"] = Instance.new("ImageLabel", G2L["2"]);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3"]["Image"] = [[http://www.roblox.com/asset/?id=9483813933]];
+G2L["3"]["Size"] = UDim2.new(0, 23, 0, 26);
+G2L["3"]["Name"] = [[ ]];
+G2L["3"]["BackgroundTransparency"] = 1;
+G2L["3"]["Position"] = UDim2.new(0.16640418767929077, 0, 0.13268542289733887, 0);
+
+-- StarterGui.SynapseX.FloatingIcon.UICorner
+G2L["4"] = Instance.new("UICorner", G2L["2"]);
+G2L["4"]["CornerRadius"] = UDim.new(1, 8);
+
+-- StarterGui.SynapseX.FloatingIcon.UIGradient
+G2L["5"] = Instance.new("UIGradient", G2L["2"]);
+G2L["5"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(0.720, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+
+-- StarterGui.SynapseX.Main
+G2L["6"] = Instance.new("Frame", G2L["1"]);
+G2L["6"]["Active"] = true;
+G2L["6"]["ZIndex"] = 4;
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71);
+G2L["6"]["BackgroundTransparency"] = 1;
+G2L["6"]["Size"] = UDim2.new(0, 646, 0, 283);
+G2L["6"]["Position"] = UDim2.new(0, 19, 0, 23);
+G2L["6"]["Name"] = [[Main]];
+
+-- StarterGui.SynapseX.Main.Icon
+G2L["7"] = Instance.new("ImageLabel", G2L["6"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["Image"] = [[http://www.roblox.com/asset/?id=9483813933]];
+G2L["7"]["Size"] = UDim2.new(0, 23, 0, 26);
+G2L["7"]["Name"] = [[Icon]];
+G2L["7"]["BackgroundTransparency"] = 1;
+G2L["7"]["Position"] = UDim2.new(0, 5, 0, 0);
+
+-- StarterGui.SynapseX.Main.Background
+G2L["8"] = Instance.new("ImageLabel", G2L["6"]);
+G2L["8"]["ZIndex"] = 0;
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["ScaleType"] = Enum.ScaleType.Tile;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(52, 52, 52);
+G2L["8"]["TileSize"] = UDim2.new(0, 25, 0, 25);
+G2L["8"]["Size"] = UDim2.new(0, 647, 0, 283);
+G2L["8"]["Name"] = [[Background]];
+
+-- StarterGui.SynapseX.Main.Panel
+G2L["9"] = Instance.new("Frame", G2L["6"]);
+G2L["9"]["ZIndex"] = 0;
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["9"]["Size"] = UDim2.new(0, 647, 0, 27);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["Name"] = [[Panel]];
+
+-- StarterGui.SynapseX.Main.MainFunc
+G2L["a"] = Instance.new("Frame", G2L["6"]);
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["BackgroundTransparency"] = 1;
+G2L["a"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["a"]["Name"] = [[MainFunc]];
+
+-- StarterGui.SynapseX.Main.MainFunc.Needs
+G2L["b"] = Instance.new("Folder", G2L["a"]);
+G2L["b"]["Name"] = [[Needs]];
+
+-- StarterGui.SynapseX.Main.MainFunc.Needs.Tab
+G2L["c"] = Instance.new("TextButton", G2L["b"]);
+G2L["c"]["ZIndex"] = 0;
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(101, 101, 101);
+G2L["c"]["TextSize"] = 14;
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["Visible"] = false;
+G2L["c"]["Size"] = UDim2.new(0, 56, 0, 16);
+G2L["c"]["Name"] = [[Tab]];
+G2L["c"]["Text"] = [[  Script 1]];
+G2L["c"]["Position"] = UDim2.new(-0.0003878306597471237, 0, -0.011710520833730698, 0);
+G2L["c"]["BackgroundTransparency"] = 0.10000000149011612;
+
+-- StarterGui.SynapseX.Main.MainFunc.Needs.Tab.Remove
+G2L["d"] = Instance.new("TextButton", G2L["c"]);
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(101, 101, 101);
+G2L["d"]["TextSize"] = 15;
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["Size"] = UDim2.new(0, 10, 0, 10);
+G2L["d"]["Name"] = [[Remove]];
+G2L["d"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["d"]["Text"] = [[x]];
+G2L["d"]["Position"] = UDim2.new(0, 46, 0, 2);
+G2L["d"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.Main.MainFunc.Needs.ScriptHubButton
+G2L["e"] = Instance.new("TextButton", G2L["b"]);
+G2L["e"]["ZIndex"] = 3;
+G2L["e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["e"]["TextSize"] = 14;
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["Visible"] = false;
+G2L["e"]["Size"] = UDim2.new(0, 96, 0, 15);
+G2L["e"]["Name"] = [[ScriptHubButton]];
+G2L["e"]["BorderColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["e"]["Text"] = [[test.lua]];
+G2L["e"]["AutomaticSize"] = Enum.AutomaticSize.X;
+G2L["e"]["Position"] = UDim2.new(0.039603959769010544, 0, 0, 0);
+
+-- StarterGui.SynapseX.Main.MainFunc.Needs.Textbox
+G2L["f"] = Instance.new("ScrollingFrame", G2L["b"]);
+G2L["f"]["Active"] = true;
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+G2L["f"]["AutomaticCanvasSize"] = Enum.AutomaticSize.XY;
+G2L["f"]["Size"] = UDim2.new(0, 533, 0, 197);
+G2L["f"]["Position"] = UDim2.new(0.05999999865889549, 0, 0.48061829805374146, 0);
+G2L["f"]["Visible"] = false;
+G2L["f"]["Name"] = [[Textbox]];
+
+-- StarterGui.SynapseX.Main.MainFunc.Needs.Textbox.Frame
+G2L["10"] = Instance.new("Frame", G2L["f"]);
+G2L["10"]["Active"] = true;
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+G2L["10"]["Size"] = UDim2.new(0, 533, 0, 200);
+G2L["10"]["Selectable"] = true;
+G2L["10"]["ClipsDescendants"] = true;
+G2L["10"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+G2L["10"]["SelectionGroup"] = true;
+
+-- StarterGui.SynapseX.Main.MainFunc.Needs.Textbox.Frame.Textbox
+G2L["11"] = Instance.new("TextBox", G2L["10"]);
+G2L["11"]["ZIndex"] = 4;
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["TextSize"] = 14;
+G2L["11"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["11"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+G2L["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["11"]["MultiLine"] = true;
+G2L["11"]["Size"] = UDim2.new(0, 486, 0, 194);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["Text"] = [[]];
+G2L["11"]["Position"] = UDim2.new(0, 35, 0, 0);
+G2L["11"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+G2L["11"]["Name"] = [[Textbox]];
+G2L["11"]["ClearTextOnFocus"] = false;
+
+-- StarterGui.SynapseX.Main.MainFunc.Needs.Textbox.Frame.Linebar
+G2L["12"] = Instance.new("Frame", G2L["10"]);
+G2L["12"]["ZIndex"] = 2;
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
+G2L["12"]["Size"] = UDim2.new(0, 32, 1, 0);
+G2L["12"]["Name"] = [[Linebar]];
+
+-- StarterGui.SynapseX.Main.MainFunc.Needs.Textbox.Frame.Linebar.LineText
+G2L["13"] = Instance.new("TextLabel", G2L["12"]);
+G2L["13"]["ZIndex"] = 5;
+G2L["13"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["TextXAlignment"] = Enum.TextXAlignment.Right;
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["13"]["TextSize"] = 14;
+G2L["13"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["Size"] = UDim2.new(0, 24, 0, 197);
+G2L["13"]["Text"] = [[1]];
+G2L["13"]["Name"] = [[LineText]];
+G2L["13"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.Main.MainFunc.Needs.Textbox.Frame.Highlighted
+G2L["14"] = Instance.new("Frame", G2L["10"]);
+G2L["14"]["ZIndex"] = 5;
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(101, 101, 101);
+G2L["14"]["BackgroundTransparency"] = 0.699999988079071;
+G2L["14"]["Size"] = UDim2.new(1.0958691835403442, 0, 0, 13);
+G2L["14"]["Position"] = UDim2.new(0, -44, 0, 0);
+G2L["14"]["AutomaticSize"] = Enum.AutomaticSize.X;
+G2L["14"]["Name"] = [[Highlighted]];
+
+-- StarterGui.SynapseX.Main.MainFunc.Needs.Textbox.Frame.Highlighted.LineText
+G2L["15"] = Instance.new("TextLabel", G2L["14"]);
+G2L["15"]["ZIndex"] = 5;
+G2L["15"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["TextXAlignment"] = Enum.TextXAlignment.Right;
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["TextTransparency"] = 1;
+G2L["15"]["TextSize"] = 14;
+G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["Size"] = UDim2.new(0, 24, 0, 197);
+G2L["15"]["Text"] = [[1]];
+G2L["15"]["Name"] = [[LineText]];
+G2L["15"]["Visible"] = false;
+G2L["15"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.Main.MainFunc.Textboxes
+G2L["16"] = Instance.new("Folder", G2L["a"]);
+G2L["16"]["Name"] = [[Textboxes]];
+
+-- StarterGui.SynapseX.Main.MainFunc.ScriptHub
+G2L["17"] = Instance.new("ScrollingFrame", G2L["a"]);
+G2L["17"]["Active"] = true;
+G2L["17"]["ZIndex"] = 2;
+G2L["17"]["BorderSizePixel"] = 0;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["17"]["AutomaticCanvasSize"] = Enum.AutomaticSize.XY;
+G2L["17"]["Size"] = UDim2.new(0, 101, 0, 215);
+G2L["17"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17"]["Position"] = UDim2.new(5.420000076293945, 0, 0.30000001192092896, 0);
+G2L["17"]["Name"] = [[ScriptHub]];
+
+-- StarterGui.SynapseX.Main.MainFunc.ScriptHub.UIListLayout
+G2L["18"] = Instance.new("UIListLayout", G2L["17"]);
+G2L["18"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+-- StarterGui.SynapseX.Main.MainFunc.ScriptHub.UIPadding
+G2L["19"] = Instance.new("UIPadding", G2L["17"]);
+G2L["19"]["PaddingLeft"] = UDim.new(0.05000000074505806, 0);
+
+-- StarterGui.SynapseX.Main.Maximize
+G2L["1a"] = Instance.new("ImageButton", G2L["6"]);
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["1a"]["Size"] = UDim2.new(0, 15, 0, 15);
+G2L["1a"]["Name"] = [[Maximize]];
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["1a"]["Position"] = UDim2.new(0, 606, 0, 2);
+
+-- StarterGui.SynapseX.Main.Maximize.NameText
+G2L["1b"] = Instance.new("TextLabel", G2L["1a"]);
+G2L["1b"]["TextWrapped"] = true;
+G2L["1b"]["ZIndex"] = 2;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(0, 55, 81);
+G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1b"]["TextSize"] = 12;
+G2L["1b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1b"]["Size"] = UDim2.new(0, 15, 0, 15);
+G2L["1b"]["Active"] = true;
+G2L["1b"]["Text"] = [[M]];
+G2L["1b"]["Name"] = [[NameText]];
+G2L["1b"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.Main.Maximize.ImageButton
+G2L["1c"] = Instance.new("ImageButton", G2L["1a"]);
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(0, 55, 81);
+G2L["1c"]["Size"] = UDim2.new(0, 15, 0, 15);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["1c"]["Visible"] = false;
+G2L["1c"]["BackgroundTransparency"] = 0.6000000238418579;
+
+-- StarterGui.SynapseX.Main.Maximize.UICorner
+G2L["1d"] = Instance.new("UICorner", G2L["1a"]);
+G2L["1d"]["CornerRadius"] = UDim.new(0, 0);
+
+-- StarterGui.SynapseX.Main.TitleSynapse
+G2L["1e"] = Instance.new("TextLabel", G2L["6"]);
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1e"]["TextSize"] = 15;
+G2L["1e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["Size"] = UDim2.new(0, 646, 0, 27);
+G2L["1e"]["Text"] = "Synapse X - "..synversion;
+G2L["1e"]["Name"] = [[TitleSynapse]];
+G2L["1e"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.Main.ScriptHub
+G2L["1f"] = Instance.new("ImageButton", G2L["6"]);
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["1f"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["1f"]["Name"] = [[ScriptHub]];
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["1f"]["Position"] = UDim2.new(0, 560, 0, 250);
+
+-- StarterGui.SynapseX.Main.ScriptHub.NameText
+G2L["20"] = Instance.new("TextLabel", G2L["1f"]);
+G2L["20"]["TextWrapped"] = true;
+G2L["20"]["ZIndex"] = 2;
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["20"]["TextSize"] = 14;
+G2L["20"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["Text"] = [[Script Hub]];
+G2L["20"]["Name"] = [[NameText]];
+G2L["20"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.Main.ScriptHub.ImageButton
+G2L["21"] = Instance.new("ImageButton", G2L["1f"]);
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(0, 55, 81);
+G2L["21"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["21"]["Visible"] = false;
+G2L["21"]["BackgroundTransparency"] = 0.6000000238418579;
+
+-- StarterGui.SynapseX.Main.ScriptHub.UICorner
+G2L["22"] = Instance.new("UICorner", G2L["1f"]);
+G2L["22"]["CornerRadius"] = UDim.new(0, 0);
+
+-- StarterGui.SynapseX.Main.Options
+G2L["23"] = Instance.new("ImageButton", G2L["6"]);
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["23"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["23"]["Name"] = [[Options]];
+G2L["23"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["23"]["Position"] = UDim2.new(0, 352, 0, 250);
+
+-- StarterGui.SynapseX.Main.Options.NameText
+G2L["24"] = Instance.new("TextLabel", G2L["23"]);
+G2L["24"]["TextWrapped"] = true;
+G2L["24"]["ZIndex"] = 2;
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["24"]["TextSize"] = 14;
+G2L["24"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["Text"] = [[Options]];
+G2L["24"]["Name"] = [[NameText]];
+G2L["24"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.Main.Options.ImageButton
+G2L["25"] = Instance.new("ImageButton", G2L["23"]);
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(0, 55, 81);
+G2L["25"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["25"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["25"]["Visible"] = false;
+G2L["25"]["BackgroundTransparency"] = 0.6000000238418579;
+
+-- StarterGui.SynapseX.Main.Options.UICorner
+G2L["26"] = Instance.new("UICorner", G2L["23"]);
+G2L["26"]["CornerRadius"] = UDim.new(0, 0);
+
+-- StarterGui.SynapseX.Main.Minimize
+G2L["27"] = Instance.new("ImageButton", G2L["6"]);
+G2L["27"]["BorderSizePixel"] = 0;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["27"]["Size"] = UDim2.new(0, 15, 0, 15);
+G2L["27"]["Name"] = [[Minimize]];
+G2L["27"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["27"]["Position"] = UDim2.new(0, 582, 0, 2);
+
+-- StarterGui.SynapseX.Main.Minimize.NameText
+G2L["28"] = Instance.new("TextLabel", G2L["27"]);
+G2L["28"]["TextWrapped"] = true;
+G2L["28"]["ZIndex"] = 2;
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(0, 55, 81);
+G2L["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["28"]["TextSize"] = 15;
+G2L["28"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["28"]["Size"] = UDim2.new(0, 15, 0, 15);
+G2L["28"]["Active"] = true;
+G2L["28"]["Text"] = [[_]];
+G2L["28"]["Name"] = [[NameText]];
+G2L["28"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.Main.Minimize.ImageButton
+G2L["29"] = Instance.new("ImageButton", G2L["27"]);
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(0, 55, 81);
+G2L["29"]["Size"] = UDim2.new(0, 15, 0, 15);
+G2L["29"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["29"]["Visible"] = false;
+G2L["29"]["BackgroundTransparency"] = 0.6000000238418579;
+
+-- StarterGui.SynapseX.Main.Minimize.UICorner
+G2L["2a"] = Instance.new("UICorner", G2L["27"]);
+G2L["2a"]["CornerRadius"] = UDim.new(0, 0);
+
+-- StarterGui.SynapseX.Main.Execute
+G2L["2b"] = Instance.new("ImageButton", G2L["6"]);
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["2b"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["2b"]["Name"] = [[Execute]];
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["2b"]["Position"] = UDim2.new(0, 6, 0, 250);
+
+-- StarterGui.SynapseX.Main.Execute.NameText
+G2L["2c"] = Instance.new("TextLabel", G2L["2b"]);
+G2L["2c"]["TextWrapped"] = true;
+G2L["2c"]["ZIndex"] = 2;
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2c"]["TextSize"] = 14;
+G2L["2c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["Text"] = [[Execute]];
+G2L["2c"]["Name"] = [[NameText]];
+G2L["2c"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.Main.Execute.ImageButton
+G2L["2d"] = Instance.new("ImageButton", G2L["2b"]);
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(0, 55, 81);
+G2L["2d"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["2d"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["2d"]["Visible"] = false;
+G2L["2d"]["BackgroundTransparency"] = 0.6000000238418579;
+
+-- StarterGui.SynapseX.Main.Execute.UICorner
+G2L["2e"] = Instance.new("UICorner", G2L["2b"]);
+G2L["2e"]["CornerRadius"] = UDim.new(0, 0);
+
+-- StarterGui.SynapseX.Main.SaveFile
+G2L["2f"] = Instance.new("ImageButton", G2L["6"]);
+G2L["2f"]["BorderSizePixel"] = 0;
+G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["2f"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["2f"]["Name"] = [[SaveFile]];
+G2L["2f"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["2f"]["Position"] = UDim2.new(0, 266, 0, 250);
+
+-- StarterGui.SynapseX.Main.SaveFile.NameText
+G2L["30"] = Instance.new("TextLabel", G2L["2f"]);
+G2L["30"]["TextWrapped"] = true;
+G2L["30"]["ZIndex"] = 2;
+G2L["30"]["BorderSizePixel"] = 0;
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["30"]["TextSize"] = 14;
+G2L["30"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["30"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["Text"] = [[Save File]];
+G2L["30"]["Name"] = [[NameText]];
+G2L["30"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.Main.SaveFile.ImageButton
+G2L["31"] = Instance.new("ImageButton", G2L["2f"]);
+G2L["31"]["BackgroundColor3"] = Color3.fromRGB(0, 55, 81);
+G2L["31"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["31"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["31"]["Visible"] = false;
+G2L["31"]["BackgroundTransparency"] = 0.6000000238418579;
+
+-- StarterGui.SynapseX.Main.SaveFile.UICorner
+G2L["32"] = Instance.new("UICorner", G2L["2f"]);
+G2L["32"]["CornerRadius"] = UDim.new(0, 0);
+
+-- StarterGui.SynapseX.Main.Close
+G2L["33"] = Instance.new("ImageButton", G2L["6"]);
+G2L["33"]["BorderSizePixel"] = 0;
+G2L["33"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["33"]["Size"] = UDim2.new(0, 15, 0, 15);
+G2L["33"]["Name"] = [[Close]];
+G2L["33"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["33"]["Position"] = UDim2.new(0, 627, 0, 2);
+
+-- StarterGui.SynapseX.Main.Close.NameText
+G2L["34"] = Instance.new("TextLabel", G2L["33"]);
+G2L["34"]["TextWrapped"] = true;
+G2L["34"]["ZIndex"] = 2;
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(0, 55, 81);
+G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["34"]["TextSize"] = 14;
+G2L["34"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["34"]["Size"] = UDim2.new(0, 15, 0, 15);
+G2L["34"]["Active"] = true;
+G2L["34"]["Text"] = [[x]];
+G2L["34"]["Name"] = [[NameText]];
+G2L["34"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.Main.Close.ImageButton
+G2L["35"] = Instance.new("ImageButton", G2L["33"]);
+G2L["35"]["BackgroundColor3"] = Color3.fromRGB(0, 55, 81);
+G2L["35"]["Size"] = UDim2.new(0, 15, 0, 15);
+G2L["35"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["35"]["Visible"] = false;
+G2L["35"]["BackgroundTransparency"] = 0.6000000238418579;
+
+-- StarterGui.SynapseX.Main.Close.UICorner
+G2L["36"] = Instance.new("UICorner", G2L["33"]);
+G2L["36"]["CornerRadius"] = UDim.new(0, 0);
+
+-- StarterGui.SynapseX.Main.Clear
+G2L["37"] = Instance.new("ImageButton", G2L["6"]);
+G2L["37"]["BorderSizePixel"] = 0;
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["37"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["37"]["Name"] = [[Clear]];
+G2L["37"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["37"]["Position"] = UDim2.new(0, 92, 0, 250);
+
+-- StarterGui.SynapseX.Main.Clear.NameText
+G2L["38"] = Instance.new("TextLabel", G2L["37"]);
+G2L["38"]["TextWrapped"] = true;
+G2L["38"]["ZIndex"] = 2;
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["38"]["TextSize"] = 14;
+G2L["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["38"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["Text"] = [[Clear]];
+G2L["38"]["Name"] = [[NameText]];
+G2L["38"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.Main.Clear.ImageButton
+G2L["39"] = Instance.new("ImageButton", G2L["37"]);
+G2L["39"]["BackgroundColor3"] = Color3.fromRGB(0, 55, 81);
+G2L["39"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["39"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["39"]["Visible"] = false;
+G2L["39"]["BackgroundTransparency"] = 0.6000000238418579;
+
+-- StarterGui.SynapseX.Main.Clear.UICorner
+G2L["3a"] = Instance.new("UICorner", G2L["37"]);
+G2L["3a"]["CornerRadius"] = UDim.new(0, 0);
+
+-- StarterGui.SynapseX.Main.Attach
+G2L["3b"] = Instance.new("ImageButton", G2L["6"]);
+G2L["3b"]["BorderSizePixel"] = 0;
+G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["3b"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["3b"]["Name"] = [[Attach]];
+G2L["3b"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["3b"]["Position"] = UDim2.new(0, 474, 0, 250);
+
+-- StarterGui.SynapseX.Main.Attach.NameText
+G2L["3c"] = Instance.new("TextLabel", G2L["3b"]);
+G2L["3c"]["TextWrapped"] = true;
+G2L["3c"]["ZIndex"] = 2;
+G2L["3c"]["BorderSizePixel"] = 0;
+G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["3c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3c"]["TextSize"] = 14;
+G2L["3c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3c"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["3c"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3c"]["Text"] = [[Attach]];
+G2L["3c"]["Name"] = [[NameText]];
+G2L["3c"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.Main.Attach.ImageButton
+G2L["3d"] = Instance.new("ImageButton", G2L["3b"]);
+G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(0, 55, 81);
+G2L["3d"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["3d"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["3d"]["Visible"] = false;
+G2L["3d"]["BackgroundTransparency"] = 0.6000000238418579;
+
+-- StarterGui.SynapseX.Main.Attach.UICorner
+G2L["3e"] = Instance.new("UICorner", G2L["3b"]);
+G2L["3e"]["CornerRadius"] = UDim.new(0, 0);
+
+-- StarterGui.SynapseX.Main.OpenFile
+G2L["3f"] = Instance.new("ImageButton", G2L["6"]);
+G2L["3f"]["BorderSizePixel"] = 0;
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["3f"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["3f"]["Name"] = [[OpenFile]];
+G2L["3f"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["3f"]["Position"] = UDim2.new(0, 179, 0, 250);
+
+-- StarterGui.SynapseX.Main.OpenFile.NameText
+G2L["40"] = Instance.new("TextLabel", G2L["3f"]);
+G2L["40"]["TextWrapped"] = true;
+G2L["40"]["ZIndex"] = 2;
+G2L["40"]["BorderSizePixel"] = 0;
+G2L["40"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["40"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["40"]["TextSize"] = 14;
+G2L["40"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["40"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["Text"] = [[Open File]];
+G2L["40"]["Name"] = [[NameText]];
+G2L["40"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.Main.OpenFile.ImageButton
+G2L["41"] = Instance.new("ImageButton", G2L["3f"]);
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(0, 55, 81);
+G2L["41"]["Size"] = UDim2.new(0, 82, 0, 27);
+G2L["41"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["41"]["Visible"] = false;
+G2L["41"]["BackgroundTransparency"] = 0.6000000238418579;
+
+-- StarterGui.SynapseX.Main.OpenFile.UICorner
+G2L["42"] = Instance.new("UICorner", G2L["3f"]);
+G2L["42"]["CornerRadius"] = UDim.new(0, 0);
+
+-- StarterGui.SynapseX.Main.ScriptTab
+G2L["43"] = Instance.new("ScrollingFrame", G2L["6"]);
+G2L["43"]["Active"] = true;
+G2L["43"]["ScrollingDirection"] = Enum.ScrollingDirection.X;
+G2L["43"]["SizeConstraint"] = Enum.SizeConstraint.RelativeYY;
+G2L["43"]["ZIndex"] = 6;
+G2L["43"]["BorderSizePixel"] = 0;
+G2L["43"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+G2L["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["43"]["VerticalScrollBarPosition"] = Enum.VerticalScrollBarPosition.Left;
+G2L["43"]["HorizontalScrollBarInset"] = Enum.ScrollBarInset.Always;
+G2L["43"]["AutomaticCanvasSize"] = Enum.AutomaticSize.X;
+G2L["43"]["BackgroundTransparency"] = 0.9990000128746033;
+G2L["43"]["Size"] = UDim2.new(0, 533, 0, 16);
+G2L["43"]["Selectable"] = false;
+G2L["43"]["ClipsDescendants"] = false;
+G2L["43"]["ScrollBarThickness"] = 3;
+G2L["43"]["Position"] = UDim2.new(0, 6, 0, 32);
+G2L["43"]["Name"] = [[ScriptTab]];
+G2L["43"]["SelectionGroup"] = false;
+
+-- StarterGui.SynapseX.Main.ScriptTab.ScriptTabHandler
+G2L["44"] = Instance.new("LocalScript", G2L["43"]);
+G2L["44"]["Name"] = [[ScriptTabHandler]];
+
+-- StarterGui.SynapseX.Main.ScriptTab.Tabs
+G2L["45"] = Instance.new("Folder", G2L["43"]);
+G2L["45"]["Name"] = [[Tabs]];
+
+-- StarterGui.SynapseX.Main.ScriptTab.Tabs.AddScript
+G2L["46"] = Instance.new("Frame", G2L["45"]);
+G2L["46"]["Active"] = true;
+G2L["46"]["ZIndex"] = 0;
+G2L["46"]["BorderSizePixel"] = 0;
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(101, 101, 101);
+G2L["46"]["BackgroundTransparency"] = 1;
+G2L["46"]["LayoutOrder"] = 999999999;
+G2L["46"]["Size"] = UDim2.new(0, 10, 0, 11);
+G2L["46"]["Selectable"] = true;
+G2L["46"]["Name"] = [[AddScript]];
+
+-- StarterGui.SynapseX.Main.ScriptTab.Tabs.AddScript.Button
+G2L["47"] = Instance.new("TextButton", G2L["46"]);
+G2L["47"]["BorderSizePixel"] = 0;
+G2L["47"]["BackgroundColor3"] = Color3.fromRGB(101, 101, 101);
+G2L["47"]["TextSize"] = 20;
+G2L["47"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["47"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["47"]["Size"] = UDim2.new(0, 10, 0, 11);
+G2L["47"]["LayoutOrder"] = 999999999;
+G2L["47"]["Name"] = [[Button]];
+G2L["47"]["Text"] = [[+]];
+G2L["47"]["Position"] = UDim2.new(0.1599999964237213, 0, 0.25, 0);
+G2L["47"]["BackgroundTransparency"] = 0.10000000149011612;
+
+-- StarterGui.SynapseX.Main.ScriptTab.Tabs.UIListLayout
+G2L["48"] = Instance.new("UIListLayout", G2L["45"]);
+G2L["48"]["FillDirection"] = Enum.FillDirection.Horizontal;
+G2L["48"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+-- StarterGui.SynapseX.Main.ButtonsHandler
+G2L["49"] = Instance.new("LocalScript", G2L["6"]);
+G2L["49"]["Name"] = [[ButtonsHandler]];
+
+-- StarterGui.SynapseX.SaveScript
+G2L["4a"] = Instance.new("Frame", G2L["1"]);
+G2L["4a"]["Active"] = true;
+G2L["4a"]["ZIndex"] = 10;
+G2L["4a"]["BorderSizePixel"] = 0;
+G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["4a"]["Size"] = UDim2.new(0, 322, 0, 81);
+G2L["4a"]["Position"] = UDim2.new(0.2866774797439575, 0, 0.3861943185329437, 0);
+G2L["4a"]["Visible"] = false;
+G2L["4a"]["Name"] = [[SaveScript]];
+
+-- StarterGui.SynapseX.SaveScript.scriptname
+G2L["4b"] = Instance.new("TextBox", G2L["4a"]);
+G2L["4b"]["ZIndex"] = 11;
+G2L["4b"]["BorderSizePixel"] = 0;
+G2L["4b"]["TextSize"] = 14;
+G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+G2L["4b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4b"]["PlaceholderText"] = [[File Name]];
+G2L["4b"]["Size"] = UDim2.new(0, 317, 0, 22);
+G2L["4b"]["Text"] = [[]];
+G2L["4b"]["Position"] = UDim2.new(0, 3, 0, 32);
+G2L["4b"]["Name"] = [[scriptname]];
+
+-- StarterGui.SynapseX.SaveScript.savescript
+G2L["4c"] = Instance.new("TextButton", G2L["4a"]);
+G2L["4c"]["ZIndex"] = 11;
+G2L["4c"]["BorderSizePixel"] = 0;
+G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
+G2L["4c"]["TextSize"] = 14;
+G2L["4c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4c"]["Size"] = UDim2.new(0, 317, 0, 19);
+G2L["4c"]["Name"] = [[savescript]];
+G2L["4c"]["Text"] = [[Save File]];
+G2L["4c"]["Position"] = UDim2.new(0, 3, 0, 56);
+
+-- StarterGui.SynapseX.SaveScript.Icon
+G2L["4d"] = Instance.new("ImageLabel", G2L["4a"]);
+G2L["4d"]["ZIndex"] = 11;
+G2L["4d"]["BorderSizePixel"] = 0;
+G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4d"]["Image"] = [[http://www.roblox.com/asset/?id=9483813933]];
+G2L["4d"]["Size"] = UDim2.new(0, 48, 0, 23);
+G2L["4d"]["Name"] = [[Icon]];
+G2L["4d"]["BackgroundTransparency"] = 1;
+G2L["4d"]["Position"] = UDim2.new(0.008999999612569809, 0, 0.05000000074505806, 0);
+
+-- StarterGui.SynapseX.SaveScript.Icon.UIAspectRatioConstraint
+G2L["4e"] = Instance.new("UIAspectRatioConstraint", G2L["4d"]);
+G2L["4e"]["AspectRatio"] = 0.8846153616905212;
+
+-- StarterGui.SynapseX.SaveScript.Title
+G2L["4f"] = Instance.new("TextLabel", G2L["4a"]);
+G2L["4f"]["TextWrapped"] = true;
+G2L["4f"]["ZIndex"] = 11;
+G2L["4f"]["BorderSizePixel"] = 4;
+G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4f"]["TextSize"] = 15;
+G2L["4f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["Size"] = UDim2.new(0, 322, 0, 30);
+G2L["4f"]["Active"] = true;
+G2L["4f"]["Text"] = [[Synapse X - Save File]];
+G2L["4f"]["Name"] = [[Title]];
+G2L["4f"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.SaveScript.Close
+G2L["50"] = Instance.new("TextButton", G2L["4a"]);
+G2L["50"]["TextWrapped"] = true;
+G2L["50"]["ZIndex"] = 12;
+G2L["50"]["BackgroundColor3"] = Color3.fromRGB(0, 55, 81);
+G2L["50"]["TextSize"] = 17;
+G2L["50"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["50"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["50"]["Selectable"] = false;
+G2L["50"]["Size"] = UDim2.new(0, 26, 0, 26);
+G2L["50"]["Name"] = [[Close]];
+G2L["50"]["Text"] = [[x]];
+G2L["50"]["Position"] = UDim2.new(0.9130434989929199, 0, 0.024690981954336166, 0);
+G2L["50"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.SaveScript.Handler
+G2L["51"] = Instance.new("LocalScript", G2L["4a"]);
+G2L["51"]["Name"] = [[Handler]];
+
+-- StarterGui.SynapseX.ScriptLog
+G2L["52"] = Instance.new("Frame", G2L["1"]);
+G2L["52"]["Active"] = true;
+G2L["52"]["BorderSizePixel"] = 0;
+G2L["52"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71);
+G2L["52"]["Size"] = UDim2.new(0, 353, 0, 26);
+G2L["52"]["Position"] = UDim2.new(0.25691962242126465, 0, 0.26443204283714294, 0);
+G2L["52"]["Visible"] = false;
+G2L["52"]["Name"] = [[ScriptLog]];
+
+-- StarterGui.SynapseX.ScriptLog.MainFrame
+G2L["53"] = Instance.new("Frame", G2L["52"]);
+G2L["53"]["BorderSizePixel"] = 0;
+G2L["53"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
+G2L["53"]["Size"] = UDim2.new(0, 353, 0, 185);
+G2L["53"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["53"]["Name"] = [[MainFrame]];
+
+-- StarterGui.SynapseX.ScriptLog.MainFrame.ANS9DZNASD8Z7NAS987NAFA
+G2L["54"] = Instance.new("ScrollingFrame", G2L["53"]);
+G2L["54"]["Active"] = true;
+G2L["54"]["BorderSizePixel"] = 0;
+G2L["54"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["54"]["Size"] = UDim2.new(0, 116, 0, 162);
+G2L["54"]["Position"] = UDim2.new(0.033443499356508255, 0, 0.06024263799190521, 0);
+G2L["54"]["Name"] = [[ANS9DZNASD8Z7NAS987NAFA]];
+
+-- StarterGui.SynapseX.ScriptLog.MainFrame.ANS9DZNASD8Z7NAS987NAFA.Script1
+G2L["55"] = Instance.new("TextButton", G2L["54"]);
+G2L["55"]["BorderSizePixel"] = 0;
+G2L["55"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["55"]["BackgroundColor3"] = Color3.fromRGB(60, 60, 60);
+G2L["55"]["TextSize"] = 14;
+G2L["55"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["55"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["55"]["Size"] = UDim2.new(0, 116, 0, 19);
+G2L["55"]["Name"] = [[Script1]];
+G2L["55"]["Text"] = [[Script1]];
+
+-- StarterGui.SynapseX.ScriptLog.MainFrame.A8SDMZAS89DZANSA98F
+G2L["56"] = Instance.new("TextButton", G2L["53"]);
+G2L["56"]["BorderSizePixel"] = 0;
+G2L["56"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["56"]["TextSize"] = 14;
+G2L["56"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["56"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["56"]["Size"] = UDim2.new(0, 97, 0, 25);
+G2L["56"]["Name"] = [[A8SDMZAS89DZANSA98F]];
+G2L["56"]["Text"] = [[Close]];
+G2L["56"]["Position"] = UDim2.new(0.7019798755645752, 0, 0.800000011920929, 0);
+
+-- StarterGui.SynapseX.ScriptLog.MainFrame.9NAC7A9S7N8ZASFH9ASF87NAS8YGA9GSA7
+G2L["57"] = Instance.new("TextBox", G2L["53"]);
+G2L["57"]["BorderSizePixel"] = 0;
+G2L["57"]["TextEditable"] = false;
+G2L["57"]["TextSize"] = 14;
+G2L["57"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["57"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["57"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["57"]["Size"] = UDim2.new(0, 200, 0, 129);
+G2L["57"]["Text"] = [[]];
+G2L["57"]["Position"] = UDim2.new(0.4107648730278015, 0, 0.05550934001803398, 0);
+G2L["57"]["Name"] = [[9NAC7A9S7N8ZASFH9ASF87NAS8YGA9GSA7]];
+G2L["57"]["ClearTextOnFocus"] = false;
+
+-- StarterGui.SynapseX.ScriptLog.MainFrame.9A8D7NAS9Z87NZDA98S7DNA98DNZ9A8SN
+G2L["58"] = Instance.new("TextButton", G2L["53"]);
+G2L["58"]["BorderSizePixel"] = 0;
+G2L["58"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["58"]["TextSize"] = 14;
+G2L["58"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["58"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["58"]["Size"] = UDim2.new(0, 97, 0, 25);
+G2L["58"]["Name"] = [[9A8D7NAS9Z87NZDA98S7DNA98DNZ9A8SN]];
+G2L["58"]["Text"] = [[Copy Code]];
+G2L["58"]["Position"] = UDim2.new(0.4107648730278015, 0, 0.800000011920929, 0);
+
+-- StarterGui.SynapseX.ScriptLog.Icon
+G2L["59"] = Instance.new("ImageLabel", G2L["52"]);
+G2L["59"]["BorderSizePixel"] = 0;
+G2L["59"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["59"]["Image"] = [[http://www.roblox.com/asset/?id=9483813933]];
+G2L["59"]["Size"] = UDim2.new(0, 23, 0, 26);
+G2L["59"]["Name"] = [[Icon]];
+G2L["59"]["BackgroundTransparency"] = 1;
+G2L["59"]["Position"] = UDim2.new(0.00932147353887558, 0, -0.006203480064868927, 0);
+
+-- StarterGui.SynapseX.ScriptLog.Title
+G2L["5a"] = Instance.new("TextLabel", G2L["52"]);
+G2L["5a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5a"]["TextSize"] = 14;
+G2L["5a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5a"]["Size"] = UDim2.new(0, 353, 0, 26);
+G2L["5a"]["Text"] = [[Script Log]];
+G2L["5a"]["Name"] = [[Title]];
+G2L["5a"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.ScriptHubMenu
+G2L["5b"] = Instance.new("Frame", G2L["1"]);
+G2L["5b"]["Active"] = true;
+G2L["5b"]["BorderSizePixel"] = 0;
+G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(67, 67, 67);
+G2L["5b"]["Size"] = UDim2.new(0, 411, 0, 31);
+G2L["5b"]["Position"] = UDim2.new(0, 13, 0, 13);
+G2L["5b"]["Visible"] = false;
+G2L["5b"]["Name"] = [[ScriptHubMenu]];
+
+-- StarterGui.SynapseX.ScriptHubMenu.Background
+G2L["5c"] = Instance.new("ImageLabel", G2L["5b"]);
+G2L["5c"]["BorderSizePixel"] = 0;
+G2L["5c"]["ScaleType"] = Enum.ScaleType.Tile;
+G2L["5c"]["BackgroundColor3"] = Color3.fromRGB(50, 50, 50);
+G2L["5c"]["Size"] = UDim2.new(0, 411, 0, 275);
+G2L["5c"]["Active"] = true;
+G2L["5c"]["BorderColor3"] = Color3.fromRGB(55, 55, 55);
+G2L["5c"]["Name"] = [[Background]];
+
+-- StarterGui.SynapseX.ScriptHubMenu.Background.ScrollingFrame
+G2L["5d"] = Instance.new("ScrollingFrame", G2L["5c"]);
+G2L["5d"]["Active"] = true;
+G2L["5d"]["BorderSizePixel"] = 0;
+G2L["5d"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+G2L["5d"]["TopImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
+G2L["5d"]["BackgroundColor3"] = Color3.fromRGB(30, 30, 30);
+G2L["5d"]["Size"] = UDim2.new(0, 109, 0, 226);
+G2L["5d"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5d"]["ScrollBarThickness"] = 14;
+G2L["5d"]["Position"] = UDim2.new(0.020667528733611107, 0, 0.13779912889003754, 0);
+G2L["5d"]["BottomImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
+
+-- StarterGui.SynapseX.ScriptHubMenu.Background.ScrollingFrame.Dex
+G2L["5e"] = Instance.new("TextButton", G2L["5d"]);
+G2L["5e"]["TextWrapped"] = true;
+G2L["5e"]["BorderSizePixel"] = 0;
+G2L["5e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(30, 30, 30);
+G2L["5e"]["TextSize"] = 14;
+G2L["5e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["Size"] = UDim2.new(0, 107, 0, 18);
+G2L["5e"]["Name"] = [[Dex]];
+G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 231, 255);
+G2L["5e"]["Text"] = [[Dex Explorer]];
+G2L["5e"]["Position"] = UDim2.new(0, 1, 0, 1);
+G2L["5e"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.ScriptHubMenu.Background.ScrollingFrame.ScriptDumper
+G2L["5f"] = Instance.new("TextButton", G2L["5d"]);
+G2L["5f"]["BorderSizePixel"] = 0;
+G2L["5f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["5f"]["BackgroundColor3"] = Color3.fromRGB(30, 30, 30);
+G2L["5f"]["TextSize"] = 14;
+G2L["5f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5f"]["Size"] = UDim2.new(0, 107, 0, 18);
+G2L["5f"]["Name"] = [[ScriptDumper]];
+G2L["5f"]["BorderColor3"] = Color3.fromRGB(0, 231, 255);
+G2L["5f"]["Text"] = [[Script Dumper]];
+G2L["5f"]["Position"] = UDim2.new(0.008999999612569809, 0, 0.34637168049812317, 0);
+G2L["5f"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.ScriptHubMenu.Background.ScrollingFrame.RemoteSpy
+G2L["60"] = Instance.new("TextButton", G2L["5d"]);
+G2L["60"]["BorderSizePixel"] = 0;
+G2L["60"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["60"]["BackgroundColor3"] = Color3.fromRGB(30, 30, 30);
+G2L["60"]["TextSize"] = 14;
+G2L["60"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["60"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["60"]["Size"] = UDim2.new(0, 107, 0, 18);
+G2L["60"]["Name"] = [[RemoteSpy]];
+G2L["60"]["BorderColor3"] = Color3.fromRGB(0, 231, 255);
+G2L["60"]["Text"] = [[Remote Spy]];
+G2L["60"]["Position"] = UDim2.new(0.008999999612569809, 0, 0.23982301354408264, 0);
+G2L["60"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.ScriptHubMenu.Background.ScrollingFrame.UnnamedESP
+G2L["61"] = Instance.new("TextButton", G2L["5d"]);
+G2L["61"]["BorderSizePixel"] = 0;
+G2L["61"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["61"]["BackgroundColor3"] = Color3.fromRGB(30, 30, 30);
+G2L["61"]["TextSize"] = 14;
+G2L["61"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["61"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["Size"] = UDim2.new(0, 107, 0, 18);
+G2L["61"]["Name"] = [[UnnamedESP]];
+G2L["61"]["BorderColor3"] = Color3.fromRGB(0, 231, 255);
+G2L["61"]["Text"] = [[Unnamed ESP]];
+G2L["61"]["Position"] = UDim2.new(0.00917431153357029, 0, 0.11946903169155121, 0);
+G2L["61"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.ScriptHubMenu.Close
+G2L["62"] = Instance.new("TextButton", G2L["5b"]);
+G2L["62"]["BorderSizePixel"] = 0;
+G2L["62"]["BackgroundColor3"] = Color3.fromRGB(60, 60, 60);
+G2L["62"]["TextSize"] = 14;
+G2L["62"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["62"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["62"]["Size"] = UDim2.new(0, 121, 0, 23);
+G2L["62"]["Name"] = [[Close]];
+G2L["62"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["62"]["Text"] = [[Close]];
+G2L["62"]["Position"] = UDim2.new(0.6677603721618652, 0, 7.790436744689941, 0);
+
+-- StarterGui.SynapseX.ScriptHubMenu.Title
+G2L["63"] = Instance.new("TextLabel", G2L["5b"]);
+G2L["63"]["TextWrapped"] = true;
+G2L["63"]["ZIndex"] = 3;
+G2L["63"].Draggable = true;
+G2L["63"]["BorderSizePixel"] = 4;
+G2L["63"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["63"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["63"]["TextSize"] = 15;
+G2L["63"].Active = true;
+G2L["63"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["63"]["Size"] = UDim2.new(0, 410, 0, 30);
+G2L["63"]["Text"] = [[Synapse X - Script Hub]];
+G2L["63"]["Name"] = [[Title]];
+G2L["63"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.ScriptHubMenu.Description
+G2L["64"] = Instance.new("TextLabel", G2L["5b"]);
+G2L["64"]["TextWrapped"] = true;
+G2L["64"]["BorderSizePixel"] = 0;
+G2L["64"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["64"]["BackgroundColor3"] = Color3.fromRGB(30, 30, 30);
+G2L["64"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["64"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["64"]["TextSize"] = 14;
+G2L["64"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["64"]["Size"] = UDim2.new(0, 272, 0, 60);
+G2L["64"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["64"]["Text"] = [[]];
+G2L["64"]["Name"] = [[Description]];
+G2L["64"]["Position"] = UDim2.new(0.31386861205101013, 0, 5.612903118133545, 0);
+
+-- StarterGui.SynapseX.ScriptHubMenu.Minimize
+G2L["65"] = Instance.new("TextButton", G2L["5b"]);
+G2L["65"]["ZIndex"] = 3;
+G2L["65"]["BorderSizePixel"] = 0;
+G2L["65"]["BackgroundColor3"] = Color3.fromRGB(60, 60, 60);
+G2L["65"]["TextSize"] = 14;
+G2L["65"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["65"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["65"]["Size"] = UDim2.new(0, 21, 0, 21);
+G2L["65"]["Name"] = [[Minimize]];
+G2L["65"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["65"]["Text"] = [[_]];
+G2L["65"]["Position"] = UDim2.new(0.9318734407424927, 0, 0.16129040718078613, 0);
+
+-- StarterGui.SynapseX.ScriptHubMenu.Dex
+G2L["66"] = Instance.new("Frame", G2L["5b"]);
+G2L["66"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["66"]["BackgroundTransparency"] = 1;
+G2L["66"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["66"]["Visible"] = false;
+G2L["66"]["Name"] = [[Dex]];
+
+-- StarterGui.SynapseX.ScriptHubMenu.Dex.Image
+G2L["67"] = Instance.new("ImageLabel", G2L["66"]);
+G2L["67"]["BorderSizePixel"] = 0;
+G2L["67"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["67"]["Image"] = [[http://www.roblox.com/asset/?id=7070160765]];
+G2L["67"]["Size"] = UDim2.new(0, 272, 0, 126);
+G2L["67"]["Name"] = [[Image]];
+G2L["67"]["BackgroundTransparency"] = 1;
+G2L["67"]["Position"] = UDim2.new(1.283868670463562, 0, 0.38265305757522583, 0);
+
+-- StarterGui.SynapseX.ScriptHubMenu.RemoteSpy
+G2L["68"] = Instance.new("Frame", G2L["5b"]);
+G2L["68"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["68"]["BackgroundTransparency"] = 1;
+G2L["68"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["68"]["Visible"] = false;
+G2L["68"]["Name"] = [[RemoteSpy]];
+
+-- StarterGui.SynapseX.ScriptHubMenu.RemoteSpy.Image
+G2L["69"] = Instance.new("ImageLabel", G2L["68"]);
+G2L["69"]["BorderSizePixel"] = 0;
+G2L["69"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["69"]["Image"] = [[http://www.roblox.com/asset/?id=7370616106]];
+G2L["69"]["Size"] = UDim2.new(0, 272, 0, 126);
+G2L["69"]["Name"] = [[Image]];
+G2L["69"]["BackgroundTransparency"] = 1;
+G2L["69"]["Position"] = UDim2.new(1.283868670463562, 0, 0.38265305757522583, 0);
+
+-- StarterGui.SynapseX.ScriptHubMenu.UnnamedESP
+G2L["6a"] = Instance.new("Frame", G2L["5b"]);
+G2L["6a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6a"]["BackgroundTransparency"] = 1;
+G2L["6a"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["6a"]["Visible"] = false;
+G2L["6a"]["Name"] = [[UnnamedESP]];
+
+-- StarterGui.SynapseX.ScriptHubMenu.UnnamedESP.Image
+G2L["6b"] = Instance.new("ImageLabel", G2L["6a"]);
+G2L["6b"]["BorderSizePixel"] = 0;
+G2L["6b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6b"]["Image"] = [[http://www.roblox.com/asset/?id=7370616607]];
+G2L["6b"]["Size"] = UDim2.new(0, 272, 0, 126);
+G2L["6b"]["Name"] = [[Image]];
+G2L["6b"]["BackgroundTransparency"] = 1;
+G2L["6b"]["Position"] = UDim2.new(1.283868670463562, 0, 0.38265305757522583, 0);
+
+-- StarterGui.SynapseX.ScriptHubMenu.ScriptDumper
+G2L["6c"] = Instance.new("Frame", G2L["5b"]);
+G2L["6c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6c"]["BackgroundTransparency"] = 1;
+G2L["6c"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["6c"]["Visible"] = false;
+G2L["6c"]["Name"] = [[ScriptDumper]];
+
+-- StarterGui.SynapseX.ScriptHubMenu.ScriptDumper.Image
+G2L["6d"] = Instance.new("ImageLabel", G2L["6c"]);
+G2L["6d"]["BorderSizePixel"] = 0;
+G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6d"]["Image"] = [[http://www.roblox.com/asset/?id=7370669353]];
+G2L["6d"]["Size"] = UDim2.new(0, 272, 0, 126);
+G2L["6d"]["Name"] = [[Image]];
+G2L["6d"]["BackgroundTransparency"] = 1;
+G2L["6d"]["Position"] = UDim2.new(1.283868670463562, 0, 0.38265305757522583, 0);
+
+-- StarterGui.SynapseX.ScriptHubMenu.Icon
+G2L["6e"] = Instance.new("ImageLabel", G2L["5b"]);
+G2L["6e"]["ZIndex"] = 6;
+G2L["6e"]["BorderSizePixel"] = 0;
+G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6e"]["Image"] = [[http://www.roblox.com/asset/?id=9483813933]];
+G2L["6e"]["Size"] = UDim2.new(0, 23, 0, 26);
+G2L["6e"]["Name"] = [[Icon]];
+G2L["6e"]["BackgroundTransparency"] = 1;
+G2L["6e"]["Position"] = UDim2.new(0.00932147353887558, 0, 0.05000000074505806, 0);
+
+-- StarterGui.SynapseX.ScriptHubMenu.Panel
+G2L["6f"] = Instance.new("Frame", G2L["5b"]);
+G2L["6f"]["BorderSizePixel"] = 0;
+G2L["6f"]["BackgroundColor3"] = Color3.fromRGB(60, 60, 60);
+G2L["6f"]["Size"] = UDim2.new(0, 411, 0, 30);
+G2L["6f"]["Position"] = UDim2.new(0, 0, -0.009731169790029526, 0);
+G2L["6f"]["Name"] = [[Panel]];
+
+-- StarterGui.SynapseX.ScriptHubMenu.Execute
+G2L["70"] = Instance.new("TextButton", G2L["5b"]);
+G2L["70"]["BorderSizePixel"] = 0;
+G2L["70"]["BackgroundColor3"] = Color3.fromRGB(60, 60, 60);
+G2L["70"]["TextSize"] = 14;
+G2L["70"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["70"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["70"]["Visible"] = false;
+G2L["70"]["Size"] = UDim2.new(0, 121, 0, 23);
+G2L["70"]["Name"] = [[Execute]];
+G2L["70"]["BorderColor3"] = Color3.fromRGB(99, 150, 182);
+G2L["70"]["Text"] = [[Execute]];
+G2L["70"]["Position"] = UDim2.new(0.31386861205101013, 0, 7.764839172363281, 0);
+
+-- StarterGui.SynapseX.ScriptHubMenu.ScriptHubHandler
+G2L["71"] = Instance.new("LocalScript", G2L["5b"]);
+G2L["71"]["Name"] = [[ScriptHubHandler]];
+
+-- StarterGui.SynapseX.OptionMenu
+G2L["72"] = Instance.new("Frame", G2L["1"]);
+G2L["72"]["Active"] = true;
+G2L["72"]["ZIndex"] = 5;
+G2L["72"]["BorderSizePixel"] = 0;
+G2L["72"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["72"]["Size"] = UDim2.new(0, 199, 0, 31);
+G2L["72"]["Position"] = UDim2.new(0, 671, 0, 16);
+G2L["72"]["Visible"] = false;
+G2L["72"]["Name"] = [[OptionMenu]];
+
+-- StarterGui.SynapseX.OptionMenu.Title
+G2L["73"] = Instance.new("TextLabel", G2L["72"]);
+G2L["73"]["ZIndex"] = 6;
+G2L["73"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["73"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["73"]["TextSize"] = 14;
+G2L["73"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["73"]["Size"] = UDim2.new(0, 199, 0, 26);
+G2L["73"]["Text"] = [[Options]];
+G2L["73"]["Name"] = [[Title]];
+G2L["73"]["BackgroundTransparency"] = 1;
+G2L["73"]["Position"] = UDim2.new(-0.0011280769249424338, 0, 0.07083868235349655, 0);
+
+-- StarterGui.SynapseX.OptionMenu.FPSUnlocker
+G2L["74"] = Instance.new("TextLabel", G2L["72"]);
+G2L["74"]["ZIndex"] = 6;
+G2L["74"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["74"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["74"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["74"]["TextSize"] = 14;
+G2L["74"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["74"]["Size"] = UDim2.new(0, 63, 0, 16);
+G2L["74"]["Text"] = 'FPS Unlock [BETA]';
+G2L["74"]["Name"] = [[FPSUnlocker]];
+G2L["74"]["BackgroundTransparency"] = 1;
+G2L["74"]["Position"] = UDim2.new(0.35585591197013855, 0, 1.5485485792160034, 0);
+
+-- StarterGui.SynapseX.OptionMenu.TopMost
+G2L["75"] = Instance.new("TextLabel", G2L["72"]);
+G2L["75"]["ZIndex"] = 6;
+G2L["75"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["75"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["75"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["75"]["TextSize"] = 14;
+G2L["75"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["75"]["Size"] = UDim2.new(0, 63, 0, 16);
+G2L["75"]["Text"] = [[TopMost]];
+G2L["75"]["Name"] = [[TopMost]];
+G2L["75"]["BackgroundTransparency"] = 1;
+G2L["75"]["Position"] = UDim2.new(0.35585591197013855, 0, 3.7420969009399414, 0);
+
+-- StarterGui.SynapseX.OptionMenu.InternalUI
+G2L["76"] = Instance.new("TextLabel", G2L["72"]);
+G2L["76"]["ZIndex"] = 6;
+G2L["76"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["76"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["76"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["76"]["TextSize"] = 14;
+G2L["76"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["76"]["Size"] = UDim2.new(0, 63, 0, 16);
+G2L["76"]["Text"] = [[Internal UI]];
+G2L["76"]["Name"] = [[InternalUI]];
+G2L["76"]["BackgroundTransparency"] = 1;
+G2L["76"]["Position"] = UDim2.new(0.35585591197013855, 0, 3.0001611709594727, 0);
+
+-- StarterGui.SynapseX.OptionMenu.Close
+G2L["77"] = Instance.new("TextButton", G2L["72"]);
+G2L["77"]["ZIndex"] = 6;
+G2L["77"]["BorderSizePixel"] = 0;
+G2L["77"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["77"]["TextSize"] = 14;
+G2L["77"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["77"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["Size"] = UDim2.new(0, 178, 0, 25);
+G2L["77"]["Name"] = [[Close]];
+G2L["77"]["BorderColor3"] = Color3.fromRGB(0, 231, 255);
+G2L["77"]["Text"] = [[Close]];
+G2L["77"]["Position"] = UDim2.new(0.04838477447628975, 0, 6.747819900512695, 0);
+
+-- StarterGui.SynapseX.OptionMenu.ToggleFPSUnlocker
+G2L["78"] = Instance.new("TextButton", G2L["72"]);
+G2L["78"]["TextWrapped"] = true;
+G2L["78"]["ZIndex"] = 6;
+G2L["78"]["BorderSizePixel"] = 0;
+G2L["78"]["BackgroundColor3"] = Color3.fromRGB(167, 167, 167);
+G2L["78"]["TextSize"] = 13;
+G2L["78"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["78"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["78"]["Size"] = UDim2.new(0, 14, 0, 14);
+G2L["78"]["Name"] = [[ToggleFPSUnlocker]];
+G2L["78"]["Text"] = [[]];
+G2L["78"]["Position"] = UDim2.new(0.24308274686336517, 0, 1.5808066129684448, 0);
+
+-- StarterGui.SynapseX.OptionMenu.ToggleInternalUI
+G2L["79"] = Instance.new("TextButton", G2L["72"]);
+G2L["79"]["TextWrapped"] = true;
+G2L["79"]["ZIndex"] = 6;
+G2L["79"]["BorderSizePixel"] = 0;
+G2L["79"]["BackgroundColor3"] = Color3.fromRGB(113, 113, 113);
+G2L["79"]["TextSize"] = 13;
+G2L["79"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["79"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["79"]["Size"] = UDim2.new(0, 14, 0, 14);
+G2L["79"]["Name"] = [[ToggleInternalUI]];
+G2L["79"]["Text"] = [[x]];
+G2L["79"]["Position"] = UDim2.new(0.24308274686336517, 0, 3.032419204711914, 0);
+
+-- StarterGui.SynapseX.OptionMenu.ToggleTopMost
+G2L["7a"] = Instance.new("TextButton", G2L["72"]);
+G2L["7a"]["TextWrapped"] = true;
+G2L["7a"]["ZIndex"] = 6;
+G2L["7a"]["BorderSizePixel"] = 0;
+G2L["7a"]["BackgroundColor3"] = Color3.fromRGB(113, 113, 113);
+G2L["7a"]["TextSize"] = 13;
+G2L["7a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7a"]["Size"] = UDim2.new(0, 14, 0, 14);
+G2L["7a"]["Name"] = [[ToggleTopMost]];
+G2L["7a"]["Text"] = [[x]];
+G2L["7a"]["Position"] = UDim2.new(0.24308274686336517, 0, 3.774354934692383, 0);
+
+-- StarterGui.SynapseX.OptionMenu.Icon
+G2L["7b"] = Instance.new("ImageLabel", G2L["72"]);
+G2L["7b"]["ZIndex"] = 6;
+G2L["7b"]["BorderSizePixel"] = 0;
+G2L["7b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7b"]["Image"] = [[http://www.roblox.com/asset/?id=9483813933]];
+G2L["7b"]["Size"] = UDim2.new(0, 23, 0, 26);
+G2L["7b"]["Name"] = [[Icon]];
+G2L["7b"]["BackgroundTransparency"] = 1;
+G2L["7b"]["Position"] = UDim2.new(0.014999999664723873, 0, 0.057999998331069946, 0);
+
+-- StarterGui.SynapseX.OptionMenu.ToggleAutoExec
+G2L["7c"] = Instance.new("TextButton", G2L["72"]);
+G2L["7c"]["TextWrapped"] = true;
+G2L["7c"]["ZIndex"] = 6;
+G2L["7c"]["BorderSizePixel"] = 0;
+G2L["7c"]["BackgroundColor3"] = Color3.fromRGB(167, 167, 167);
+G2L["7c"]["TextSize"] = 13;
+G2L["7c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7c"]["Size"] = UDim2.new(0, 14, 0, 14);
+G2L["7c"]["Name"] = [[ToggleAutoExec]];
+G2L["7c"]["Text"] = [[]];
+G2L["7c"]["Position"] = UDim2.new(0.24308274686336517, 0, 2.2904839515686035, 0);
+
+-- StarterGui.SynapseX.OptionMenu.AutoExec
+G2L["7d"] = Instance.new("TextLabel", G2L["72"]);
+G2L["7d"]["ZIndex"] = 6;
+G2L["7d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["7d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7d"]["TextSize"] = 14;
+G2L["7d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7d"]["Size"] = UDim2.new(0, 63, 0, 16);
+G2L["7d"]["Text"] = [[Auto Exec scripts]];
+G2L["7d"]["Name"] = [[AutoExec]];
+G2L["7d"]["BackgroundTransparency"] = 1;
+G2L["7d"]["Position"] = UDim2.new(0.35585591197013855, 0, 2.258225917816162, 0);
+
+-- StarterGui.SynapseX.OptionMenu.Buttons
+G2L["7e"] = Instance.new("Frame", G2L["72"]);
+G2L["7e"]["ZIndex"] = 6;
+G2L["7e"]["BorderSizePixel"] = 0;
+G2L["7e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7e"]["BackgroundTransparency"] = 1;
+G2L["7e"]["Size"] = UDim2.new(0, 176, 0, 58);
+G2L["7e"]["Position"] = UDim2.new(0.05500003695487976, 0, 4.516129493713379, 0);
+G2L["7e"]["Name"] = [[Buttons]];
+
+-- StarterGui.SynapseX.OptionMenu.Buttons.UIListLayout
+G2L["7f"] = Instance.new("UIListLayout", G2L["7e"]);
+G2L["7f"]["Padding"] = UDim.new(0, 5);
+G2L["7f"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+-- StarterGui.SynapseX.OptionMenu.Buttons.Rejoin
+G2L["80"] = Instance.new("TextButton", G2L["7e"]);
+G2L["80"]["ZIndex"] = 6;
+G2L["80"]["BorderSizePixel"] = 0;
+G2L["80"]["Modal"] = true;
+G2L["80"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["80"]["TextSize"] = 14;
+G2L["80"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["80"]["TextColor3"] = Color3.fromRGB(251, 251, 251);
+G2L["80"]["Size"] = UDim2.new(0, 177, 0, 17);
+G2L["80"]["Name"] = [[Rejoin]];
+G2L["80"]["BorderColor3"] = Color3.fromRGB(0, 231, 255);
+G2L["80"]["Text"] = [[Rejoin]];
+G2L["80"]["Position"] = UDim2.new(0.054999999701976776, 0, 5.838741779327393, 0);
+
+-- StarterGui.SynapseX.OptionMenu.Buttons.Discord
+G2L["81"] = Instance.new("TextButton", G2L["7e"]);
+G2L["81"]["ZIndex"] = 6;
+G2L["81"]["BorderSizePixel"] = 0;
+G2L["81"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["81"]["TextSize"] = 14;
+G2L["81"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["81"]["TextColor3"] = Color3.fromRGB(251, 251, 251);
+G2L["81"]["Size"] = UDim2.new(0, 177, 0, 17);
+G2L["81"]["Name"] = [[Discord]];
+G2L["81"]["BorderColor3"] = Color3.fromRGB(0, 231, 255);
+G2L["81"]["Text"] = [[Discord]];
+G2L["81"]["Position"] = UDim2.new(0.054999999701976776, 0, 5.838741779327393, 0);
+
+-- StarterGui.SynapseX.OptionMenu.MainFrame
+G2L["82"] = Instance.new("Frame", G2L["72"]);
+G2L["82"]["ZIndex"] = 5;
+G2L["82"]["BorderSizePixel"] = 0;
+G2L["82"]["BackgroundColor3"] = Color3.fromRGB(52, 52, 52);
+G2L["82"]["Size"] = UDim2.new(0, 199, 0, 211);
+G2L["82"]["Position"] = UDim2.new(0, 0, 0.988335907459259, 0);
+G2L["82"]["Name"] = [[MainFrame]];
+
+-- StarterGui.SynapseX.OptionMenu.Optionhandler
+G2L["83"] = Instance.new("LocalScript", G2L["72"]);
+G2L["83"]["Name"] = [[Optionhandler]];
+
+-- StarterGui.SynapseX.GetSavedScripts
+G2L["84"] = Instance.new("LocalScript", G2L["1"]);
+G2L["84"]["Name"] = [[GetSavedScripts]];
+
+-- StarterGui.SynapseX.Injected
+G2L["85"] = Instance.new("BoolValue", G2L["1"]);
+G2L["85"]["Name"] = [[Injected]];
+
+-- StarterGui.SynapseX.Module
+G2L["86"] = Instance.new("ModuleScript", G2L["1"]);
+G2L["86"]["Name"] = [[Module]];
+
+-- StarterGui.SynapseX.Module.RClick
+G2L["87"] = Instance.new("Frame", G2L["86"]);
+G2L["87"]["ZIndex"] = 7;
+G2L["87"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+G2L["87"]["Size"] = UDim2.new(0, 94, 0, 63);
+G2L["87"]["BorderColor3"] = Color3.fromRGB(119, 119, 119);
+G2L["87"]["Position"] = UDim2.new(-0.0146878557279706, 0, 1.0666667222976685, 0);
+G2L["87"]["Visible"] = false;
+G2L["87"]["Name"] = [[RClick]];
+
+-- StarterGui.SynapseX.Module.RClick.Execute
+G2L["88"] = Instance.new("TextButton", G2L["87"]);
+G2L["88"]["ZIndex"] = 7;
+G2L["88"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+G2L["88"]["TextSize"] = 14;
+G2L["88"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["88"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["88"]["Size"] = UDim2.new(0, 93, 0, 21);
+G2L["88"]["Name"] = [[Execute]];
+G2L["88"]["BorderColor3"] = Color3.fromRGB(119, 119, 119);
+G2L["88"]["Text"] = [[Execute]];
+G2L["88"]["Position"] = UDim2.new(0.005026959348469973, 0, 0, 0);
+
+-- StarterGui.SynapseX.Module.RClick.Load
+G2L["89"] = Instance.new("TextButton", G2L["87"]);
+G2L["89"]["ZIndex"] = 7;
+G2L["89"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+G2L["89"]["TextSize"] = 14;
+G2L["89"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["89"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["89"]["Size"] = UDim2.new(0, 93, 0, 21);
+G2L["89"]["Name"] = [[Load]];
+G2L["89"]["BorderColor3"] = Color3.fromRGB(119, 119, 119);
+G2L["89"]["Text"] = [[Load into Editor]];
+G2L["89"]["Position"] = UDim2.new(0.005026959348469973, 0, 0.3174603283405304, 0);
+
+-- StarterGui.SynapseX.Module.RClick.Delete
+G2L["8a"] = Instance.new("TextButton", G2L["87"]);
+G2L["8a"]["ZIndex"] = 7;
+G2L["8a"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+G2L["8a"]["TextSize"] = 14;
+G2L["8a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8a"]["Size"] = UDim2.new(0, 93, 0, 21);
+G2L["8a"]["Name"] = [[Delete]];
+G2L["8a"]["BorderColor3"] = Color3.fromRGB(119, 119, 119);
+G2L["8a"]["Text"] = [[Delete]];
+G2L["8a"]["Position"] = UDim2.new(0.005026959348469973, 0, 0.6666666865348816, 0);
+
+-- StarterGui.SynapseX.OpenScript
+G2L["8b"] = Instance.new("Frame", G2L["1"]);
+G2L["8b"]["Active"] = true;
+G2L["8b"]["ZIndex"] = 10;
+G2L["8b"]["BorderSizePixel"] = 0;
+G2L["8b"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["8b"]["Size"] = UDim2.new(0, 322, 0, 81);
+G2L["8b"]["Position"] = UDim2.new(0.2866109609603882, 0, 0.5302865505218506, 0);
+G2L["8b"]["Visible"] = false;
+G2L["8b"]["Name"] = [[OpenScript]];
+
+-- StarterGui.SynapseX.OpenScript.scriptname
+G2L["8c"] = Instance.new("TextBox", G2L["8b"]);
+G2L["8c"]["ZIndex"] = 11;
+G2L["8c"]["BorderSizePixel"] = 0;
+G2L["8c"]["TextSize"] = 14;
+G2L["8c"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+G2L["8c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8c"]["PlaceholderText"] = [[File Name]];
+G2L["8c"]["Size"] = UDim2.new(0, 317, 0, 22);
+G2L["8c"]["Text"] = [[]];
+G2L["8c"]["Position"] = UDim2.new(0, 3, 0, 32);
+G2L["8c"]["Name"] = [[scriptname]];
+
+-- StarterGui.SynapseX.OpenScript.savescript
+G2L["8d"] = Instance.new("TextButton", G2L["8b"]);
+G2L["8d"]["ZIndex"] = 11;
+G2L["8d"]["BorderSizePixel"] = 0;
+G2L["8d"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
+G2L["8d"]["TextSize"] = 14;
+G2L["8d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8d"]["Size"] = UDim2.new(0, 317, 0, 19);
+G2L["8d"]["Name"] = [[savescript]];
+G2L["8d"]["Text"] = [[Open FIle]];
+G2L["8d"]["Position"] = UDim2.new(0, 3, 0, 56);
+
+-- StarterGui.SynapseX.OpenScript.Icon
+G2L["8e"] = Instance.new("ImageLabel", G2L["8b"]);
+G2L["8e"]["ZIndex"] = 11;
+G2L["8e"]["BorderSizePixel"] = 0;
+G2L["8e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8e"]["Image"] = [[http://www.roblox.com/asset/?id=9483813933]];
+G2L["8e"]["Size"] = UDim2.new(0, 48, 0, 23);
+G2L["8e"]["Name"] = [[Icon]];
+G2L["8e"]["BackgroundTransparency"] = 1;
+G2L["8e"]["Position"] = UDim2.new(0.008999999612569809, 0, 0.05000000074505806, 0);
+
+-- StarterGui.SynapseX.OpenScript.Icon.UIAspectRatioConstraint
+G2L["8f"] = Instance.new("UIAspectRatioConstraint", G2L["8e"]);
+G2L["8f"]["AspectRatio"] = 0.8846153616905212;
+
+-- StarterGui.SynapseX.OpenScript.Title
+G2L["90"] = Instance.new("TextLabel", G2L["8b"]);
+G2L["90"]["TextWrapped"] = true;
+G2L["90"]["ZIndex"] = 11;
+G2L["90"]["BorderSizePixel"] = 4;
+G2L["90"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["90"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["90"]["TextSize"] = 15;
+G2L["90"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["90"]["Size"] = UDim2.new(0, 322, 0, 30);
+G2L["90"]["Active"] = true;
+G2L["90"]["Text"] = [[Synapse X - Open FIle]];
+G2L["90"]["Name"] = [[Title]];
+G2L["90"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.OpenScript.Close
+G2L["91"] = Instance.new("TextButton", G2L["8b"]);
+G2L["91"]["TextWrapped"] = true;
+G2L["91"]["ZIndex"] = 12;
+G2L["91"]["BackgroundColor3"] = Color3.fromRGB(0, 55, 81);
+G2L["91"]["TextSize"] = 17;
+G2L["91"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["91"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["91"]["Selectable"] = false;
+G2L["91"]["Size"] = UDim2.new(0, 26, 0, 26);
+G2L["91"]["Name"] = [[Close]];
+G2L["91"]["Text"] = [[x]];
+G2L["91"]["Position"] = UDim2.new(0.9130434989929199, 0, 0.024690981954336166, 0);
+G2L["91"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.SynapseX.OpenScript.Handler
+G2L["92"] = Instance.new("LocalScript", G2L["8b"]);
+G2L["92"]["Name"] = [[Handler]];
+
+-- StarterGui.SynapseX.SetDraggable
+G2L["93"] = Instance.new("LocalScript", G2L["1"]);
+G2L["93"]["Name"] = [[SetDraggable]];
+
+-- StarterGui.SynapseX.Highlighter
+G2L["94"] = Instance.new("ModuleScript", G2L["1"]);
+G2L["94"]["Name"] = [[Highlighter]];
+
+-- StarterGui.SynapseX.Highlighter.lexer
+G2L["95"] = Instance.new("ModuleScript", G2L["94"]);
+G2L["95"]["Name"] = [[lexer]];
+
+-- StarterGui.SynapseX.Highlighter.lexer.language
+G2L["96"] = Instance.new("ModuleScript", G2L["95"]);
+G2L["96"]["Name"] = [[language]];
+
+-- Require G2L wrapper
+local G2L_REQUIRE = require;
+local G2L_MODULES = {};
 local function require(Module:ModuleScript)
-	local ModuleState = AZY_MODULES[Module];
-	if ModuleState then
-		if not ModuleState.Required then
-			ModuleState.Required = true;
-			ModuleState.Value = ModuleState.Closure();
-		end
-		return ModuleState.Value;
-	end;
-	return AZY_REQUIRE(Module);
+    local ModuleState = G2L_MODULES[Module];
+    if ModuleState then
+        if not ModuleState.Required then
+            ModuleState.Required = true;
+            ModuleState.Value = ModuleState.Closure();
+        end
+        return ModuleState.Value;
+    end;
+    return G2L_REQUIRE(Module);
 end
 
-AZY_MODULES[AZY["12b"]] = {
-	Closure = function()
-		local script = AZY["12b"];
-		-- Lexer by sleitnick
-		-- Everything else by me, bread. lol.
+G2L_MODULES[G2L["86"]] = {
+Closure = function()
+    local script = G2L["86"];
+local module = {}
+local highlighter = require(script.Parent.Highlighter)
 
+function module:AddTab(title, source)
+	local NewTextbox = script.Parent.Main.MainFunc.Needs.Textbox:Clone()
+	local NewTab = script.Parent.Main.MainFunc.Needs.Tab:Clone()
+	local num = 0
 
-		local module = {}
+	NewTextbox.Parent = script.Parent.Main.MainFunc.Textboxes
+	NewTab.Parent=  script.Parent.Main.ScriptTab.Tabs
+	NewTab.Visible = true
+	NewTextbox.Visible = true
+	NewTab.BackgroundColor3 = Color3.fromRGB(80,80,80)
+	highlighter.highlight({
+		textObject = NewTextbox.Frame.Textbox,
+		src = NewTextbox.Frame.Textbox.Text,
+		forceUpdate = true
+	})
 
-		local syntax 	   = require(script.Syntax)
-		local getLines 	   = require(script.GetLines)
-		local fakeEditor   = require(script.FakeEditor)
-		local textFixer    = require(script.TextFixer)
-		local getLine 	   = require(script.GetLine)
-		local tween 	   = require(script.TweenLibrary)
-		local suggestions  = require(script.Suggestions)
+    NewTab.MouseButton1Up:Connect(function()
+        
+        -- Set any textbox except new disabled (not visible)
+	for _,tabs in pairs(script.Parent.Main.MainFunc.Textboxes:GetChildren()) do
+		if tabs.Name ~= NewTextbox.Name then
+			tabs.Visible = false
+		elseif tabs.Name == NewTextbox.Name then
+			tabs.Visible = true
+			end
+	end
 
-		function module.new(frame)
-			local newEditor = script.Editor:Clone()
-			newEditor.Parent = frame
-
-			local editorObj  	= fakeEditor.new(newEditor)
-			local textbox 	 	= newEditor.Scroll.Source
-			local linesLabel 	= newEditor.Scroll.Left.Lines
-			local lineHighlight = textbox.LineHighlight
-
-			local highlightBox = Instance.new("TextLabel")
-			highlightBox.Size = UDim2.new(1, 0,1, 0)
-			highlightBox.Position = UDim2.new(0, 0,0, 0)
-			highlightBox.TextColor3 = textbox.TextColor3
-			highlightBox.BackgroundTransparency = 1
-			highlightBox.Name = "Syntax"
-			highlightBox.RichText = true
-			highlightBox.TextSize = textbox.TextSize
-			highlightBox.Font = textbox.Font
-			highlightBox.TextXAlignment = Enum.TextXAlignment.Left
-			highlightBox.TextYAlignment = Enum.TextYAlignment.Top
-			highlightBox.TextStrokeColor3 = Color3.fromRGB(40, 40, 40)
-			highlightBox.TextStrokeTransparency = 0.1
-			highlightBox.Text = ""
-			highlightBox.Parent = textbox
-
-			editorObj:SetTheme("default")
-			textFixer.Fix(highlightBox)
-			suggestions:Start(newEditor)
-
-			textbox:GetPropertyChangedSignal("Text"):Connect(function()
-				syntax.Highlight(highlightBox, textbox.Text)
-
-				-- Fix tabs
-				textbox.Text = textbox.Text:gsub("\t", "    ")
-				--textbox.CursorPosition += 4
-
-				-- Update line count
-				linesLabel.Text = getLines.GetLinesString(textbox.Text)
-			end)
-
-			textbox:GetPropertyChangedSignal("CursorPosition"):Connect(function()
-				-- Position line highlight
-				local lineYPos = ((getLine:GetCurrentLine(textbox) * textbox.TextSize) - math.ceil(lineHighlight.AbsoluteSize.Y / 2)) + 4
-
-				if lineYPos ~= lineHighlight.Position.Y.Offset then
-					tween.TweenPosition(lineHighlight, UDim2.new(0, -10,0, lineYPos), 0.1, Enum.EasingStyle.Quad)
-				end
-			end)
-
-			return editorObj
+	-- Set any Tab color back except this
+	for i,v in pairs(script.Parent:GetChildren()) do
+		if v:IsA("TextButton") and v.Name ~= NewTab.Name then
+			v.BackgroundColor3 = Color3.fromRGB(100,100,100)
 		end
+	end
+    
+    end)
+    NewTab:FindFirstChild("Remove").MouseButton1Up:Connect(function()
 
-		return module
+        NewTab:Destroy()
+		
 
-	end;
+    end)
+
+	-- Set da name as yes
+	for i,v in pairs(script.Parent.Main.MainFunc.Textboxes:GetChildren()) do
+		num += 1
+	end
+	if type(title) == "string" then
+		NewTab.Name = '  '..title
+		NewTab.Text = '  '..title
+		NewTextbox.Name = '  '..title
+		NewTextbox.Frame.Textbox.Text = source
+	else
+		NewTab.Name = "  Script "..tostring(num)
+		NewTab.Text = "  Script "..tostring(num)
+		NewTextbox.Name = "  Script "..tostring(num)
+	end
+
+	-- Set any textbox except new disabled (not visible)
+	for _,tabs in pairs(script.Parent.Main.MainFunc.Textboxes:GetChildren()) do
+		if tabs.Name ~= NewTextbox.Name then
+			tabs.Visible = false
+		end
+	end
+
+	-- Set any Tab color back except this
+	for i,v in pairs(script.Parent:GetChildren()) do
+		if v:IsA("TextButton") and v.Name ~= NewTab.Name then
+			v.BackgroundColor3 = Color3.fromRGB(100,100,100)
+		end
+	end
+end
+
+function module:GetActiveTextbox()
+	for _, textbox in pairs(script.Parent.Main.MainFunc.Textboxes:GetChildren()) do
+		if textbox.Visible then
+			return textbox
+		end
+	end
+end
+
+function module:AddScriptTabSave(name, source)
+	local Button = script.Parent.Main.MainFunc.Needs.ScriptHubButton:Clone()
+	local click = false
+	Button.Parent = script.Parent.Main.MainFunc.ScriptHub
+	Button.Text = name
+	Button.Visible = true
+
+	Button.MouseButton1Up:Connect(function()
+		if not click then
+			click = true
+			wait(0.5) -- Adjust this delay if needed
+			if click then
+				module:AddTab(name, source)
+			end
+			click = false
+		end
+	end)
+	Button.MouseButton2Up:Connect(function()
+		local rclick = script.RClick:Clone()
+		rclick.Visible = true
+		rclick.Parent = Button
+		rclick.MouseEnter:Connect(function()
+			rclick.Execute.MouseButton1Up:Connect(function()
+				loadstring(source)()
+			end)
+			rclick.Load.MouseButton1Up:Connect(function()
+				module:AddTab(name, source)
+			end)
+			rclick.Delete.MouseButton1Up:Connect(function()
+				rclick.Parent:Destroy()
+			end)
+			rclick.MouseLeave:Connect(function()
+				rclick:Destroy()
+			end)
+		end)
+	end)
+end
+
+return module
+
+end;
 };
-AZY_MODULES[AZY["12c"]] = {
-	Closure = function()
-		local script = AZY["12c"];
-		local module = {}
+G2L_MODULES[G2L["94"]] = {
+Closure = function()
+    local script = G2L["94"];
+export type HighlighterColors = { [string]: Color3 }
 
-		local lexer 	= require(script.Parent.Lexer)
-		local theme 	= require(script.Parent.Theme)
-		local textFixer = require(script.Parent.TextFixer)
+export type TextObject = TextLabel | TextBox
 
-		local function ColorToFont(text, color)
-			return string.format(
-				'<font color="rgb(%s,%s,%s)">%s</font>',
-				tostring(math.floor(color.R * 255)),
-				tostring(math.floor(color.G * 255)),
-				tostring(math.floor(color.B * 255)),
-				text
-			)
+export type HighlightProps = {
+	textObject: TextObject,
+	src: string?,
+	forceUpdate: boolean?,
+	lexer: Lexer?,
+	customLang: { [string]: string }?
+}
+
+export type Lexer = {
+	scan: (src: string) -> () -> (string, string),
+	navigator: () -> any,
+	finished: boolean?,
+}
+
+export type Highlighter = {
+	defaultLexer: Lexer,
+	setTokenColors: (colors: HighlighterColors?) -> (),
+	highlight: (props: HighlightProps) -> (() -> ())?,
+	refresh: () -> (),
+}
+
+export type ObjectData = {
+	Text: string,
+	Labels: { TextLabel },
+	Lines: { string },
+	Lexer: Lexer?,
+	CustomLang: { [string]: string }?,
+}
+
+local function SanitizeRichText(s: string): string
+	return string.gsub(
+		string.gsub(string.gsub(string.gsub(string.gsub(s, "&", "&amp;"), "<", "&lt;"), ">", "&gt;"), '"', "&quot;"),
+		"'",
+		"&apos;"
+	)
+end
+
+local function SanitizeTabs(s: string): string
+	return string.gsub(s, "\t", "    ")
+end
+
+local function SanitizeControl(s: string): string
+	return string.gsub(s, "[\0\1\2\3\4\5\6\7\8\11\12\13\14\15\16\17\18\19\20\21\22\23\24\25\26\27\28\29\30\31]+", "")
+end
+
+local TokenColors: HighlighterColors = {
+	["background"] = Color3.fromRGB(41, 41, 41),
+	["iden"] = Color3.fromRGB(234, 234, 234),
+	["keyword"] = Color3.fromRGB(215, 174, 255),
+	["builtin"] = Color3.fromRGB(131, 206, 255),
+	["string"] = Color3.fromRGB(196, 255, 193),
+	["number"] = Color3.fromRGB(255, 125, 125),
+	["comment"] = Color3.fromRGB(140, 140, 155),
+	["operator"] = Color3.fromRGB(255, 239, 148),
+	["custom"] = Color3.fromRGB(119, 122, 255),
+}
+local ColorFormatter: { [Color3]: string } = {}
+local LastData: { [TextObject]: ObjectData } = {}
+local Cleanups: { [TextObject]: () -> () } = {}
+
+local Highlighter = {
+	defaultLexer = require(script.lexer),
+}
+
+function Highlighter.highlight(props: HighlightProps)
+	-- Gather props
+	local textObject = props.textObject
+	local src = SanitizeTabs(SanitizeControl(props.src or textObject.Text))
+	local lexer = props.lexer or Highlighter.defaultLexer
+	local customLang = props.customLang
+	local forceUpdate = props.forceUpdate
+
+	-- Avoid updating when unnecessary
+	local data = LastData[textObject]
+	if data == nil then
+		data = {
+			Text = "",
+			Labels = {},
+			Lines = {},
+			Lexer = lexer,
+			CustomLang = customLang,
+		}
+		LastData[textObject] = data
+	elseif forceUpdate ~= true and data.Text == src then
+		return
+	end
+
+	local lineLabels = data.Labels
+	local previousLines = data.Lines
+
+	local lines = string.split(src, "\n")
+
+	data.Lines = lines
+	data.Text = src
+	data.Lexer = lexer
+	data.CustomLang = customLang
+
+	-- Ensure valid object properties
+	textObject.RichText = false
+	textObject.Text = src
+	textObject.TextXAlignment = Enum.TextXAlignment.Left
+	textObject.TextYAlignment = Enum.TextYAlignment.Top
+	textObject.BackgroundColor3 = TokenColors.background
+	textObject.TextColor3 = TokenColors.iden
+	textObject.TextTransparency = 0.5
+
+	-- Build the highlight labels
+	local lineFolder = textObject:FindFirstChild("SyntaxHighlights")
+	if lineFolder == nil then
+		local newLineFolder = Instance.new("Folder")
+		newLineFolder.Name = "SyntaxHighlights"
+		newLineFolder.Parent = textObject
+
+		lineFolder = newLineFolder
+	end
+
+	-- Add a cleanup handler for this textObject
+	local cleanup = Cleanups[textObject]
+	if not cleanup then
+		local connections: { RBXScriptConnection } = {}
+		local function newCleanup()
+			for _, label in ipairs(lineLabels) do
+				label:Destroy()
+			end
+			table.clear(lineLabels)
+			lineLabels = nil
+
+			LastData[textObject] = nil
+			Cleanups[textObject] = nil
+
+			for _, connection in connections do
+				connection:Disconnect()
+			end
+			table.clear(connections)
+			connections = nil
 		end
+		Cleanups[textObject] = newCleanup
+		cleanup = newCleanup
 
-		function module.Highlight(textbox, source)
-			textbox.Text = ""
+		table.insert(
+			connections,
+			textObject.AncestryChanged:Connect(function()
+				if textObject.Parent then
+					return
+				end
 
-			for tokenType, text in lexer.scan(source) do
-				local currentTheme = theme.current
-				local tokenCol = currentTheme[tokenType]
+				cleanup()
+			end)
+		)
+		table.insert(
+			connections,
+			textObject:GetPropertyChangedSignal("TextBounds"):Connect(function()
+				Highlighter.highlight({
+					textObject = textObject,
+					forceUpdate = true,
+					lexer = lexer,
+					customLang = customLang,
+				})
+			end)
+		)
+		table.insert(
+			connections,
+			textObject:GetPropertyChangedSignal("Text"):Connect(function()
+				Highlighter.highlight({
+					textObject = textObject,
+					lexer = lexer,
+					customLang = customLang,
+				})
+			end)
+		)
+		table.insert(
+			connections,
+			textObject:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
+				Highlighter.highlight({
+					textObject = textObject,
+					forceUpdate = true,
+					lexer = lexer,
+					customLang = customLang,
+				})
+			end)
+		)
+	end
 
-				if tokenCol then
-					textbox.Text = textbox.Text .. ColorToFont(text, tokenCol)
+	-- Shortcut empty labels
+	if src == "" then
+		for l=1, #lineLabels do
+			if lineLabels[l].Text == "" then continue end
+			lineLabels[l].Text = ""
+		end
+		return cleanup
+	end
+
+	-- Wait for TextBounds to be non-NaN and non-zero because Roblox
+	local textBounds = textObject.TextBounds
+	while (textBounds.Y ~= textBounds.Y) or (textBounds.Y < 1) do
+		task.wait()
+		textBounds = textObject.TextBounds
+	end
+
+	if LastData[textObject] == nil then
+		-- Got cleaned up while we were waiting
+		return cleanup
+	end
+
+	local numLines = #lines
+	local textHeight = textBounds.Y / numLines * textObject.LineHeight
+
+	local richText, index, lineNumber = table.create(5), 0, 1
+	for token: string, content: string in lexer.scan(src) do
+		local Color =
+			if customLang and customLang[content] then
+				TokenColors["custom"]
+			else
+				TokenColors[token] or TokenColors["iden"]
+
+		local tokenLines = string.split(SanitizeRichText(content), "\n")
+
+		for l, line in ipairs(tokenLines) do
+			-- Find line label
+			local lineLabel = lineLabels[lineNumber]
+			if not lineLabel then
+				local newLabel = Instance.new("TextLabel")
+				newLabel.Name = "Line_" .. lineNumber
+				newLabel.RichText = true
+				newLabel.BackgroundTransparency = 1
+				newLabel.ZIndex = 4
+				newLabel.Text = ""
+				newLabel.TextXAlignment = Enum.TextXAlignment.Left
+				newLabel.TextYAlignment = Enum.TextYAlignment.Top
+				newLabel.Parent = lineFolder
+				lineLabels[lineNumber] = newLabel
+				lineLabel = newLabel
+			end
+
+			-- Align line label
+			lineLabel.TextColor3 = TokenColors["iden"]
+			lineLabel.Font = textObject.Font
+			lineLabel.TextSize = textObject.TextSize
+			lineLabel.Size = UDim2.new(1, 0, 0, math.ceil(textHeight))
+			lineLabel.Position = UDim2.fromScale(0, textHeight * (lineNumber - 1) / textObject.AbsoluteSize.Y)
+
+			-- If multiline token, then set line & move to next
+			if l > 1 then
+				if forceUpdate or lines[lineNumber] ~= previousLines[lineNumber] then
+					-- Set line
+					lineLabels[lineNumber].Text = table.concat(richText)
+				end
+				-- Move to next line
+				lineNumber += 1
+				index = 0
+				table.clear(richText)
+			end
+
+			-- If changed, add token to line
+			if forceUpdate or lines[lineNumber] ~= previousLines[lineNumber] then
+				index += 1
+				-- Only add RichText tags when the color is non-default and the characters are non-whitespace
+				if Color ~= TokenColors["iden"] and string.find(line, "[%S%C]") then
+					richText[index] = string.format(ColorFormatter[Color], line)
 				else
-					textbox.Text = textbox.Text .. text
+					richText[index] = line
 				end
 			end
+		end
+	end
 
-			textFixer.Fix(textbox)
+	-- Set final line
+	if richText[1] and lineLabels[lineNumber] then
+		lineLabels[lineNumber].Text = table.concat(richText)
+	end
+
+	-- Clear unused line labels
+	for l=lineNumber+1, #lineLabels do
+		if lineLabels[l].Text == "" then continue end
+		lineLabels[l].Text = ""
+	end
+
+	return cleanup
+end
+
+function Highlighter.refresh(): ()
+	-- Rehighlight existing labels using latest colors
+	for textObject, data in pairs(LastData) do
+		for _, lineLabel in ipairs(data.Labels) do
+			lineLabel.TextColor3 = TokenColors["iden"]
 		end
 
-		return module
+		Highlighter.highlight({
+			textObject = textObject,
+			forceUpdate = true,
+			src = data.Text,
+			lexer = data.Lexer,
+			customLang = data.CustomLang,
+		})
+	end
+end
 
-	end;
+function Highlighter.setTokenColors(colors: HighlighterColors)
+	for token, color in colors do
+		TokenColors[token] = color
+		ColorFormatter[color] = string.format(
+			'<font color="#%.2x%.2x%.2x">',
+			color.R * 255,
+			color.G * 255,
+			color.B * 255
+		) .. "%s</font>"
+	end
+
+	Highlighter.refresh()
+end
+Highlighter.setTokenColors(TokenColors)
+
+return Highlighter :: Highlighter
+
+end;
 };
-AZY_MODULES[AZY["12d"]] = {
-	Closure = function()
-		local script = AZY["12d"];
-		local theme = {
-			current = nil,
-			themes = {
-				["default"] = {
-					["keyword"] = Color3.fromRGB(248, 109, 124),
-					["builtin"] = Color3.fromRGB(84, 184, 247),
-					["string"] = Color3.fromRGB(130, 241, 149),
-					["number"] = Color3.fromRGB(255, 198, 0),
-					["comment"] = Color3.fromRGB(106, 106, 100),
-					["thingy"] = Color3.fromRGB(253, 251, 154)
-				},
-				["extra 2"] = {
-					["keyword"] = Color3.fromRGB(249, 36, 114),
-					["builtin"] = Color3.fromRGB(95, 209, 250),
-					["string"] = Color3.fromRGB(217, 219, 88),
-					["number"] = Color3.fromRGB(161, 118, 209),
-					["comment"] = Color3.fromRGB(116, 122, 101),
-					["thingy"] = Color3.fromRGB(248, 245, 139)
-				}
-			}
-		}
-
-		return theme
-
-	end;
-};
-getgenv().ChillzAntiSkid123 = AZY["94"]["Text"]
-getgenv().ChillzAntiSkid1234 = AZY["cc"]["Text"]
-AZY_MODULES[AZY["12e"]] = {
-	Closure = function()
-		local script = AZY["12e"];
-		local module = {}
-
-		function module.GetLines(text)
-			local amount = 1
-
-			text:gsub("\n", function()
-				amount += 1
-			end)
-
-			return amount
-		end
-
-		function module.GetLinesString(text)
-			local lineAmt = module.GetLines(text)
-			local result = ""
-
-			for i = 1, lineAmt do
-				result = result .. i .. "\n"
-			end
-
-			-- Remove last \n
-			result = result:sub(1, #result - 1)
-
-			return result
-		end
-
-		return module
-
-	end;
-};
-AZY_MODULES[AZY["12f"]] = {
-	Closure = function()
-		local script = AZY["12f"];
-		local fakeEditor = {} -- Main module
-
-		local textFixer = require(script.Parent.TextFixer)
-		local theme = require(script.Parent.Theme)
-		local syntax = require(script.Parent.Syntax)
-
-		local editorObj = {
-			SetTextSize = function(self, textSize)
-				local sourceBox = self.Editor.Scroll.Source
-				local syntaxBox = sourceBox.Syntax
-				local linesBox = self.Editor.Scroll.Left.Lines
-				local lineHighlight = sourceBox.LineHighlight
-
-				sourceBox.TextSize = textSize
-				syntaxBox.TextSize = textSize
-				linesBox.TextSize = textSize
-				lineHighlight.Size = UDim2.new(1, 0,0, textSize + 5)
-
-
-		--[[
-			Might want to fix it manually because adding another \n
-			might cause some instability
-		]]
-				textFixer.Fix(self.Editor.Scroll.Source.Syntax)
-
-				return textSize
-			end,
-			Destroy = function(self)
-				self.Editor:Destroy()
-				setmetatable(self, {__index = nil})
-				table.clear(self)
-				self = nil
-
-				return nil
-			end,
-			GetText = function(self)
-				local sourceBox = self.Editor.Scroll.Source
-				return sourceBox.Text
-			end,
-			SetText = function(self, text)
-				local sourceBox = self.Editor.Scroll.Source
-				sourceBox.Text = text
-
-				return text
-			end,
-			ContentToBytes = function(self)
-				local text = self.Editor.Scroll.Source.Text
-				local bytes = {}
-
-				for _, c in pairs(text:split("")) do
-					table.insert(bytes, string.byte(c))
-				end
-
-				return "/" .. table.concat(bytes, "/")
-			end,
-			Hide = function(self)
-				local hiddenLabel = self.Editor.Scroll.Source.Hidden
-				hiddenLabel.Visible = true
-			end,
-			Unhide = function(self)
-				local hiddenLabel = self.Editor.Scroll.Source.Hidden
-				hiddenLabel.Visible = false
-			end,
-			SetTheme = function(self, themeName)
-				local sourceBox = self.Editor.Scroll.Source
-				local syntaxBox = sourceBox.Syntax
-
-				assert(theme.themes[themeName], "'" .. themeName .. "' is not a valid theme.")
-
-				theme.current = theme.themes[themeName]
-
-				-- Update highlighting
-				syntax.Highlight(syntaxBox, sourceBox.Text)
-			end,
-		}
-
-		function fakeEditor.new(editor)
-			return setmetatable({Editor = editor}, {__index = editorObj})
-		end
-
-		return fakeEditor
-
-	end;
-};
-AZY_MODULES[AZY["130"]] = {
-	Closure = function()
-		local script = AZY["130"];
-		local module = {}
-
-		function module.peekBack(self)
-			return self.text:sub(self.position - 1, self.position - 1)
-		end
-
-		function module.next(self)
-			self.position += 1
-
-			self.character = self.text:sub(self.position, self.position)
-
-			if self.character == "\n" then
-				self.lines += 1
-			end
-
-			if self.position < #self.text and self.position < self.cursorPosition then
-				self:next()
-			end
-		end
-
-		function module.GetCurrentLine(self, textbox)
-			self.position = 0
-			self.text = textbox.Text .. " "
-			self.cursorPosition = textbox.CursorPosition
-			self.lines = 1
-
-			self:next()
-
-			return self.lines
-		end
-
-		function module.GetCurrentLineWidth(self, textbox)
-			self.position = 0
-			self.text = textbox.Text .. " "
-			self.cursorPosition = textbox.CursorPosition
-			self.lines = 1
-
-			self:next()
-
-			-- self.lines is the current line
-
-			return self.position
-		end
-
-		return module
-
-	end;
-};
-AZY_MODULES[AZY["131"]] = {
-	Closure = function()
-		local script = AZY["131"];
-		local module = {}
-
-		local tweenService = game:GetService("TweenService")
-		local debris = game:GetService("Debris")
-
-		-- Custom functions
-		local function default(arg, def)
-			if arg == nil then
-				arg = def
-			end
-			return arg
-		end
-
-		-- Guis --
-
-		function module.TweenScale(frame, scale, timelen, easingstyle, easingdir)
-			local uiscale
-			if not frame:FindFirstChild("$ScaleAnim") then
-				uiscale = Instance.new("UIScale")
-				uiscale.Scale = 1
-				uiscale.Name = "$ScaleAnim"
-				uiscale.Parent = frame
-			end
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				Scale = scale
-			}
-
-			-- Finally, play tween
-			tweenService:Create(uiscale, tinfo, goals):Play()
-			--debris:AddItem(uiscale, timelen) -- Remove it when animation is done
-		end
-
-		function module.TweenPosition(frame, position, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(position, "No position provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				Position = position
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenSize(frame, size, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(size, "No size provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				Size = size
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenBackgroundColor3(frame, color, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(color, "No color provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				BackgroundColor3 = color
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenBackgroundTransparency(frame, transparency, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(transparency, "No transparency provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				BackgroundTransparency = transparency
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenBorderColor3(frame, color, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(color, "No color provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				BorderColor3 = color
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenBorderSizePixel(frame, bordersize, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(bordersize, "No border size provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				BorderSizePixel = bordersize
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenImageTransparency(frame, imagetransparency, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(imagetransparency, "No image transparency provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				ImageTransparency = imagetransparency
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenImageColor3(frame, color, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(color, "No color provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				ImageColor3 = color
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenImageRectOffset(frame, offset, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(offset, "No offset provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				ImageRectOffset = offset
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenImageRectSize(frame, size, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(size, "No size provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				ImageRectSize = size
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenSliceScale(frame, scale, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(scale, "No scale provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				SliceScale = scale
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenTextColor3(frame, color, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(color, "No color provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				TextColor3 = color
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenMaxVisibleGraphemes(frame, graphemes, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(graphemes, "No graphemes provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				MaxVisibleGraphemes = graphemes
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenTextSize(frame, size, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(size, "No size provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				TextSize = size
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenTextStrokeColor3(frame, color, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(color, "No color provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				TextStrokeColor3 = color
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenTextTransparency(frame, transparency, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(transparency, "No transparency provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				TextTransparency = transparency
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenTextStrokeTransparency(frame, transparency, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(transparency, "No transparency provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				TextStrokeTransparency = transparency
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenCanvasSize(frame, size, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(size, "No size provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				CanvasSize = size
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenCanvasPosition(frame, position, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(position, "No position provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				CanvasPosition = position
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenScrollBarImageTransparency(frame, transparency, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(transparency, "No transparency provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				ScrollBarImageTransparency = transparency
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenScrollBarThickness(frame, thickness, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(thickness, "No thickness provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				ScrollBarThickness = thickness
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenScrollBarImageColor3(frame, color, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(frame, "No frame provided")
-			assert(color, "No color provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				ScrollBarImageColor3 = color
-			}
-
-			-- Finally, play tween
-			tweenService:Create(frame, tinfo, goals):Play()
-		end
-
-		function module.TweenCFrame(thing, cframe, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(thing, "No instance provided")
-			assert(cframe, "No cframe provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				CFrame = cframe
-			}
-
-			-- Finally, play tween
-			tweenService:Create(thing, tinfo, goals):Play()
-		end
-
-		function module.TweenFOV(thing, fov, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(thing, "No instance provided")
-			assert(fov, "No FOV provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				FieldOfView = fov
-			}
-
-			-- Finally, play tween
-			tweenService:Create(thing, tinfo, goals):Play()
-		end
-
-		function module.TweenValue(thing, value, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(thing, "No instance provided")
-			assert(value, "No value provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				Value = value
-			}
-
-			-- Finally, play tween
-			tweenService:Create(thing, tinfo, goals):Play()
-		end
-
-		function module.TweenVolume(thing, volume, timelen, easingstyle, easingdir)
-			-- Errors & defaults
-			assert(thing, "No instance provided")
-			assert(volume, "No volume provided")
-			assert(timelen, "No time length provided")
-			easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
-			easingdir = default(easingdir, Enum.EasingDirection.Out)
-
-			-- Generate tween info
-			local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
-			local goals = {
-				Volume = volume
-			}
-
-			-- Finally, play tween
-			tweenService:Create(thing, tinfo, goals):Play()
-		end
-
-		return module
-
-	end;
-};
-AZY_MODULES[AZY["132"]] = {
-	Closure = function()
-		local script = AZY["132"];
-		local module = {}
-
-		function module.next(self)
-			self.position += 1
-			local character = self.text:sub(self.position, self.position)
-
-			if character == "\n" or character == " " or self.position > #self.text then
-				return self.position - 1
-			else
-				return self:next()
-			end
-		end
-
-		function module.prev(self)
-			self.position -= 1
-			local character = self.text:sub(self.position, self.position)
-
-			if character == "\n" or character == " " or self.position < 1 then
-				return self.position + 1
-			else
-				return self:prev()
-			end
-		end
-
-		function module.GetCurrentWord(self, textbox)
-			self.cursorPosition = textbox.CursorPosition
-			self.position = self.cursorPosition
-			self.text = textbox.Text
-
-			local wordEnd = self:next()
-			local wordStart = self:prev()
-			local wordString = self.text:sub(wordStart, wordEnd)
-
-			return wordString
-		end
-
-		return module
-
-	end;
-};
-AZY_MODULES[AZY["133"]] = {
-	Closure = function()
-		local script = AZY["133"];
---[[
-
+G2L_MODULES[G2L["95"]] = {
+Closure = function()
+    local script = G2L["95"];
+--[=[
 	Lexical scanner for creating a sequence of tokens from Lua source code.
-
 	This is a heavily modified and Roblox-optimized version of
 	the original Penlight Lexer module:
 		https://github.com/stevedonovan/Penlight
-
 	Authors:
-		stevedonovan <https://github.com/stevedonovan> ----------------- Original Penlight lexer author
-		ryanjmulder  <https://github.com/ryanjmulder>  ----------------- Penlight lexer contributer
-		mpeterv      <https://github.com/mpeterv>      ----------------- Penlight lexer contributer
-		Tieske       <https://github.com/Tieske>       ----------------- Penlight lexer contributer
-		boatbomber   <https://github.com/boatbomber>   ----------------- Roblox port, optimizations, and bug fixes
-		Sleitnick    <https://github.com/Sleitnick>    ----------------- Roblox optimizations
+		stevedonovan <https://github.com/stevedonovan> ----------- Original Penlight lexer author
+		ryanjmulder <https://github.com/ryanjmulder> ------------- Penlight lexer contributer
+		mpeterv <https://github.com/mpeterv> --------------------- Penlight lexer contributer
+		Tieske <https://github.com/Tieske> ----------------------- Penlight lexer contributer
+		boatbomber <https://github.com/boatbomber> --------------- Roblox port, added builtin token,
+		                                                           added patterns for incomplete syntax, bug fixes,
+		                                                           behavior changes, token optimization, thread optimization
+		                                                           Added lexer.navigator() for non-sequential reads
+		Sleitnick <https://github.com/Sleitnick> ----------------- Roblox optimizations
+		howmanysmall <https://github.com/howmanysmall> ----------- Lua + Roblox optimizations
 
-	Usage:
-
-		local source = "for i = 1,n do end"
-		
-		-- The 'scan' function returns a token iterator:
-		for token,src in lexer.scan(source) do
-			print(token, src)
-		end
-
-			> keyword for
-			> iden    i
-			> =       =
-			> number  1
-			> ,       ,
-			> iden    n
-			> keyword do
-			> keyword end
-
-	List of tokens:
+	List of possible tokens:
+		- iden
 		- keyword
 		- builtin
-		- iden
 		- string
 		- number
-		- space
 		- comment
+		- operator
+--]=]
 
-	Other tokens that don't fall into the above categories
-	will simply be returned as itself. For instance, operators
-	like "+" will simply return "+" as the token.
+local lexer = {}
 
---]]
+local Prefix, Suffix, Cleaner = "^[%c%s]*", "[%c%s]*", "[%c%s]+"
+local UNICODE = "[%z\x01-\x7F\xC2-\xF4][\x80-\xBF]+"
+local NUMBER_A = "0[xX][%da-fA-F_]+"
+local NUMBER_B = "0[bB][01_]+"
+local NUMBER_C = "%d+%.?%d*[eE][%+%-]?%d+"
+local NUMBER_D = "%d+[%._]?[%d_eE]*"
+local OPERATORS = "[:;<>/~%*%(%)%-={},%.#%^%+%%]+"
+local BRACKETS = "[%[%]]+" -- needs to be separate pattern from other operators or it'll mess up multiline strings
+local IDEN = "[%a_][%w_]*"
+local STRING_EMPTY = "(['\"])%1" --Empty String
+local STRING_PLAIN = "(['\"])[^\n]-([^\\]%1)" --TODO: Handle escaping escapes
+local STRING_INTER = "`[^\n]-`"
+local STRING_INCOMP_A = "(['\"]).-\n" --Incompleted String with next line
+local STRING_INCOMP_B = "(['\"])[^\n]*" --Incompleted String without next line
+local STRING_MULTI = "%[(=*)%[.-%]%1%]" --Multiline-String
+local STRING_MULTI_INCOMP = "%[=*%[.-.*" --Incompleted Multiline-String
+local COMMENT_MULTI = "%-%-%[(=*)%[.-%]%1%]" --Completed Multiline-Comment
+local COMMENT_MULTI_INCOMP = "%-%-%[=*%[.-.*" --Incompleted Multiline-Comment
+local COMMENT_PLAIN = "%-%-.-\n" --Completed Singleline-Comment
+local COMMENT_INCOMP = "%-%-.*" --Incompleted Singleline-Comment
+-- local TYPED_VAR = ":%s*([%w%?%| \t]+%s*)" --Typed variable, parameter, function
 
-		local lexer = {}
+local lang = require(script.language)
+local lua_keyword = lang.keyword
+local lua_builtin = lang.builtin
+local lua_libraries = lang.libraries
 
-		local yield, wrap  = coroutine.yield, coroutine.wrap
-		local strfind      = string.find
-		local strsub       = string.sub
-		local append       = table.insert
-		local type         = type
+lexer.language = lang
 
-		local NUMBER1	= "^[%+%-]?%d+%.?%d*[eE][%+%-]?%d+"
-		local NUMBER2	= "^[%+%-]?%d+%.?%d*"
-		local NUMBER3	= "^0x[%da-fA-F]+"
-		local NUMBER4	= "^%d+%.?%d*[eE][%+%-]?%d+"
-		local NUMBER5	= "^%d+%.?%d*"
-		local IDEN		= "^[%a_][%w_]*"
-		local WSPACE	= "^%s+"
-		local STRING1	= "^(['\"])%1"							--Empty String
-		local STRING2	= [[^(['"])(\*)%2%1]]
-		local STRING3	= [[^(['"]).-[^\](\*)%2%1]]
-		local STRING4	= "^(['\"]).-.*"						--Incompleted String
-		local STRING5	= "^%[(=*)%[.-%]%1%]"					--Multiline-String
-		local STRING6	= "^%[%[.-.*"							--Incompleted Multiline-String
-		local CHAR1		= "^''"
-		local CHAR2		= [[^'(\*)%1']]
-		local CHAR3		= [[^'.-[^\](\*)%1']]
-		local PREPRO	= "^#.-[^\\]\n"
-		local MCOMMENT1	= "^%-%-%[(=*)%[.-%]%1%]"				--Completed Multiline-Comment
-		local MCOMMENT2	= "^%-%-%[%[.-.*"						--Incompleted Multiline-Comment
-		local SCOMMENT1	= "^%-%-.-\n"							--Completed Singleline-Comment
-		local SCOMMENT2	= "^%-%-.-.*"							--Incompleted Singleline-Comment
-		local THINGY 	= "^[%.:]%w-%s?%(.-%)"
+local lua_matches = {
+	-- Indentifiers
+	{ Prefix .. IDEN .. Suffix, "var" },
 
-		local lua_keyword = {
-			["and"] = true,  ["break"] = true,  ["do"] = true,      ["else"] = true,      ["elseif"] = true,
-			["end"] = true,  ["false"] = true,  ["for"] = true,     ["function"] = true,  ["if"] = true,
-			["in"] = true,   ["local"] = true,  ["nil"] = true,     ["not"] = true,       ["while"] = true,
-			["or"] = true,   ["repeat"] = true, ["return"] = true,  ["then"] = true,      ["true"] = true,
-			["self"] = true, ["until"] = true
-		}
+	-- Numbers
+	{ Prefix .. NUMBER_A .. Suffix, "number" },
+	{ Prefix .. NUMBER_B .. Suffix, "number" },
+	{ Prefix .. NUMBER_C .. Suffix, "number" },
+	{ Prefix .. NUMBER_D .. Suffix, "number" },
 
-		local lua_builtin = {
-			["assert"] = true;["collectgarbage"] = true;["error"] = true;["_G"] = true;
-			["gcinfo"] = true;["getfenv"] = true;["getmetatable"] = true;["ipairs"] = true;
-			["loadstring"] = true;["newproxy"] = true;["next"] = true;["pairs"] = true;
-			["pcall"] = true;["print"] = true;["rawequal"] = true;["rawget"] = true;["rawset"] = true;
-			["select"] = true;["setfenv"] = true;["setmetatable"] = true;["tonumber"] = true;
-			["tostring"] = true;["type"] = true;["unpack"] = true;["_VERSION"] = true;["xpcall"] = true;
-			["delay"] = true;["elapsedTime"] = true;["require"] = true;["spawn"] = true;["tick"] = true;
-			["time"] = true;["typeof"] = true;["UserSettings"] = true;["wait"] = true;["warn"] = true;
-			["game"] = true;["Enum"] = true;["script"] = true;["shared"] = true;["workspace"] = true;
-			["Axes"] = true;["BrickColor"] = true;["CFrame"] = true;["Color3"] = true;["ColorSequence"] = true;
-			["ColorSequenceKeypoint"] = true;["Faces"] = true;["Instance"] = true;["NumberRange"] = true;
-			["NumberSequence"] = true;["NumberSequenceKeypoint"] = true;["PhysicalProperties"] = true;
-			["Random"] = true;["Ray"] = true;["Rect"] = true;["Region3"] = true;["Region3int16"] = true;
-			["TweenInfo"] = true;["UDim"] = true;["UDim2"] = true;["Vector2"] = true;["Vector3"] = true;
-			["Vector3int16"] = true;["next"] = true;["dofile"] = true;["writefile"] = true;["readfile"] = true;
-			["isfile"] = true;["delfile"] = true;["isfolder"] = true;["makefolder"] = true;["delfolder"] = true;["listfiles"] = true;
-			["descend"] = true;
-			["os"] = true;
-			--["os.time"] = true;["os.date"] = true;["os.difftime"] = true;
-			["debug"] = true;
-			--["debug.traceback"] = true;["debug.profilebegin"] = true;["debug.profileend"] = true;
-			["math"] = true;
-			--["math.abs"] = true;["math.acos"] = true;["math.asin"] = true;["math.atan"] = true;["math.atan2"] = true;["math.ceil"] = true;["math.clamp"] = true;["math.cos"] = true;["math.cosh"] = true;["math.deg"] = true;["math.exp"] = true;["math.floor"] = true;["math.fmod"] = true;["math.frexp"] = true;["math.ldexp"] = true;["math.log"] = true;["math.log10"] = true;["math.max"] = true;["math.min"] = true;["math.modf"] = true;["math.noise"] = true;["math.pow"] = true;["math.rad"] = true;["math.random"] = true;["math.randomseed"] = true;["math.sign"] = true;["math.sin"] = true;["math.sinh"] = true;["math.sqrt"] = true;["math.tan"] = true;["math.tanh"] = true;
-			["coroutine"] = true;
-			--["coroutine.create"] = true;["coroutine.resume"] = true;["coroutine.running"] = true;["coroutine.status"] = true;["coroutine.wrap"] = true;["coroutine.yield"] = true;
-			["string"] = true;
-			--["string.byte"] = true;["string.char"] = true;["string.dump"] = true;["string.find"] = true;["string.format"] = true;["string.len"] = true;["string.lower"] = true;["string.match"] = true;["string.rep"] = true;["string.reverse"] = true;["string.sub"] = true;["string.upper"] = true;["string.gmatch"] = true;["string.gsub"] = true;
-			["table"] = true;
-			--["table.concat"] = true;["table.insert"] = true;["table.remove"] = true;["table.sort"] = true;
-		}
+	-- Strings
+	{ Prefix .. STRING_EMPTY .. Suffix, "string" },
+	{ Prefix .. STRING_PLAIN .. Suffix, "string" },
+	{ Prefix .. STRING_INCOMP_A .. Suffix, "string" },
+	{ Prefix .. STRING_INCOMP_B .. Suffix, "string" },
+	{ Prefix .. STRING_MULTI .. Suffix, "string" },
+	{ Prefix .. STRING_MULTI_INCOMP .. Suffix, "string" },
+	{ Prefix .. STRING_INTER .. Suffix, "string_inter" },
 
-		local function tdump(tok)
-			return yield(tok, tok)
-		end
+	-- Comments
+	{ Prefix .. COMMENT_MULTI .. Suffix, "comment" },
+	{ Prefix .. COMMENT_MULTI_INCOMP .. Suffix, "comment" },
+	{ Prefix .. COMMENT_PLAIN .. Suffix, "comment" },
+	{ Prefix .. COMMENT_INCOMP .. Suffix, "comment" },
 
-		local function ndump(tok)
-			return yield("number", tok)
-		end
+	-- Operators
+	{ Prefix .. OPERATORS .. Suffix, "operator" },
+	{ Prefix .. BRACKETS .. Suffix, "operator" },
 
-		local function sdump(tok)
-			return yield("string", tok)
-		end
+	-- Unicode
+	{ Prefix .. UNICODE .. Suffix, "iden" },
 
-		local function cdump(tok)
-			return yield("comment", tok)
-		end
+	-- Unknown
+	{ "^.", "iden" },
+}
 
-		local function wsdump(tok)
-			return yield("space", tok)
-		end
+-- To reduce the amount of table indexing during lexing, we separate the matches now
+local PATTERNS, TOKENS = {}, {}
+for i, m in lua_matches do
+	PATTERNS[i] = m[1]
+	TOKENS[i] = m[2]
+end
 
-		local function lua_vdump(tok)
-			if (lua_keyword[tok]) then
-				return yield("keyword", tok)
-			elseif (lua_builtin[tok]) then
-				return yield("builtin", tok)
-			else
-				return yield("iden", tok)
-			end
-		end
+--- Create a plain token iterator from a string.
+-- @tparam string s a string.
 
-		local function thingy_dump(tok)
-			return yield("thingy", tok)
-		end
+function lexer.scan(s: string)
+	local index = 1
+	local size = #s
+	local previousContent1, previousContent2, previousContent3, previousToken = "", "", "", ""
 
-		local lua_matches = {
-			{THINGY, thingy_dump},
+	local thread = coroutine.create(function()
+		while index <= size do
+			local matched = false
+			for tokenType, pattern in ipairs(PATTERNS) do
+				-- Find match
+				local start, finish = string.find(s, pattern, index)
+				if start == nil then continue end
 
-			{IDEN,      lua_vdump},        -- Indentifiers
-			{WSPACE,    wsdump},           -- Whitespace
-			{NUMBER3,   ndump},            -- Numbers
-			{NUMBER4,   ndump},
-			{NUMBER5,   ndump},
-			{STRING1,   sdump},            -- Strings
-			{STRING2,   sdump},
-			{STRING3,   sdump},
-			{STRING4,   sdump},
-			{STRING5,   sdump},            -- Multiline-Strings
-			{STRING6,   sdump},            -- Multiline-Strings
+				-- Move head
+				index = finish + 1
+				matched = true
 
-			{MCOMMENT1, cdump},            -- Multiline-Comments
-			{MCOMMENT2, cdump},			
-			{SCOMMENT1, cdump},            -- Singleline-Comments
-			{SCOMMENT2, cdump},
+				-- Gather results
+				local content = string.sub(s, start, finish)
+				local rawToken = TOKENS[tokenType]
+				local processedToken = rawToken
 
-			{"^==",     tdump},            -- Operators
-			{"^~=",     tdump},
-			{"^<=",     tdump},
-			{"^>=",     tdump},
-			{"^%.%.%.", tdump},
-			{"^%.%.",   tdump},
-			{"^.",      tdump},
-		}
+				-- Process token
+				if rawToken == "var" then
+					-- Since we merge spaces into the tok, we need to remove them
+					-- in order to check the actual word it contains
+					local cleanContent = string.gsub(content, Cleaner, "")
 
-		local num_lua_matches = #lua_matches
-
-
-		--- Create a plain token iterator from a string.
-		-- @tparam string s a string.
-		function lexer.scan(s)
-
-			local function lex(first_arg)
-
-				local line_nr = 0
-				local sz = #s
-				local idx = 1
-
-				-- res is the value used to resume the coroutine.
-				local function handle_requests(res)
-					while (res) do
-						local tp = type(res)
-						-- Insert a token list:
-						if (tp == "table") then
-							res = yield("", "")
-							for i = 1,#res do
-								local t = res[i]
-								res = yield(t[1], t[2])
-							end
-						elseif (tp == "string") then -- Or search up to some special pattern:
-							local i1, i2 = strfind(s, res, idx)
-							if (i1) then
-								local tok = strsub(s, i1, i2)
-								idx = (i2 + 1)
-								res = yield("", tok)
-							else
-								res = yield("", "")
-								idx = (sz + 1)
-							end
+					if lua_keyword[cleanContent] then
+						processedToken = "keyword"
+					elseif lua_builtin[cleanContent] then
+						processedToken = "builtin"
+					elseif string.find(previousContent1, "%.[%s%c]*$") and previousToken ~= "comment" then
+						-- The previous was a . so we need to special case indexing things
+						local parent = string.gsub(previousContent2, Cleaner, "")
+						local lib = lua_libraries[parent]
+						if lib and lib[cleanContent] and not string.find(previousContent3, "%.[%s%c]*$") then
+							-- Indexing a builtin lib with existing item, treat as a builtin
+							processedToken = "builtin"
 						else
-							res = yield(line_nr, idx)
+							-- Indexing a non builtin, can't be treated as a keyword/builtin
+							processedToken = "iden"
 						end
+						-- print("indexing",parent,"with",cleanTok,"as",t2)
+					else
+						processedToken = "iden"
 					end
-				end
+				elseif rawToken == "string_inter" then
+					if not string.find(content, "[^\\]{") then
+						-- This inter string doesnt actually have any inters
+						processedToken = "string"
+					else
+						-- We're gonna do our own yields, so the main loop won't need to
+						-- Our yields will be a mix of string and whatever is inside the inters
+						processedToken = nil
 
-				handle_requests(first_arg)
-				line_nr = 1
-
-				while (true) do
-
-					if (idx > sz) then
-						while (true) do
-							handle_requests(yield())
-						end
-					end
-
-					for i = 1,num_lua_matches do
-						local m = lua_matches[i]
-						local pat = m[1]
-						local fun = m[2]
-						local findres = {strfind(s, pat, idx)}
-						local i1, i2 = findres[1], findres[2]
-						if (i1) then
-							local tok = strsub(s, i1, i2)
-							idx = (i2 + 1)
-							lexer.finished = (idx > sz)
-							local res = fun(tok, findres)
-							if (tok:find("\n")) then
-								-- Update line number:
-								local _,newlines = tok:gsub("\n", {})
-								line_nr = (line_nr + newlines)
+						local isString = true
+						local subIndex = 1
+						local subSize = #content
+						while subIndex <= subSize do
+							-- Find next brace
+							local subStart, subFinish = string.find(content, "^.-[^\\][{}]", subIndex)
+							if subStart == nil then
+								-- No more braces, all string
+								coroutine.yield("string", string.sub(content, subIndex))
+								break
 							end
-							handle_requests(res)
-							break
+
+							if isString then
+								-- We are currently a string
+								subIndex = subFinish + 1
+								coroutine.yield("string", string.sub(content, subStart, subFinish))
+
+								-- This brace opens code
+								isString = false
+							else
+								-- We are currently in code
+								subIndex = subFinish
+								local subContent = string.sub(content, subStart, subFinish-1)
+								for innerToken, innerContent in lexer.scan(subContent) do
+									coroutine.yield(innerToken, innerContent)
+								end
+
+								-- This brace opens string/closes code
+								isString = true
+							end
 						end
 					end
-
 				end
 
-			end
-
-			return wrap(lex)
-
-		end
-
-		return lexer
-	end;
-};
-AZY_MODULES[AZY["134"]] = {
-	Closure = function()
-		local script = AZY["134"];
-		local module = {}
-
-		--// Vars
-		local words   = require(script.Parent.Words)
-		local GetWord = require(script.Parent.GetWord)
-		local getLine = require(script.Parent.GetLine)
-
-		--// Funcs
-		function module.GetCurrentWord(self)
-			return GetWord:GetCurrentWord(self.Textbox)
-		end
-
-		function module.Search(self)
-			local currentWord = self:GetCurrentWord():lower()
-
-			if currentWord == "" and #currentWord <= 1 then
-				return nil
-			end
-
-			for word, wordType in pairs(words) do
-				local matched = string.match(word:lower(), currentWord)
-
-				if matched then
-					local foundStart, foundEnd = string.find(word:lower(), currentWord)
-					return word, (foundEnd - foundStart) + 1
+				-- Record last 3 tokens for the indexing context check
+				previousContent3 = previousContent2
+				previousContent2 = previousContent1
+				previousContent1 = content
+				previousToken = processedToken or rawToken
+				if processedToken then
+					coroutine.yield(processedToken, content)
 				end
+				break
 			end
 
-			return nil
-		end
-
-		function module.Start(self, editor)
-			self.Editor = editor
-			self.Textbox = editor.Scroll.Source
-			self.SuggestionButton = self.Textbox.Suggestion
-
-			self.Textbox:GetPropertyChangedSignal("Text"):Connect(function()
-				local foundWord, matchedLength = self:Search()
-
-				if foundWord then
-					local position = UDim2.new(0, 0,0, getLine:GetCurrentLine(self.Textbox) * self.Textbox.TextSize)
-
-					self.SuggestionButton.Text = foundWord
-					self.SuggestionButton.Position = position
-					self.SuggestionButton.Visible = true
-					self.MatchedLength = matchedLength
-				else
-					self.SuggestionButton.Visible = false
-				end
-			end)
-
-			self.SuggestionButton.MouseButton1Click:Connect(function(input)
-				-- Fill in the word
-				local word = self.SuggestionButton.Text
-				self.SuggestionButton.Visible = false
-				self.Textbox.Text = self.Textbox.Text:sub(1, self.Textbox.CursorPosition - 1 - (self.MatchedLength or 0)) .. word .. self.Textbox.Text:sub(self.Textbox.CursorPosition + 1, #self.Textbox.Text)
-
-				local newCursorPosition = self.Textbox.CursorPosition + #word - self.MatchedLength
-				wait()
-				self.Textbox:ReleaseFocus()
-				self.Textbox:CaptureFocus()
-				self.Textbox.CursorPosition = newCursorPosition
-			end)
-		end
-
-		return module
-
-	end;
-};
-AZY_MODULES[AZY["135"]] = {
-	Closure = function()
-		local script = AZY["135"];
-		local words = {
-			['print'] = 'builtin',
-			['warn'] = 'builtin',
-			['Vector3'] = 'builtin',
-			['Vector2'] = 'builtin',
-			['error'] = 'builtin',
-			['Instance'] = 'builtin',
-			['game'] = 'builtin',
-			['script'] = 'builtin',
-			['workspace'] = 'builtin',
-
-			['while'] = 'keyword',
-			['true'] = 'keyword',
-			['false'] = 'keyword',
-			['then'] = 'keyword',
-			['do'] = 'keyword',
-			['if'] = 'keyword',
-		}
-
-		return words
-
-	end;
-};
-AZY_MODULES[AZY["148"]] = {
-	Closure = function()
-		local script = AZY["148"];
-		-- Fixes a Roblox bug with RichText
-
-		-- If the bug gets fixed, this will break the editor (visually).
-		-- In this case, please remove any instances of this module being used.
-
-		local module = {}
-
-		function module.Fix(textbox)
-			if textbox.Text:sub(1, 1) ~= "\n" then
-				textbox.Text = "\n" .. textbox.Text
+			-- No matches found
+			if not matched then
+				return
 			end
-
-			textbox.Position = UDim2.new(0, -3.5,0,-8.9)
-			textbox.Size = UDim2.new(1, 4,1, textbox.TextSize)
 		end
 
-		return module
-
-	end;
-};
--- StarterGui.ArceusXV3.Welcome.Welcome.ScrollingFrame.Text.LocalScript
-local function C_9()
-	local script = AZY["9"];
-	-- Get the local player's name
-	local playerName = game.Players.LocalPlayer.DisplayName
-
-	-- Create the welcome message with string interpolation
-	local welcomeMessage = string.format([[
-	Dear %s,
-	
-	We are writing to welcome you as one of your first beta testers of Arceus X!
-	We are thrilled to have your collaboration and to offer you the opportunity
-	to try out the new features we are developing.
-	
-	We are confident that your experience and creativity will help us make
-	Arceus X an even more effective and user-friendly application.
-	Please feel free to share any feedback and suggestions that can help us further
-	improve our platform.
-	
-	Thank you so much for your support, and we look forward to working with
-	you in this exciting journey!
-	
-	Best regards,
-	SPDM Team
-	]], playerName)
-
-	-- Display the welcome message
-	script.Parent.Text = welcomeMessage
-end;
-task.spawn(C_9);
--- StarterGui.ArceusXV3.Welcome.Welcome.ScrollingFrame.TextButton.LocalScriptNew
-local function C_d()
-	local script = AZY["d"];
-	local btn = script.Parent
-	local welcome = script.Parent.Parent.Parent
-	local bg = script.Parent.Parent.Parent.Parent.Frame
-	local gui = script.Parent.Parent.Parent.Parent
-
-	pcall(function()
-		if isfile("arc.xloaded") then
-			script.Parent.Parent.Parent.Parent.Parent.MainUI.FloatingUI.Visible = true
-			script.Parent.Parent.Parent.Parent.Parent.MainUI.FloatingUI.Active = true
-			script.Parent.Parent.Parent.Parent.Frame.Visible = false
-			script.Parent.Parent.Parent.Parent.Welcome.Visible = false
-		end
+		-- Completed the scan
+		return
 	end)
 
-	btn.MouseButton1Click:Connect(function()
-		pcall(function()
-			writefile("arc.xloaded", "Nothing to read here, this is just a file to check if you're already execute it at first time, you may remove or delete this file to get your welcome message again.")
+	return function()
+		if coroutine.status(thread) == "dead" then
+			return
+		end
+
+		local success, token, content = coroutine.resume(thread)
+		if success and token then
+			return token, content
+		end
+
+		return
+	end
+end
+
+function lexer.navigator()
+	local nav = {
+		Source = "",
+		TokenCache = table.create(50),
+
+		_RealIndex = 0,
+		_UserIndex = 0,
+		_ScanThread = nil,
+	}
+
+	function nav:Destroy()
+		self.Source = nil
+		self._RealIndex = nil
+		self._UserIndex = nil
+		self.TokenCache = nil
+		self._ScanThread = nil
+	end
+
+	function nav:SetSource(SourceString)
+		self.Source = SourceString
+
+		self._RealIndex = 0
+		self._UserIndex = 0
+		table.clear(self.TokenCache)
+
+		self._ScanThread = coroutine.create(function()
+			for Token, Src in lexer.scan(self.Source) do
+				self._RealIndex += 1
+				self.TokenCache[self._RealIndex] = { Token, Src }
+				coroutine.yield(Token, Src)
+			end
 		end)
-		welcome.Visible = false
-		bg.Visible=false
-		gui.Parent.AnimationIntro.Background.Visible = true
-		gui.Parent.AnimationIntro.ImageLabel.Visible = true
+	end
 
-		gui.Parent.AnimationIntro.NameLogo.Visible = true
-		--gui.Parent.AnimationIntro.Frame.Visible = true
+	function nav.Next()
+		nav._UserIndex += 1
 
-
-		local function uninvislogo()
-			local TextLabel = gui.Parent.AnimationIntro.ImageLabel -- Change this to the name of your TextLabel
-			local FadeTime = 1 -- Change this to adjust the fade time in seconds
-
-			for i = 1, 10 do -- Loop 10 times to create a smoother fade
-				wait(FadeTime/10) -- Wait for 1/10th of the fade time
-				local Alpha = 1 - (i/10) -- Calculate the transparency value
-				TextLabel.ImageTransparency = Alpha -- Set the transparency of the TextLabel
-			end
-		end
-		uninvislogo()
-
-		wait(0.5)
-
-
-		--0, 900,0, 900
-		--100, -150, 100, -100
-		local function movearc()
-
-			local textn = gui.Parent.AnimationIntro.NameLogo
-			local frame1 = textn
-
-			-- Define the start and end positions for the tween
-			local startPos1 = UDim2.new(0.442, 0,0.361, 0) --[[FOR LOGO OPENING]] --ACTUAL END
-			local endPos1 = UDim2.new(0.482, 0,0.452, 0)
-
-			-- Define the length of time for the tween
-			local tweenTime1 = 0.3
-
-			-- Import the TweenService module
-			local TweenService1 = game:GetService("TweenService")
-
-			-- Define the tweenInfo for the tween
-			local tweenInfo1 = TweenInfo.new(tweenTime1, Enum.EasingStyle.Linear)
-
-			-- Define the tween
-			local tween1 = TweenService1:Create(frame1, tweenInfo1, {Position = endPos1})
-
-			-- Play the tween
-			tween1:Play()
-			local function fadetext()
-				local TextLabel = textn -- Change this to the name of your TextLabel
-				local FadeTime = 0.3 -- Change this to adjust the fade time in seconds
-
-				for i = 1, 10 do -- Loop 10 times to create a smoother fade [[FOR TEXT]]
-					wait(FadeTime/10) -- Wait for 1/10th of the fade time
-					local Alpha = 1 - (i/10) -- Calculate the transparency value
-					TextLabel.TextTransparency = Alpha -- Set the transparency of the TextLabel
+		if nav._RealIndex >= nav._UserIndex then
+			-- Already scanned, return cached
+			return table.unpack(nav.TokenCache[nav._UserIndex])
+		else
+			if coroutine.status(nav._ScanThread) == "dead" then
+				-- Scan thread dead
+				return
+			else
+				local success, token, src = coroutine.resume(nav._ScanThread)
+				if success and token then
+					-- Scanned new data
+					return token, src
+				else
+					-- Lex completed
+					return
 				end
 			end
+		end
+	end
 
+	function nav.Peek(PeekAmount)
+		local GoalIndex = nav._UserIndex + PeekAmount
 
-			-- Define the Frame we want to tween
-			local frame = gui.Parent.AnimationIntro.ImageLabel
+		if nav._RealIndex >= GoalIndex then
+			-- Already scanned, return cached
+			if GoalIndex > 0 then
+				return table.unpack(nav.TokenCache[GoalIndex])
+			else
+				-- Invalid peek
+				return
+			end
+		else
+			if coroutine.status(nav._ScanThread) == "dead" then
+				-- Scan thread dead
+				return
+			else
+				local IterationsAway = GoalIndex - nav._RealIndex
 
-			-- Define the start and end positions for the tween [FOR TEXT]
-			local startPos = UDim2.new(0.442, 0,0.361, 0) --ACTUAL END
-			local endPos = UDim2.new(0.362, 0,0.361, 0)
+				local success, token, src = nil, nil, nil
 
-			-- Define the length of time for the tween
-			local tweenTime = 0.3
-
-			-- Import the TweenService module
-			local TweenService = game:GetService("TweenService")
-
-			-- Define the tweenInfo for the tween
-			local tweenInfo = TweenInfo.new(tweenTime, Enum.EasingStyle.Linear)
-
-			-- Define the tween
-			local tween = TweenService:Create(frame, tweenInfo, {Position = endPos})
-
-			-- Play the tween
-			tween:Play()
-
-			gui.Parent.AnimationIntro.Frame.Visible = true
-			local TweenService4 = game:GetService("TweenService")
-
-			-- The GUI frame that we want to animate
-			local frame4 = gui.Parent.AnimationIntro.Frame
-
-			-- The final size and position that we want to tween to
-			local finalSize4 = UDim2.new(0, 2051,0, 1495)
-			local finalPosition4 = UDim2.new(-0.353, 0,-0.738, 0)
-
-			-- The duration of the tween in seconds
-			local tweenDuration4 = 0.4
-
-			-- Define the tween information for the size and position
-			local tweenInfo4 = TweenInfo.new(tweenDuration4, Enum.EasingStyle.Quint, Enum.EasingDirection.Out, 0, false, 0)
-
-			-- Create the tweens for the size and position
-			local sizeTween = TweenService:Create(frame4, tweenInfo4, {Size = finalSize4})
-			local positionTween = TweenService:Create(frame4, tweenInfo4, {Position = finalPosition4})
-
-			-- Play the tweens simultaneously
-			sizeTween:Play()
-			positionTween:Play()
-
-			wait(0.2)
-			fadetext()
-			wait(0.4)
-			gui.Parent.AnimationIntro.NameLogo.Visible = true
-			wait(1.4)
-			local FadeTime = 0.3
-			for i = 0, 1.1, 0.1 do -- Loop 10 times to create a smoother far
-				gui.Parent.AnimationIntro.Background.BackgroundTransparency = i
-				gui.Parent.AnimationIntro.Frame.BackgroundTransparency = i
-				gui.Parent.AnimationIntro.ImageLabel.ImageTransparency = i
-				gui.Parent.AnimationIntro.NameLogo.TextTransparency = i
-				if i == 1 then
-					for _,v in pairs(gui.Parent.AnimationIntro:GetChildren()) do
-						if v.Visible then
-							v.Visible = false
-						end
+				for _ = 1, IterationsAway do
+					success, token, src = coroutine.resume(nav._ScanThread)
+					if not (success or token) then
+						-- Lex completed
+						break
 					end
 				end
-				wait(0.05)
+
+				return token, src
 			end
-			wait(0.04)
-			script.Parent.Parent.Parent.Parent.Parent.MainUI.FloatingUI.Visible = true
-			script.Parent.Parent.Parent.Parent.Parent.MainUI.FloatingUI.Active = true
-			--print("completed.")
+		end
+	end
 
+	return nav
+end
 
+return lexer
+
+end;
+};
+G2L_MODULES[G2L["96"]] = {
+Closure = function()
+    local script = G2L["96"];
+local language = {
+	keyword = {
+		["and"] = "keyword",
+		["break"] = "keyword",
+		["continue"] = "keyword",
+		["do"] = "keyword",
+		["else"] = "keyword",
+		["elseif"] = "keyword",
+		["end"] = "keyword",
+		["export"] = "keyword",
+		["false"] = "keyword",
+		["for"] = "keyword",
+		["function"] = "keyword",
+		["if"] = "keyword",
+		["in"] = "keyword",
+		["local"] = "keyword",
+		["nil"] = "keyword",
+		["not"] = "keyword",
+		["or"] = "keyword",
+		["repeat"] = "keyword",
+		["return"] = "keyword",
+		["self"] = "keyword",
+		["then"] = "keyword",
+		["true"] = "keyword",
+		["type"] = "keyword",
+		["typeof"] = "keyword",
+		["until"] = "keyword",
+		["while"] = "keyword",
+	},
+
+	builtin = {
+		-- Luau Functions
+		["assert"] = "function",
+		["error"] = "function",
+		["getfenv"] = "function",
+		["getmetatable"] = "function",
+		["ipairs"] = "function",
+		["loadstring"] = "function",
+		["newproxy"] = "function",
+		["next"] = "function",
+		["pairs"] = "function",
+		["pcall"] = "function",
+		["print"] = "function",
+		["rawequal"] = "function",
+		["rawget"] = "function",
+		["rawlen"] = "function",
+		["rawset"] = "function",
+		["select"] = "function",
+		["setfenv"] = "function",
+		["setmetatable"] = "function",
+		["tonumber"] = "function",
+		["tostring"] = "function",
+		["unpack"] = "function",
+		["xpcall"] = "function",
+
+		-- Luau Functions (Deprecated)
+		["collectgarbage"] = "function",
+
+		-- Luau Variables
+		["_G"] = "table",
+		["_VERSION"] = "string",
+
+		-- Luau Tables
+		["bit32"] = "table",
+		["coroutine"] = "table",
+		["debug"] = "table",
+		["math"] = "table",
+		["os"] = "table",
+		["string"] = "table",
+		["table"] = "table",
+		["utf8"] = "table",
+
+		-- Roblox Functions
+		["DebuggerManager"] = "function",
+		["delay"] = "function",
+		["gcinfo"] = "function",
+		["PluginManager"] = "function",
+		["require"] = "function",
+		["settings"] = "function",
+		["spawn"] = "function",
+		["tick"] = "function",
+		["time"] = "function",
+		["UserSettings"] = "function",
+		["wait"] = "function",
+		["warn"] = "function",
+
+		-- Roblox Functions (Deprecated)
+		["Delay"] = "function",
+		["ElapsedTime"] = "function",
+		["elapsedTime"] = "function",
+		["printidentity"] = "function",
+		["Spawn"] = "function",
+		["Stats"] = "function",
+		["stats"] = "function",
+		["Version"] = "function",
+		["version"] = "function",
+		["Wait"] = "function",
+		["ypcall"] = "function",
+
+		-- Roblox Variables
+		["game"] = "Instance",
+		["plugin"] = "Instance",
+		["script"] = "Instance",
+		["shared"] = "Instance",
+		["workspace"] = "Instance",
+
+		-- Roblox Variables (Deprecated)
+		["Game"] = "Instance",
+		["Workspace"] = "Instance",
+
+		-- Roblox Tables
+		["Axes"] = "table",
+		["BrickColor"] = "table",
+		["CatalogSearchParams"] = "table",
+		["CFrame"] = "table",
+		["Color3"] = "table",
+		["ColorSequence"] = "table",
+		["ColorSequenceKeypoint"] = "table",
+		["DateTime"] = "table",
+		["DockWidgetPluginGuiInfo"] = "table",
+		["Enum"] = "table",
+		["Faces"] = "table",
+		["FloatCurveKey"] = "table",
+		["Font"] = "table",
+		["Instance"] = "table",
+		["NumberRange"] = "table",
+		["NumberSequence"] = "table",
+		["NumberSequenceKeypoint"] = "table",
+		["OverlapParams"] = "table",
+		["PathWaypoint"] = "table",
+		["PhysicalProperties"] = "table",
+		["Random"] = "table",
+		["Ray"] = "table",
+		["RaycastParams"] = "table",
+		["Rect"] = "table",
+		["Region3"] = "table",
+		["Region3int16"] = "table",
+		["RotationCurveKey"] = "table",
+		["task"] = "table",
+		["TweenInfo"] = "table",
+		["UDim"] = "table",
+		["UDim2"] = "table",
+		["Vector2"] = "table",
+		["Vector2int16"] = "table",
+		["Vector3"] = "table",
+		["Vector3int16"] = "table",
+	},
+
+	libraries = {
+
+		-- Luau Libraries
+		bit32 = {
+			arshift = "function",
+			band = "function",
+			bnot = "function",
+			bor = "function",
+			btest = "function",
+			bxor = "function",
+			countlz = "function",
+			countrz = "function",
+			extract = "function",
+			lrotate = "function",
+			lshift = "function",
+			replace = "function",
+			rrotate = "function",
+			rshift = "function",
+		},
+
+		coroutine = {
+			close = "function",
+			create = "function",
+			isyieldable = "function",
+			resume = "function",
+			running = "function",
+			status = "function",
+			wrap = "function",
+			yield = "function",
+		},
+
+		debug = {
+			dumpheap = "function",
+			info = "function",
+			loadmodule = "function",
+			profilebegin = "function",
+			profileend = "function",
+			resetmemorycategory = "function",
+			setmemorycategory = "function",
+			traceback = "function",
+		},
+
+		math = {
+			abs = "function",
+			acos = "function",
+			asin = "function",
+			atan2 = "function",
+			atan = "function",
+			ceil = "function",
+			clamp = "function",
+			cos = "function",
+			cosh = "function",
+			deg = "function",
+			exp = "function",
+			floor = "function",
+			fmod = "function",
+			frexp = "function",
+			ldexp = "function",
+			log10 = "function",
+			log = "function",
+			max = "function",
+			min = "function",
+			modf = "function",
+			noise = "function",
+			pow = "function",
+			rad = "function",
+			random = "function",
+			randomseed = "function",
+			round = "function",
+			sign = "function",
+			sin = "function",
+			sinh = "function",
+			sqrt = "function",
+			tan = "function",
+			tanh = "function",
+
+			huge = "number",
+			pi = "number",
+		},
+
+		os = {
+			clock = "function",
+			date = "function",
+			difftime = "function",
+			time = "function",
+		},
+
+		string = {
+			byte = "function",
+			char = "function",
+			find = "function",
+			format = "function",
+			gmatch = "function",
+			gsub = "function",
+			len = "function",
+			lower = "function",
+			match = "function",
+			pack = "function",
+			packsize = "function",
+			rep = "function",
+			reverse = "function",
+			split = "function",
+			sub = "function",
+			unpack = "function",
+			upper = "function",
+		},
+
+		table = {
+			clear = "function",
+			clone = "function",
+			concat = "function",
+			create = "function",
+			find = "function",
+			foreach = "function",
+			foreachi = "function",
+			freeze = "function",
+			getn = "function",
+			insert = "function",
+			isfrozen = "function",
+			maxn = "function",
+			move = "function",
+			pack = "function",
+			remove = "function",
+			sort = "function",
+			unpack = "function",
+		},
+
+		utf8 = {
+			char = "function",
+			codepoint = "function",
+			codes = "function",
+			graphemes = "function",
+			len = "function",
+			nfcnormalize = "function",
+			nfdnormalize = "function",
+			offset = "function",
+
+			charpattern = "string",
+		},
+
+		-- Roblox Libraries
+		Axes = {
+			new = "function",
+		},
+
+		BrickColor = {
+			Black = "function",
+			Blue = "function",
+			DarkGray = "function",
+			Gray = "function",
+			Green = "function",
+			new = "function",
+			New = "function",
+			palette = "function",
+			Random = "function",
+			random = "function",
+			Red = "function",
+			White = "function",
+			Yellow = "function",
+		},
+
+		CatalogSearchParams = {
+			new = "function",
+		},
+
+		CFrame = {
+			Angles = "function",
+			fromAxisAngle = "function",
+			fromEulerAngles = "function",
+			fromEulerAnglesXYZ = "function",
+			fromEulerAnglesYXZ = "function",
+			fromMatrix = "function",
+			fromOrientation = "function",
+			lookAt = "function",
+			new = "function",
+
+			identity = "CFrame",
+		},
+
+		Color3 = {
+			fromHex = "function",
+			fromHSV = "function",
+			fromRGB = "function",
+			new = "function",
+			toHSV = "function",
+		},
+
+		ColorSequence = {
+			new = "function",
+		},
+
+		ColorSequenceKeypoint = {
+			new = "function",
+		},
+
+		DateTime = {
+			fromIsoDate = "function",
+			fromLocalTime = "function",
+			fromUniversalTime = "function",
+			fromUnixTimestamp = "function",
+			fromUnixTimestampMillis = "function",
+			now = "function",
+		},
+
+		DockWidgetPluginGuiInfo = {
+			new = "function",
+		},
+
+		Enum = {},
+
+		Faces = {
+			new = "function",
+		},
+
+		FloatCurveKey = {
+			new = "function",
+		},
+
+		Font = {
+			fromEnum = "function",
+			fromId = "function",
+			fromName = "function",
+			new = "function",
+		},
+
+		Instance = {
+			new = "function",
+		},
+
+		NumberRange = {
+			new = "function",
+		},
+
+		NumberSequence = {
+			new = "function",
+		},
+
+		NumberSequenceKeypoint = {
+			new = "function",
+		},
+
+		OverlapParams = {
+			new = "function",
+		},
+
+		PathWaypoint = {
+			new = "function",
+		},
+
+		PhysicalProperties = {
+			new = "function",
+		},
+
+		Random = {
+			new = "function",
+		},
+
+		Ray = {
+			new = "function",
+		},
+
+		RaycastParams = {
+			new = "function",
+		},
+
+		Rect = {
+			new = "function",
+		},
+
+		Region3 = {
+			new = "function",
+		},
+
+		Region3int16 = {
+			new = "function",
+		},
+
+		RotationCurveKey = {
+			new = "function",
+		},
+
+		task = {
+			cancel = "function",
+			defer = "function",
+			delay = "function",
+			desynchronize = "function",
+			spawn = "function",
+			synchronize = "function",
+			wait = "function",
+		},
+
+		TweenInfo = {
+			new = "function",
+		},
+
+		UDim = {
+			new = "function",
+		},
+
+		UDim2 = {
+			fromOffset = "function",
+			fromScale = "function",
+			new = "function",
+		},
+
+		Vector2 = {
+			new = "function",
+
+			one = "Vector2",
+			xAxis = "Vector2",
+			yAxis = "Vector2",
+			zero = "Vector2",
+		},
+
+		Vector2int16 = {
+			new = "function",
+		},
+
+		Vector3 = {
+			fromAxis = "function",
+			FromAxis = "function",
+			fromNormalId = "function",
+			FromNormalId = "function",
+			new = "function",
+
+			one = "Vector3",
+			xAxis = "Vector3",
+			yAxis = "Vector3",
+			zAxis = "Vector3",
+			zero = "Vector3",
+		},
+
+		Vector3int16 = {
+			new = "function",
+		},
+	},
+}
+
+-- Filling up language.libraries.Enum table
+local enumLibraryTable = language.libraries.Enum
+
+for _, enum in ipairs(Enum:GetEnums()) do
+	--TODO: Remove tostring from here once there is a better way to get the name of an Enum
+	enumLibraryTable[tostring(enum)] = "Enum"
+end
+
+return language
+
+end;
+};
+-- StarterGui.SynapseX.Main.ScriptTab.ScriptTabHandler
+local function C_44()
+local script = G2L["44"];
+	local function AddTab()
+		local NewTextbox = script.Parent.Parent.MainFunc.Needs.Textbox:Clone()
+		local NewTab = script.Parent.Parent.MainFunc.Needs.Tab:Clone()
+		local num = 0
+		
+		NewTextbox.Parent = script.Parent.Parent.MainFunc.Textboxes
+		NewTab.Parent=  script.Parent.Tabs
+		NewTab.Visible = true
+		NewTextbox.Visible = true
+		NewTab.BackgroundColor3 = Color3.fromRGB(80,80,80)
+		
+		-- Set da name as yes
+		for i,v in pairs(script.Parent.Parent.MainFunc.Textboxes:GetChildren()) do
+			num += 1
+		end
+		NewTab.Name = "  Script "..tostring(num)
+		NewTab.Text = "  Script "..tostring(num)
+		NewTextbox.Name = "  Script "..tostring(num)
+		
+		-- Set any textbox except new disabled (not visible)
+		for _,tabs in pairs(script.Parent.Parent.MainFunc.Textboxes:GetChildren()) do
+			if tabs.Name ~= NewTextbox.Name then
+				tabs.Visible = false
+			end
 		end
 
-		movearc()
-	end)
-end;
-task.spawn(C_d);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.Close.LocalScript
-local function C_21()
-	local script = AZY["21"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Visible = false
-		script.Parent.Parent.Parent.Active = false
-		script.Parent.Parent.Parent.Parent.FloatingUI.Visible = true
-		script.Parent.Parent.Parent.Parent.FloatingUI.Active = true
-	end)
-end;
-task.spawn(C_21);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.Expand.LocalScript
-local function C_23()
-	local script = AZY["23"];
-	big = false
-	script.Parent.MouseButton1Click:Connect(function()
-		if big == false then
-			script.Parent.Parent.Parent.Parent.MainFrame.Size = UDim2.new(0, 569,0, 346)
-			script.Parent.Image = "rbxassetid://12586472565"
-			big = true
+		-- Set any Tab color back except this
+		for i,v in pairs(script.Parent.Tabs:GetChildren()) do
+			if v:IsA("TextButton") and v.Name ~= NewTab.Name then
+				v.BackgroundColor3 = Color3.fromRGB(100,100,100)
+			end
+		end
 
+
+
+
+
+		NewTab:FindFirstChild("Remove").MouseButton1Up:Connect(function()
+			local num = 0
+			for _, textboxes in pairs(script.Parent.Parent.MainFunc.Textboxes:GetChildren()) do
+				num += 1
+
+			end
+			if num > 1 then
+				for i,v in pairs(script.Parent.Parent.MainFunc.Textboxes:GetChildren()) do
+					if v.Name == NewTab.Name then
+						v:Destroy()
+					end
+				end
+				NewTab:Destroy()
+			end
+		end)
+		NewTab.MouseButton1Up:Connect(function()
+			for i,v in pairs(script.Parent.Parent.MainFunc.Textboxes:GetChildren()) do
+				if v.Name == NewTab.Name then
+					v.Visible = true
+				else
+					v.Visible = false
+				end
+			end
+			for i,v in pairs(script.Parent.Tabs:GetChildren()) do
+				if v:IsA("TextButton") and v.Name ~= NewTab.Name then
+					v.BackgroundColor3 = Color3.fromRGB(100,100,100)
+				else
+					if v:IsA("TextButton") then
+						v.BackgroundColor3 = Color3.fromRGB(80,80,80)
+					end
+				end
+			end
+		end)
+
+
+
+
+		-- Textbox handler
+		local Highlighter = require(script.Parent.Parent.Parent.Highlighter)
+
+		local textBox = NewTextbox.Frame.Textbox
+
+
+
+		local TextBox = textBox
+		local LineIndicator = NewTextbox.Frame.Linebar.LineText
+
+
+		local function updateLineIndicator()
+			local text = TextBox.Text
+			local lineCount = select(2, text:gsub('\n', '\n'))
+
+			LineIndicator.Text = ""
+
+			for lineNumber = 1, lineCount + 1 do
+				LineIndicator.Text = LineIndicator.Text .. lineNumber .. "\n"
+			end
+		end
+
+		local function autoHighlight()
+			Highlighter.highlight({
+				textObject = textBox,
+				src = textBox.Text,
+				forceUpdate = true
+			})
+		end
+		textBox:GetPropertyChangedSignal("Text"):Connect(function()
+			autoHighlight()
+		end)
+
+		task.spawn(function()
+			local UserInputService = game:GetService("UserInputService")
+			local textBox = NewTextbox.Frame.Textbox -- Replace with the instance of your TextBox
+			local lineIndicatorFrame = NewTextbox.Frame.Highlighted -- Replace with the instance of your line indicator frame
+
+			local function moveLineIndicatorFrame(lineNumber)
+				local lineHeight = lineIndicatorFrame.LineText.TextSize -- Adjust this value as per your line indicator's line height
+
+				local newYOffset
+				if lineNumber then
+					newYOffset = (lineNumber - 10) * lineHeight
+				else
+					newYOffset = lineIndicatorFrame.Position.Y.Offset + 14
+				end
+
+				lineIndicatorFrame.Position = UDim2.new(0, 0, 0, newYOffset)
+			end
+
+			local function onMouseMove()
+				if textBox:IsFocused() then
+					UserInputService.InputBegan:Connect(function(input)
+						if  input == Enum.UserInputType.MouseButton1 or input == Enum.UserInputType.Touch then
+							local mouse = UserInputService:GetMouseLocation()
+							local y = mouse.Y
+							local lineHeight = lineIndicatorFrame.LineText.TextSize -- Adjust this value as per your line indicator's line height
+
+							local lineNumber = math.floor(y / lineHeight) + 1
+							moveLineIndicatorFrame(lineNumber)
+						end
+					end)
+				end
+			end
+
+			UserInputService.InputChanged:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseMovement then
+					onMouseMove()
+				end
+			end)
+
+			UserInputService.InputBegan:Connect(function(input)
+            pcall(function() -- i hate the errors, so yes
+            if input.UserInputType == Enum.UserInputType.MouseButton1 then
+					local mouse = UserInputService:GetMouseLocation()
+					local y = mouse.Y
+					pcall(function() lineHeight = lineIndicatorFrame:FindFirstChild("LineText").TextSize end)
+
+					local lineNumber = math.floor(y / lineHeight) + 1
+					moveLineIndicatorFrame(lineNumber)
+				elseif input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.Return and textBox:IsFocused() then
+					moveLineIndicatorFrame(nil)
+				end
+            end)
+            end)
+
+			textBox.FocusLost:Connect(function(enterPressed)
+				if enterPressed then
+					local lineNumber = textBox.CursorPosition.Y
+					moveLineIndicatorFrame(lineNumber)
+				end
+			end)
+		end)
+
+
+
+
+
+		updateLineIndicator()
+
+
+		TextBox.Changed:Connect(function(property)
+			if property == "Text" then
+				updateLineIndicator()
+			end
+		end)
+
+
+		textBox:GetPropertyChangedSignal("Text"):Connect(function()
+			NewTextbox.Frame.Size = UDim2.new(script.Parent.Size.X.Scale, script.Parent.Size.X.Offset, script.Parent.Parent.Size.Y.Scale, script.Parent.Parent.Size.Y.Offset + 150)
+			NewTextbox.Frame.Highlighted.Size = UDim2.new(0, script.Parent.Parent.Size.X.Offset + 150,0, 13)
+		end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	end
+
+	script.Parent.Tabs.AddScript.Button.MouseButton1Up:Connect(function()
+		AddTab()
+	end)
+	AddTab()
+end;
+task.spawn(C_44);
+-- StarterGui.SynapseX.Main.ButtonsHandler
+local function C_49()
+	local script = G2L["49"];
+	local buttons = script.Parent
+	local title = buttons.TitleSynapse
+	local injected =  script.Parent.Parent.Injected.Value
+
+
+	local function GetTextbox()
+		for _,textbox in pairs(script.Parent.MainFunc.Textboxes:GetChildren()) do
+			if textbox.Visible then
+				return textbox
+			end
+		end
+	end
+	buttons.Clear.MouseButton1Up:Connect(function()
+		for _, textbox in pairs(buttons.MainFunc.Textboxes:GetChildren()) do
+			if textbox.Visible then
+				textbox.Frame.Textbox.Text = ''
+			end
+		end
+	end)
+	buttons.Execute.MouseButton1Up:Connect(function()
+		if not injected then
+			title.Text = "Synapse X - "..synversion.." (not injected! press attach)"
+		elseif injected == true then
+
+			local textbox = GetTextbox()
+
+			loadstring(textbox.Frame.Textbox.Text)()
+		end
+	end)
+	buttons.Attach.MouseButton1Up:Connect(function()
+		if not injected then
+			title.Text = "Synapse X - "..synversion.." (checking...)"
+			task.wait(0.8)
+			title.Text = "Synapse X - "..synversion.." (injecting...)"
+			task.wait(2.3)
+			title.Text = "Synapse X - "..synversion.." (checking whitelist...)"
+			task.wait(1.6)
+			title.Text = "Synapse X - "..synversion.." (scanning...)"
+			task.wait(1.3)
+			title.Text = "Synapse X - "..synversion.." (ready!)"
+			injected = true
+			task.wait(1)
+			title.Text = "Synapse X - "..synversion
 		else
-			script.Parent.Parent.Parent.Parent.MainFrame.Size = UDim2.new(0, 459,0, 276)
-			script.Parent.Image = "rbxassetid://12566545357"
-			big = false
+			title.Text = "Synapse X - "..synversion.." (already injected!)"
+			task.wait(1)
+			title.Text = "Synapse X - "..synversion
 		end
 	end)
-end;
-task.spawn(C_23);
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/loader.lua"))()
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.TimeLeft.LocalScript
-local function C_25()
-	local script = AZY["25"];
-	local Timer = script.Parent
-	local TimeDisplay = Timer
 
-	-- Set the initial time to 24 hours
-	local TimeLeft = 86400
+	buttons.Options.MouseButton1Up:Connect(function()
+		script.Parent.Parent.OptionMenu.Position = UDim2.new(0.367, -11,0.317, -6)
+		script.Parent.Parent.OptionMenu.Visible = true
+	end)
 
-	-- Define a function to update the timer display
-	local function UpdateTimerDisplay()
-		local HoursLeft = math.floor(TimeLeft / 3600)
-		local MinutesLeft = math.floor((TimeLeft % 3600) / 60)
-		TimeDisplay.Text = string.format("%02dh %02dm", HoursLeft, MinutesLeft).." left"
-	end
+	buttons.OpenFile.MouseButton1Up:Connect(function()
+		script.Parent.Parent.OpenScript.Visible = true
+	end)
+	buttons.SaveFile.MouseButton1Up:Connect(function()
+		script.Parent.Parent.SaveScript.Visible = true
+	end)
+	buttons.Close.MouseButton1Up:Connect(function()
+		script.Parent.Parent:Destroy()
+	end)
+	buttons.Maximize.MouseButton1Up:Connect(function()
+		--idkkk
+	end)
+	buttons.Minimize.MouseButton1Up:Connect(function()
+		buttons.Visible = false
+		script.Parent.Parent.FloatingIcon.Visible = true
+	end)
 
-	-- Call the update function once to set the initial display
-	UpdateTimerDisplay()
+	script.Parent.Parent.FloatingIcon.MouseButton1Up:Connect(function()
+		buttons.Visible = true
+		script.Parent.Parent.FloatingIcon.Visible = false
+	end)
 
-	-- Define a function to update the time left and the timer display every second
-	local function UpdateTimer()
-		TimeLeft = TimeLeft - 1
-		UpdateTimerDisplay()
-	end
-
-	-- Call the update function every second
-	while TimeLeft > 0 do
-		wait(1)
-		UpdateTimer()
-	end
-
-end;
-task.spawn(C_25);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.Restore.LocalScript
-local function C_28()
-	local script = AZY["28"];
-	-- Add a click event handler to the TextLabel to reset the timer
-	script.Parent.MouseButton1Click:Connect(function()
-		-- get the parent object and the TextLabel inside it
-		local parent = script.Parent.Parent.Time
-		local textLabel = parent
-		local time = os.date("%I:%M %p") -- get the current time in "hh:mm AM/PM" format
-		local today = os.date("%A") -- get the current day of the week
-		parent.Parent.Time.Text = "Today, " .. time -- concatenate the strings
-		--TimeLeft = 86400
-		--UpdateTimerDisplay()
+	buttons.ScriptHub.MouseButton1Up:Connect(function()
+		script.Parent.Parent.ScriptHubMenu.Visible = true
 	end)
 end;
-task.spawn(C_28);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Panel.Icon.LocalScript
-local function C_2a()
-	local script = AZY["2a"];
-	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Parent.Parent.Draggable == true then
-			script.Parent.Parent.Parent.Draggable = false
-		else
-			script.Parent.Parent.Parent.Draggable = true
-		end
-	end)
-end;
-task.spawn(C_2a);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.UserPage.TextLabel.LocalScript
-local function C_33()
-	local script = AZY["33"];
-	script.Parent.Text = game.Players.LocalPlayer.DisplayName
-end;
-task.spawn(C_33);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.TimeLeft.LocalScript
-local function C_3a()
-	local script = AZY["3a"];
-	local Timer = script.Parent
-	local TimeDisplay = Timer
-
-	-- Set the initial time to 24 hours
-	local TimeLeft = 86400
-
-	-- Define a function to update the timer display
-	local function UpdateTimerDisplay()
-		local HoursLeft = math.floor(TimeLeft / 3600)
-		local MinutesLeft = math.floor((TimeLeft % 3600) / 60)
-		TimeDisplay.Text = string.format("%02dh %02dm", HoursLeft, MinutesLeft)
-	end
-
-	-- Call the update function once to set the initial display
-	UpdateTimerDisplay()
-
-	-- Define a function to update the time left and the timer display every second
-	local function UpdateTimer()
-		TimeLeft = TimeLeft - 1
-		UpdateTimerDisplay()
-	end
-
-	-- Call the update function every second
-	while TimeLeft > 0 do
-		wait(1)
-		UpdateTimer()
-	end
-
-end;
-task.spawn(C_3a);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.Time.LocalScript
-local function C_40()
-	local script = AZY["40"];
-	local parent = script.Parent
-	local textLabel = parent
-	local time = os.date("%I:%M %p") -- get the current time in "hh:mm AM/PM" format
-	local today = os.date("%A") -- get the current day of the week
-	parent.Text = "Today, " .. time -- concatenate the strings
-end;
-task.spawn(C_40);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.KeySystemPage.Restore.LocalScript
-local function C_43()
-	local script = AZY["43"];
-	-- Add a click event handler to the TextLabel to reset the timer
-	script.Parent.MouseButton1Click:Connect(function()
-		-- get the parent object and the TextLabel inside it
-		local parent = script.Parent.Parent.Time
-		local textLabel = parent
-		local time = os.date("%I:%M %p") -- get the current time in "hh:mm AM/PM" format
-		local today = os.date("%A") -- get the current day of the week
-		parent.Parent.Time.Text = "Today, " .. time -- concatenate the strings
-		--TimeLeft = 86400
-		--UpdateTimerDisplay()
-	end)
-end;
-task.spawn(C_43);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Aimbot.LocalScript
-local function C_4b()
-	local script = AZY["4b"];
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20Aimbot.lua"))()
-	end)
-end;
-task.spawn(C_4b);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Btools.LocalScript
-local function C_4e()
-	local script = AZY["4e"];
-	script.Parent.MouseButton1Click:Connect(function()
-		local backpack = game:GetService("Players").LocalPlayer.Backpack
-
-		local hammer = Instance.new("HopperBin")
-		hammer.Name = "Hammer"
-		hammer.BinType = 4
-		hammer.Parent = backpack
-
-		local cloneTool = Instance.new("HopperBin")
-		cloneTool.Name = "Clone"
-		cloneTool.BinType = 3
-		cloneTool.Parent = backpack
-
-		local grabTool = Instance.new("HopperBin")
-		grabTool.Name = "Grab"
-		grabTool.BinType = 2
-		grabTool.Parent = backpack
-	end)
-end;
-task.spawn(C_4e);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Dex.LocalScript
+task.spawn(C_49);
+-- StarterGui.SynapseX.SaveScript.Handler
 local function C_51()
-	local script = AZY["51"];
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
+	local script = G2L["51"];
+	script.Parent.savescript.MouseButton1Up:Connect(function()
+		local module = require(script.Parent.Parent.Module)
+		module:AddScriptTabSave(script.Parent.scriptname.Text..".lua", module:GetActiveTextbox().Frame.Textbox.Text)
+		script.Parent.Visible = false
+		script.Parent.scriptname.Text = ''
+		makefolder("SynapseSavedScripts")
+		writefile("SynapseSavedScripts/"..script.Parent.scriptname.Text..".lua", module:GetActiveTextbox().Frame.Textbox.Text)
+	end)
+
+	script.Parent.Close.MouseButton1Up:Connect(function()
+		script.Parent.Visible = false
+		script.Parent.scriptname.Text = ''
 	end)
 end;
 task.spawn(C_51);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.FatesESP.LocalScript
-local function C_54()
-	local script = AZY["54"];
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(request({ Url = "https://raw.githubusercontent.com/fatesc/fates-esp/main/main.lua", Method = "GET"}).Body)()
-	end)
-end;
-task.spawn(C_54);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.Fly.LocalScript
-local function C_57()
-	local script = AZY["57"];
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20Fly.lua"))()
-	end)
-end;
-task.spawn(C_57);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.IY.LocalScript
-local function C_5a()
-	local script = AZY["5a"];
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-	end)
-end;
-task.spawn(C_5a);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.Scripts.PwnHub.LocalScript
-local function C_5d()
-	local script = AZY["5d"];
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet(("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/PWNERHUB.lua"), true))()
-	end)
-end;
-task.spawn(C_5d);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.ToggleGrav.LocalScript
-local function C_65()
-	local script = AZY["65"];
-	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Parent.Grav.Value == false then
-			script.Parent.Parent.Grav.Value = true
-			script.Parent.Parent.GravS.SliderButton.ImageColor3 = Color3.fromRGB(255,0,0)
-			script.Parent.BackgroundColor3 = Color3.fromRGB(255,0,0)
-		else
-			script.Parent.Parent.Grav.Value = false
-			script.Parent.Parent.GravS.SliderButton.ImageColor3 = Color3.fromRGB(145,0,0)
-			script.Parent.BackgroundColor3 = Color3.fromRGB(145,0,0)
-			workspace.Gravity = 196.2
-		end
-	end)
-end;
-task.spawn(C_65);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.ToggleWs.LocalScript
-local function C_68()
-	local script = AZY["68"];
-	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Parent.Ws.Value == false then
-			script.Parent.Parent.Ws.Value = true
-			script.Parent.Parent.WsS.SliderButton.ImageColor3 = Color3.fromRGB(255,0,0)
-			script.Parent.BackgroundColor3 = Color3.fromRGB(255,0,0)
-		else
-			script.Parent.Parent.Ws.Value = false
-			script.Parent.Parent.WsS.SliderButton.ImageColor3 = Color3.fromRGB(145,0,0)
-			script.Parent.BackgroundColor3 = Color3.fromRGB(145,0,0)
-		end
-	end)
-end;
-task.spawn(C_68);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.ToggleJp.LocalScript
-local function C_6b()
-	local script = AZY["6b"];
-	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Parent.Jp.Value == false then
-			script.Parent.Parent.Jp.Value = true
-			script.Parent.Parent.JpS.SliderButton.ImageColor3 = Color3.fromRGB(255,0,0)
-			script.Parent.BackgroundColor3 = Color3.fromRGB(255,0,0)
-		else
-			script.Parent.Parent.Jp.Value = false
-			script.Parent.Parent.JpS.SliderButton.ImageColor3 = Color3.fromRGB(145,0,0)
-			script.Parent.BackgroundColor3 = Color3.fromRGB(145,0,0)
-		end
-	end)
-end;
-task.spawn(C_6b);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.JpS.SliderButton.LocalScript
-local function C_6e()
-	local script = AZY["6e"];
-	-- Written by Bread
-
-	local UIS			= game:GetService("UserInputService") 	
-	local Outer			= script.Parent.Parent					-- Slider / Container
-	local Inner 		= script.Parent 						-- Thing to drag across slider
-	local Percent = Instance.new("NumberValue", Outer)	-- A number value containing the perctage in decimal form.
-	local Max_Percent = 100									-- Max Percentage (Scale of slider)
-	Percent.Name = "Percentage"
-	local TextLabel = Outer.TextLabel
-
-	local sliding = false
-
-	local ClickY = 0
-
-	local function UpdatePercentage(Percentage)
-		Percent.Value = Percentage
-		TextLabel.Text = Percentage .. "%"
-		local Value = Percentage * 5
-		if script.Parent.Parent.Parent.Jp.Value == true then
-			game.Players.LocalPlayer.Character.Humanoid.JumpPower =  Value
-		end
-	end
-
-	Outer.InputBegan:Connect(function(input)
-		if not (input.UserInputType == Enum.UserInputType.MouseButton1
-			or input.UserInputType == Enum.UserInputType.Touch) then return end
-
-		ClickY = input.Position.Y
-
-		sliding = true
-	end)
-
-	Outer.InputEnded:Connect(function(input)
-		if not (input.UserInputType == Enum.UserInputType.MouseButton1
-			or input.UserInputType == Enum.UserInputType.Touch) then return end
-
-		sliding = false
-	end)
-
-	UIS.InputChanged:Connect(function(input)
-		if input.UserInputType ~= Enum.UserInputType.MouseMovement then return end
-
-		if not sliding then return end
-
-		local MouseY = UIS:GetMouseLocation().Y
-
-		local RelativeY = math.max(math.min(((Outer.AbsolutePosition.Y - MouseY) + 119) / 119, 1), 0)
-		local Percentage = math.round(RelativeY * Max_Percent)
-
-		Inner.Size = UDim2.fromScale(RelativeY, 1)
-
-		UpdatePercentage(Percentage)
-	end)
-
-	local function setJumppower()
-
-		local character = game.Players.LocalPlayer.Character
-
-		local textBox = script.Parent.Parent.TextLabel
-
-		local Jumppower = tonumber(textBox.Text)
-
-		if Jumppower ~= nil then
-
-			if script.Parent.Parent.Parent.Jp.Value == true then
-				character.Humanoid.JumpPower = Jumppower * 4.1
-			end
-			textBox.Text = textBox.Text .. "%"
-		end
-	end
-
-
-	setJumppower()
-
-
-	script.Parent.Parent.TextLabel.FocusLost:Connect(setJumppower)
-
-	game.Players.LocalPlayer.CharacterAdded:Connect(function(character)
-		wait(1)
-		setJumppower()
-	end)
-
-end;
-task.spawn(C_6e);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.WsS.SliderButton.LocalScript
-local function C_77()
-	local script = AZY["77"];
-	-- Written by Bread
-
-	local UIS			= game:GetService("UserInputService") 	
-	local Outer			= script.Parent.Parent					-- Slider / Container
-	local Inner 		= script.Parent 						-- Thing to drag across slider
-	local Percent = Instance.new("NumberValue", Outer)	-- A number value containing the perctage in decimal form.
-	local Max_Percent = 100									-- Max Percentage (Scale of slider)
-	Percent.Name = "Percentage"
-	local TextLabel = Outer.TextLabel
-
-	local sliding = false
-
-	local ClickY = 0
-
-	local function UpdatePercentage(Percentage)
-		Percent.Value = Percentage
-		TextLabel.Text = Percentage .. "%"
-		local Value = Percentage * 4.1
-		if script.Parent.Parent.Parent.Ws.Value == true then
-			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed =  Value
-		end
-	end
-
-	Outer.InputBegan:Connect(function(input)
-		if not (input.UserInputType == Enum.UserInputType.MouseButton1
-			or input.UserInputType == Enum.UserInputType.Touch) then return end
-
-		ClickY = input.Position.Y
-
-		sliding = true
-	end)
-
-	Outer.InputEnded:Connect(function(input)
-		if not (input.UserInputType == Enum.UserInputType.MouseButton1
-			or input.UserInputType == Enum.UserInputType.Touch) then return end
-
-		sliding = false
-	end)
-
-	UIS.InputChanged:Connect(function(input)
-		if input.UserInputType ~= Enum.UserInputType.MouseMovement then return end
-
-		if not sliding then return end
-
-		local MouseY = UIS:GetMouseLocation().Y
-
-		local RelativeY = math.max(math.min(((Outer.AbsolutePosition.Y - MouseY) + 119) / 119, 1), 0)
-		local Percentage = math.round(RelativeY * Max_Percent)
-
-		Inner.Size = UDim2.fromScale(RelativeY, 1)
-
-		UpdatePercentage(Percentage)
-	end)
-
-	local function setWalkspeed()
-
-		local character = game.Players.LocalPlayer.Character
-
-		local textBox = script.Parent.Parent.TextLabel
-
-		local walkspeed = tonumber(textBox.Text)
-
-		if walkspeed ~= nil then
-
-			if script.Parent.Parent.Parent.Ws.Value == true then
-				character.Humanoid.WalkSpeed = walkspeed * 4.1
-			end
-			textBox.Text = textBox.Text .. "%"
-		end
-	end
-
-
-	setWalkspeed()
-
-
-	script.Parent.Parent.TextLabel.FocusLost:Connect(setWalkspeed)
-
-	game.Players.LocalPlayer.CharacterAdded:Connect(function(character)
-		wait(1)
-		setWalkspeed()
-	end)
-
-end;
-task.spawn(C_77);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Home.HaxPage.GravS.SliderButton.LocalScript
-local function C_80()
-	local script = AZY["80"];
-	-- Written by Bread
-
-	local UIS			= game:GetService("UserInputService") 	
-	local Outer			= script.Parent.Parent					-- Slider / Container
-	local Inner 		= script.Parent 						-- Thing to drag across slider
-	local Percent = Instance.new("NumberValue", Outer)	-- A number value containing the perctage in decimal form.
-	local Max_Percent = 100									-- Max Percentage (Scale of slider)
-	Percent.Name = "Percentage"
-	local TextLabel = Outer.TextLabel
-
-	local sliding = false
-
-	local ClickY = 0
-
-	local function UpdatePercentage(Percentage)
-		Percent.Value = Percentage
-		TextLabel.Text = Percentage .. "%"
-		local Value = Percentage * 5
-		if script.Parent.Parent.Parent.Grav.Value == true then
-			workspace.Gravity =  Value
-		end
-	end
-
-	Outer.InputBegan:Connect(function(input)
-		if not (input.UserInputType == Enum.UserInputType.MouseButton1
-			or input.UserInputType == Enum.UserInputType.Touch) then return end
-
-		ClickY = input.Position.Y
-
-		sliding = true
-	end)
-
-	Outer.InputEnded:Connect(function(input)
-		if not (input.UserInputType == Enum.UserInputType.MouseButton1
-			or input.UserInputType == Enum.UserInputType.Touch) then return end
-
-		sliding = false
-	end)
-
-	UIS.InputChanged:Connect(function(input)
-		if input.UserInputType ~= Enum.UserInputType.MouseMovement then return end
-
-		if not sliding then return end
-
-		local MouseY = UIS:GetMouseLocation().Y
-
-		local RelativeY = math.max(math.min(((Outer.AbsolutePosition.Y - MouseY) + 119) / 119, 1), 0)
-		local Percentage = math.round(RelativeY * Max_Percent)
-
-		Inner.Size = UDim2.fromScale(RelativeY, 1)
-
-		UpdatePercentage(Percentage)
-	end)
-
-	local function setGravity()
-
-		local character = game.Players.LocalPlayer.Character
-
-		local textBox = script.Parent.Parent.TextLabel
-
-		local Gravity = tonumber(textBox.Text)
-
-		if Gravity ~= nil then
-
-			if script.Parent.Parent.Parent.Grav.Value == true then
-				workspace.Gravity = Gravity * 5
-			end
-			textBox.Text = textBox.Text .. "%"
-		end
-	end
-
-
-	setGravity()
-
-
-	script.Parent.Parent.TextLabel.FocusLost:Connect(setGravity)
-
-	game.Players.LocalPlayer.CharacterAdded:Connect(function(character)
-		wait(1)
-		setGravity()
-	end)
-
-end;
-task.spawn(C_80);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Changelogs.Communications.Copy.LocalScript
-local function C_c9()
-	local script = AZY["c9"];
-	script.Parent.MouseButton1Click:Connect(function()
-		setclipboard("VPn54EcfNX")
-	end)
-end;
-task.spawn(C_c9);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.ToggleGrav.LocalScript
-local function C_d6()
-	local script = AZY["d6"];
-	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Parent.Grav.Value == false then
-			script.Parent.Parent.Grav.Value = true
-			script.Parent.Parent.GravS.SliderButton.ImageColor3 = Color3.fromRGB(255,0,0)
-			script.Parent.BackgroundColor3 = Color3.fromRGB(255,0,0)
-		else
-			script.Parent.Parent.Grav.Value = false
-			script.Parent.Parent.GravS.SliderButton.ImageColor3 = Color3.fromRGB(145,0,0)
-			script.Parent.BackgroundColor3 = Color3.fromRGB(145,0,0)
-			workspace.Gravity = 196.2
-		end
-	end)
-end;
-task.spawn(C_d6);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.ToggleJp.LocalScript
-local function C_d9()
-	local script = AZY["d9"];
-	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Parent.Jp.Value == false then
-			script.Parent.Parent.Jp.Value = true
-			script.Parent.Parent.JpS.SliderButton.ImageColor3 = Color3.fromRGB(255,0,0)
-			script.Parent.BackgroundColor3 = Color3.fromRGB(255,0,0)
-		else
-			script.Parent.Parent.Jp.Value = false
-			script.Parent.Parent.JpS.SliderButton.ImageColor3 = Color3.fromRGB(145,0,0)
-			script.Parent.BackgroundColor3 = Color3.fromRGB(145,0,0)
-		end
-	end)
-end;
-task.spawn(C_d9);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.ToggleWs.LocalScript
-local function C_dc()
-	local script = AZY["dc"];
-	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Parent.Ws.Value == false then
-			script.Parent.Parent.Ws.Value = true
-			script.Parent.Parent.WsS.SliderButton.ImageColor3 = Color3.fromRGB(255,0,0)
-			script.Parent.BackgroundColor3 = Color3.fromRGB(255,0,0)
-		else
-			script.Parent.Parent.Ws.Value = false
-			script.Parent.Parent.WsS.SliderButton.ImageColor3 = Color3.fromRGB(145,0,0)
-			script.Parent.BackgroundColor3 = Color3.fromRGB(145,0,0)
-		end
-	end)
-end;
-task.spawn(C_dc);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.WsS.SliderButton.LocalScript
-local function C_df()
-	local script = AZY["df"];
-	-- Written by Bread
-
-	local UIS			= game:GetService("UserInputService") 	
-	local Outer			= script.Parent.Parent					-- Slider / Container
-	local Inner 		= script.Parent 						-- Thing to drag across slider
-	local Percent = Instance.new("NumberValue", Outer)	-- A number value containing the perctage in decimal form.
-	local Max_Percent = 100									-- Max Percentage (Scale of slider)
-	Percent.Name = "Percentage"
-	local TextLabel = Outer.TextLabel
-
-	local sliding = false
-
-	local ClickY = 0
-
-	local function UpdatePercentage(Percentage)
-		Percent.Value = Percentage
-		TextLabel.Text = Percentage .. "%"
-		local Value = Percentage * 4.1
-		if script.Parent.Parent.Parent.Ws.Value == true then
-			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed =  Value
-		end
-	end
-
-	Outer.InputBegan:Connect(function(input)
-		if not (input.UserInputType == Enum.UserInputType.MouseButton1
-			or input.UserInputType == Enum.UserInputType.Touch) then return end
-
-		ClickY = input.Position.Y
-
-		sliding = true
-	end)
-
-	Outer.InputEnded:Connect(function(input)
-		if not (input.UserInputType == Enum.UserInputType.MouseButton1
-			or input.UserInputType == Enum.UserInputType.Touch) then return end
-
-		sliding = false
-	end)
-
-	UIS.InputChanged:Connect(function(input)
-		if input.UserInputType ~= Enum.UserInputType.MouseMovement then return end
-
-		if not sliding then return end
-
-		local MouseY = UIS:GetMouseLocation().Y
-
-		local RelativeY = math.max(math.min(((Outer.AbsolutePosition.Y - MouseY) + 119) / 119, 1), 0)
-		local Percentage = math.round(RelativeY * Max_Percent)
-
-		Inner.Size = UDim2.fromScale(RelativeY, 1)
-
-		UpdatePercentage(Percentage)
-	end)
-
-	local function setWalkspeed()
-
-		local character = game.Players.LocalPlayer.Character
-
-		local textBox = script.Parent.Parent.TextLabel
-
-		local walkspeed = tonumber(textBox.Text)
-
-		if walkspeed ~= nil then
-
-			if script.Parent.Parent.Parent.Ws.Value == true then
-				character.Humanoid.WalkSpeed = walkspeed * 4.1
-			end
-			textBox.Text = textBox.Text .. "%"
-		end
-	end
-
-
-	setWalkspeed()
-
-
-	script.Parent.Parent.TextLabel.FocusLost:Connect(setWalkspeed)
-
-	game.Players.LocalPlayer.CharacterAdded:Connect(function(character)
-		wait(1)
-		setWalkspeed()
-	end)
-
-end;
-task.spawn(C_df);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.JpS.SliderButton.LocalScript
-local function C_e8()
-	local script = AZY["e8"];
-	-- Written by Bread
-
-	local UIS			= game:GetService("UserInputService") 	
-	local Outer			= script.Parent.Parent					-- Slider / Container
-	local Inner 		= script.Parent 						-- Thing to drag across slider
-	local Percent = Instance.new("NumberValue", Outer)	-- A number value containing the perctage in decimal form.
-	local Max_Percent = 100									-- Max Percentage (Scale of slider)
-	Percent.Name = "Percentage"
-	local TextLabel = Outer.TextLabel
-
-	local sliding = false
-
-	local ClickY = 0
-
-	local function UpdatePercentage(Percentage)
-		Percent.Value = Percentage
-		TextLabel.Text = Percentage .. "%"
-		local Value = Percentage * 5
-		if script.Parent.Parent.Parent.Jp.Value == true then
-			game.Players.LocalPlayer.Character.Humanoid.JumpPower =  Value
-		end
-	end
-
-	Outer.InputBegan:Connect(function(input)
-		if not (input.UserInputType == Enum.UserInputType.MouseButton1
-			or input.UserInputType == Enum.UserInputType.Touch) then return end
-
-		ClickY = input.Position.Y
-
-		sliding = true
-	end)
-
-	Outer.InputEnded:Connect(function(input)
-		if not (input.UserInputType == Enum.UserInputType.MouseButton1
-			or input.UserInputType == Enum.UserInputType.Touch) then return end
-
-		sliding = false
-	end)
-
-	UIS.InputChanged:Connect(function(input)
-		if input.UserInputType ~= Enum.UserInputType.MouseMovement then return end
-
-		if not sliding then return end
-
-		local MouseY = UIS:GetMouseLocation().Y
-
-		local RelativeY = math.max(math.min(((Outer.AbsolutePosition.Y - MouseY) + 119) / 119, 1), 0)
-		local Percentage = math.round(RelativeY * Max_Percent)
-
-		Inner.Size = UDim2.fromScale(RelativeY, 1)
-
-		UpdatePercentage(Percentage)
-	end)
-
-	local function setJumppower()
-
-		local character = game.Players.LocalPlayer.Character
-
-		local textBox = script.Parent.Parent.TextLabel
-
-		local Jumppower = tonumber(textBox.Text)
-
-		if Jumppower ~= nil then
-
-			if script.Parent.Parent.Parent.Jp.Value == true then
-				character.Humanoid.JumpPower = Jumppower * 4.1
-			end
-			textBox.Text = textBox.Text .. "%"
-		end
-	end
-
-
-	setJumppower()
-
-
-	script.Parent.Parent.TextLabel.FocusLost:Connect(setJumppower)
-
-	game.Players.LocalPlayer.CharacterAdded:Connect(function(character)
-		wait(1)
-		setJumppower()
-	end)
-
-end;
-task.spawn(C_e8);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.HaxPage.GravS.SliderButton.LocalScript
-local function C_f1()
-	local script = AZY["f1"];
-	-- Written by Bread
-
-	local UIS			= game:GetService("UserInputService") 	
-	local Outer			= script.Parent.Parent					-- Slider / Container
-	local Inner 		= script.Parent 						-- Thing to drag across slider
-	local Percent = Instance.new("NumberValue", Outer)	-- A number value containing the perctage in decimal form.
-	local Max_Percent = 100									-- Max Percentage (Scale of slider)
-	Percent.Name = "Percentage"
-	local TextLabel = Outer.TextLabel
-
-	local sliding = false
-
-	local ClickY = 0
-
-	local function UpdatePercentage(Percentage)
-		Percent.Value = Percentage
-		TextLabel.Text = Percentage .. "%"
-		local Value = Percentage * 5
-		if script.Parent.Parent.Parent.Grav.Value == true then
-			workspace.Gravity =  Value
-		end
-	end
-
-	Outer.InputBegan:Connect(function(input)
-		if not (input.UserInputType == Enum.UserInputType.MouseButton1
-			or input.UserInputType == Enum.UserInputType.Touch) then return end
-
-		ClickY = input.Position.Y
-
-		sliding = true
-	end)
-
-	Outer.InputEnded:Connect(function(input)
-		if not (input.UserInputType == Enum.UserInputType.MouseButton1
-			or input.UserInputType == Enum.UserInputType.Touch) then return end
-
-		sliding = false
-	end)
-
-	UIS.InputChanged:Connect(function(input)
-		if input.UserInputType ~= Enum.UserInputType.MouseMovement then return end
-
-		if not sliding then return end
-
-		local MouseY = UIS:GetMouseLocation().Y
-
-		local RelativeY = math.max(math.min(((Outer.AbsolutePosition.Y - MouseY) + 119) / 119, 1), 0)
-		local Percentage = math.round(RelativeY * Max_Percent)
-
-		Inner.Size = UDim2.fromScale(RelativeY, 1)
-
-		UpdatePercentage(Percentage)
-	end)
-
-	local function setGravity()
-
-		local character = game.Players.LocalPlayer.Character
-
-		local textBox = script.Parent.Parent.TextLabel
-
-		local Gravity = tonumber(textBox.Text)
-
-		if Gravity ~= nil then
-
-			if script.Parent.Parent.Parent.Grav.Value == true then
-				workspace.Gravity = Gravity * 5
-			end
-			textBox.Text = textBox.Text .. "%"
-		end
-	end
-
-
-	setGravity()
-
-
-	script.Parent.Parent.TextLabel.FocusLost:Connect(setGravity)
-
-	game.Players.LocalPlayer.CharacterAdded:Connect(function(character)
-		wait(1)
-		setGravity()
-	end)
-
-end;
-task.spawn(C_f1);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Aimbot.LocalScript
-local function C_fe()
-	local script = AZY["fe"];
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20Aimbot.lua"))()
-	end)
-end;
-task.spawn(C_fe);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Btools.LocalScript
-local function C_102()
-	local script = AZY["102"];
-	script.Parent.MouseButton1Click:Connect(function()
-		local backpack = game:GetService("Players").LocalPlayer.Backpack
-
-		local hammer = Instance.new("HopperBin")
-		hammer.Name = "Hammer"
-		hammer.BinType = 4
-		hammer.Parent = backpack
-
-		local cloneTool = Instance.new("HopperBin")
-		cloneTool.Name = "Clone"
-		cloneTool.BinType = 3
-		cloneTool.Parent = backpack
-
-		local grabTool = Instance.new("HopperBin")
-		grabTool.Name = "Grab"
-		grabTool.BinType = 2
-		grabTool.Parent = backpack
-	end)
-end;
-task.spawn(C_102);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Dex.LocalScript
-local function C_106()
-	local script = AZY["106"];
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
-	end)
-end;
-task.spawn(C_106);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.FatesESP.LocalScript
-local function C_10a()
-	local script = AZY["10a"];
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(request({ Url = "https://raw.githubusercontent.com/fatesc/fates-esp/main/main.lua", Method = "GET"}).Body)()
-	end)
-end;
-task.spawn(C_10a);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.Fly.LocalScript
-local function C_10e()
-	local script = AZY["10e"];
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20Fly.lua"))()
-	end)
-end;
-task.spawn(C_10e);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.IY.LocalScript
-local function C_112()
-	local script = AZY["112"];
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-	end)
-end;
-task.spawn(C_112);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.BuiltInHax.Scripts.PwnHub.LocalScript
-local function C_116()
-	local script = AZY["116"];
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet(("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/PWNERHUB.lua"), true))()
-	end)
-end;
-task.spawn(C_116);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Execute.LocalScript
-local function C_11e()
-	local script = AZY["11e"];
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(script.Parent.Parent.TextboxBar.Editor.Scroll.Source.Text)()
-	end)
-end;
-task.spawn(C_11e);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Clear.LocalScript
-local function C_121()
-	local script = AZY["121"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.TextboxBar.Editor.Scroll.Source.Text = ""
-	end)
-end;
-task.spawn(C_121);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Copy.LocalScript
-local function C_124()
-	local script = AZY["124"];
-	script.Parent.MouseButton1Click:Connect(function()
-		setclipboard(script.Parent.Parent.TextboxBar.Editor.Scroll.Source.Text)
-	end)
-end;
-task.spawn(C_124);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.Paste.LocalScript
-local function C_127()
-	local script = AZY["127"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Text = "Not Implemented"
-		script.Disabled = true
-		wait(1)
-		script.Disabled = false
-		script.Parent.Text = "Paste"
-	end)
-end;
-task.spawn(C_127);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript
-local function C_12a()
-	local script = AZY["12a"];
-	local ScriptEditor = require(script.ScriptEditor)
-	local editor = ScriptEditor.new(script.Parent)
-end;
-task.spawn(C_12a);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.TextboxBar.LocalScript.ScriptEditor.Editor.Scroll.Left.AdaptSize
-local function C_146()
-	local script = AZY["146"];
-	local defaultSize = script.Parent.Size
-	local textbox = script.Parent.Parent.Source
-
-	textbox:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
-		local height = textbox.AbsoluteSize.Y
-
-		script.Parent.Size = UDim2.new(
-			defaultSize.X.Scale,
-			defaultSize.X.Offset,
-			0,
-			height
-		)
-	end)
-end;
-task.spawn(C_146);
--- StarterGui.ArceusXV3.MainUI.MainFrame.Tabs.Executor.ResetTextBox.LocalScript
-local function C_14b()
-	local script = AZY["14b"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.TextboxBar.Editor:Destroy()
-		local ScriptEditor = require(script.Parent.Parent.TextboxBar.LocalScript.ScriptEditor)
-		local editor = ScriptEditor.new(script.Parent.Parent.TextboxBar)
-	end)
-end;
-task.spawn(C_14b);
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.Changelogs.LocalScript
-local function C_151()
-	local script = AZY["151"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Frame.Visible = true
-
-		for i,v in pairs(script.Parent.Parent.Parent.Tabs:GetChildren()) do
-			if v.Name == script.Parent.Name then
-				v.Visible = true
+-- StarterGui.SynapseX.ScriptHubMenu.ScriptHubHandler
+local function C_71()
+	local script = G2L["71"];
+	local yes = script.Parent
+	yes.Background.ScrollingFrame.Dex.MouseButton1Up:Connect(function()
+		for i,v in pairs(script.Parent:GetChildren()) do
+			if v.Name ~= script.Parent.Background.ScrollingFrame.Dex.Name and v:IsA("Frame") then
+				pcall(function() v.Visible = false end)
 			else
-				v.Visible = false
+				pcall(function() v.Visible = true end)
 			end
 		end
-
-		for i,v in pairs(script.Parent.Parent:GetChildren()) do
-			if v.Name ~= "UICorner" then
-				if v.Name ~= script.Parent.Name then
-					v.Frame.Visible = false
-				end
-			end
-		end
+		script.Parent.Description.Text = [[A version of the popular Dex explorer with
+		patches specifically for Synapse X.]]
 	end)
-end;
-task.spawn(C_151);
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.Home.LocalScript
-local function C_155()
-	local script = AZY["155"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Frame.Visible = true
 
-		for i,v in pairs(script.Parent.Parent.Parent.Tabs:GetChildren()) do
-			if v.Name == script.Parent.Name then
-				v.Visible = true
+	yes.Background.ScrollingFrame.RemoteSpy.MouseButton1Up:Connect(function()
+		for i,v in pairs(script.Parent:GetChildren()) do
+			if v.Name ~= script.Parent.Background.ScrollingFrame.RemoteSpy.Name and v:IsA("Frame") then
+				pcall(function() v.Visible = false end)
 			else
-				v.Visible = false
+				pcall(function() v.Visible = true end)
 			end
 		end
-
-		for i,v in pairs(script.Parent.Parent:GetChildren()) do
-			if v.Name ~= "UICorner" then
-				if v.Name ~= script.Parent.Name then
-					v.Frame.Visible = false
-				end
-			end
-		end
+		script.Parent.Description.Text = [[Allows you to view RemoteEvents and
+		RemoteFunctions calleld.]]
 	end)
-end;
-task.spawn(C_155);
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.BuiltInHax.LocalScript
-local function C_159()
-	local script = AZY["159"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Frame.Visible = true
 
-		for i,v in pairs(script.Parent.Parent.Parent.Tabs:GetChildren()) do
-			if v.Name == script.Parent.Name then
-				v.Visible = true
+	yes.Background.ScrollingFrame.UnnamedESP.MouseButton1Up:Connect(function()
+		for i,v in pairs(script.Parent:GetChildren()) do
+			if v.Name ~= script.Parent.Background.ScrollingFrame.UnnamedESP.Name and v:IsA("Frame") then
+				pcall(function() v.Visible = false end)
 			else
-				v.Visible = false
+				pcall(function() v.Visible = true end)
 			end
 		end
-
-		for i,v in pairs(script.Parent.Parent:GetChildren()) do
-			if v.Name ~= "UICorner" then
-				if v.Name ~= script.Parent.Name then
-					v.Frame.Visible = false
-				end
-			end
-		end
+		script.Parent.Description.Text = [[ESP made by ic3w0lf using the Drawing API.]]
 	end)
-end;
-task.spawn(C_159);
--- StarterGui.ArceusXV3.MainUI.MainFrame.TabBar.Executor.LocalScript
-local function C_15d()
-	local script = AZY["15d"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Frame.Visible = true
 
-		for i,v in pairs(script.Parent.Parent.Parent.Tabs:GetChildren()) do
-			if v.Name == script.Parent.Name then
-				v.Visible = true
+	yes.Background.ScrollingFrame.ScriptDumper.MouseButton1Up:Connect(function()
+		for i,v in pairs(script.Parent:GetChildren()) do
+			if v.Name ~= script.Parent.Background.ScrollingFrame.ScriptDumper.Name and v:IsA("Frame") then
+				pcall(function() pcall(function() v.Visible = false end) end)
 			else
-				v.Visible = false
+				pcall(function() v.Visible = true end)
 			end
 		end
+		script.Parent.Description.Text = [[Dumps all LocalScripts an ModuleScripts.]]
+	end)
 
-		for i,v in pairs(script.Parent.Parent:GetChildren()) do
-			if v.Name ~= "UICorner" then
-				if v.Name ~= script.Parent.Name then
-					v.Frame.Visible = false
-				end
+	yes.Execute.MouseButton1Up:Connect(function()
+		for i,v in pairs(yes:GetChildren()) do
+			if v.Visible then
+				if v.Name == "Dex" then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
+			elseif v.Name == "RemoteSpy" then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/SimpleSpyV3/main.lua"))()
+			elseif v.Name == "UnnamedESP" then
+				pcall(function() loadstring(game:HttpGet('https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua'))() end)
+			elseif v.Name == "ScriptDumper" then
+				saveinstance()
+			end
 			end
 		end
 	end)
-end;
-task.spawn(C_15d);
--- StarterGui.ArceusXV3.MainUI.MainFrame.LocalScript
-local function C_15f()
-	local script = AZY["15f"];
-	script.Parent.Draggable = true
-	script.Parent.Active = true
-end;
-task.spawn(C_15f);
--- StarterGui.ArceusXV3.MainUI.FloatingUI.LocalScript
-local function C_162()
-	local script = AZY["162"];
-	script.Parent.Active = true
-	script.Parent.Draggable = true
-	script.Parent.MouseButton1Click:Connect(function()
+
+	yes.Close.MouseButton1Up:Connect(function()
 		script.Parent.Visible = false
-		script.Parent.Parent.MainFrame.Visible = true
-		script.Parent.Active = false
-		script.Parent.Parent.MainFrame.Active = true
+	end)
+
+	yes.Minimize.MouseButton1Up:Connect(function()
+		script.Parent.Visible = false
 	end)
 end;
-task.spawn(C_162);
+task.spawn(C_71);
+-- StarterGui.SynapseX.OptionMenu.Optionhandler
+local function C_83()
+	local script = G2L["83"];
+	local stuff  =script.Parent
 
-return AZY["1"], require;
+	stuff.Buttons.Discord.MouseButton1Up:Connect(function()
+		setclipboard("XYFXYNmG4D")
+	end)
+	stuff.Buttons.Rejoin.MouseButton1Up:Connect(function()
+		game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId)
+	end)
+
+	stuff.Close.MouseButton1Up:Connect(function()
+		script.Parent.Visible = false
+	end)
+
+
+
+	-- Toggles
+	stuff.ToggleAutoExec.MouseButton1Up:Connect(function()
+		if stuff.ToggleAutoExec.Text == '' then
+			stuff.ToggleAutoExec.BackgroundColor3 = Color3.fromRGB(112,112,112)
+			stuff.ToggleAutoExec.Text = 'x'
+
+
+
+		else
+			stuff.ToggleAutoExec.BackgroundColor3 = Color3.fromRGB(166,166,166)
+			stuff.ToggleAutoExec.Text = ''
+
+
+
+		end
+	end)
+
+	stuff.ToggleFPSUnlocker.MouseButton1Up:Connect(function()
+		if stuff.ToggleFPSUnlocker.Text == '' then
+			stuff.ToggleFPSUnlocker.BackgroundColor3 = Color3.fromRGB(112,112,112)
+			stuff.ToggleFPSUnlocker.Text = 'x'
+
+			setfpscap(math.huge)
+
+		else
+			stuff.ToggleFPSUnlocker.BackgroundColor3 = Color3.fromRGB(166,166,166)
+			stuff.ToggleFPSUnlocker.Text = ''
+
+			setfpscap(60)
+
+		end
+	end)
+
+	stuff.ToggleInternalUI.MouseButton1Up:Connect(function()
+		if stuff.ToggleInternalUI.Text == '' then
+			stuff.ToggleInternalUI.BackgroundColor3 = Color3.fromRGB(112,112,112)
+			stuff.ToggleInternalUI.Text = 'x'
+
+			-- idk
+
+		else
+			stuff.ToggleInternalUI.BackgroundColor3 = Color3.fromRGB(166,166,166)
+			stuff.ToggleInternalUI.Text = ''
+
+			-- idk
+
+		end
+	end)
+
+	stuff.ToggleTopMost.MouseButton1Up:Connect(function()
+		if stuff.ToggleTopMost.Text == '' then
+			stuff.ToggleTopMost.BackgroundColor3 = Color3.fromRGB(112,112,112)
+			stuff.ToggleTopMost.Text = 'x'
+
+			-- idk
+
+		else
+			stuff.ToggleTopMost.BackgroundColor3 = Color3.fromRGB(166,166,166)
+			stuff.ToggleTopMost.Text = ''
+
+			-- idk
+
+		end
+	end)
+end;
+task.spawn(C_83);
+-- StarterGui.SynapseX.GetSavedScripts
+local function C_84()
+
+	local script = G2L["84"];
+	local module = require(script.Parent.Module)
+    
+	for index, value in pairs(listfiles("SynapseSavedScripts")) do
+    	print(value)
+		if isfile(value) then
+			task.wait(0.05)
+            local editedString = string.gsub(value, [[SynapseSavedScripts\]], "")
+			module:AddScriptTabSave(editedString, readfile(value))
+		end
+	end
+end;
+task.spawn(C_84);
+-- StarterGui.SynapseX.OpenScript.Handler
+local function C_92()
+	local script = G2L["92"];
+	script.Parent.savescript.MouseButton1Up:Connect(function()
+		local module = require(script.Parent.Parent.Module)
+		if isfile(script.Parent.scriptname.Text) then
+			local a = script.Parent.scriptname.Text
+			script.Parent.Visible = false
+			script.Parent.scriptname.Text = ''
+			module:AddTab(script.Parent.scriptname.Text, readfile(a))
+		else
+			script.Parent.Title.Text = "Synapse X - Open File (File not found!)"
+			task.wait(1)
+			script.Parent.Title.Text = "Synapse X - Open File"
+		end
+	end)
+
+	script.Parent.Close.MouseButton1Up:Connect(function()
+		script.Parent.Visible = false
+		script.Parent.scriptname.Text = ''
+	end)
+end;
+task.spawn(C_92);
+-- StarterGui.SynapseX.SetDraggable
+local function C_93()
+	local script = G2L["93"];
+	local yes =  script.Parent
+	yes.Main.Draggable = true
+	yes.OpenScript.Draggable = true
+	yes.OptionMenu.Draggable = true
+	yes.SaveScript.Draggable = true
+	yes.ScriptHubMenu.Draggable = true
+	yes.ScriptLog.Draggable = true
+	yes.FloatingIcon.Draggable = true
+	
+	
+	
+	yes.Main.MainFunc.ScriptHub.ChildAdded:Connect(function(v)
+		
+		if v:IsA("TextButton") then
+        		local color = v.BackgroundColor3
+            	local bordercolor = v.BorderColor3
+            	local bordersize = v.BorderSizePixel
+            	v.MouseEnter:Connect(function()
+               	 	v.BackgroundColor3 = Color3.fromRGB(0,47,80)
+               	 	v.BorderColor3 = Color3.fromRGB(91,139,168)
+               	 	v.BorderSizePixel = 1
+            	end)
+           		 v.MouseLeave:Connect(function()
+               		 v.BackgroundColor3 = color
+               	 	v.BorderColor3 = bordercolor
+               	 	v.BorderSizePixel = bordersize
+           		 end)
+           	end
+	
+	end)
+	
+	yes.Main.MainFunc.ScriptHub.ChildAdded:Connect(function(v)
+		if yes:IsA("TextButton") then
+			v.ChildAdded:Connect(function(RClick)
+			print(RClick.Name)
+			local del = RCLick.Delete
+				local color = del.BackgroundColor3
+            	local bordercolor = del.BorderColor3
+            	local bordersize = del.BorderSizePixel
+            	del.MouseEnter:Connect(function()
+               	 	del.BackgroundColor3 = Color3.fromRGB(0,47,80)
+               	 	del.BorderColor3 = Color3.fromRGB(91,139,168)
+               	 	del.BorderSizePixel = 1
+            	end)
+           		 del.MouseLeave:Connect(function()
+               		 del.BackgroundColor3 = color
+               	 	del.BorderColor3 = bordercolor
+               	 	del.BorderSizePixel = bordersize
+           		 end)
+           		 
+           		 
+           		 local exec = RCLick.Execute
+				local color = exec.BackgroundColor3
+            	local bordercolor = exec.BorderColor3
+            	local bordersize = exec.BorderSizePixel
+            	exec.MouseEnter:Connect(function()
+               	 	exec.BackgroundColor3 = Color3.fromRGB(0,47,80)
+               	 	exec.BorderColor3 = Color3.fromRGB(91,139,168)
+               	 	exec.BorderSizePixel = 1
+            	end)
+           		exec.MouseLeave:Connect(function()
+               		 exec.BackgroundColor3 = color
+               	 	exec.BorderColor3 = bordercolor
+               	 	exec.BorderSizePixel = bordersize
+           		 end)
+           		 
+           		 local load = RCLick.Load
+				local color = load.BackgroundColor3
+            	local bordercolor = load.BorderColor3
+            	local bordersize =load.BorderSizePixel
+            	load.MouseEnter:Connect(function()
+               	 	load.BackgroundColor3 = Color3.fromRGB(0,47,80)
+               	 	load.BorderColor3 = Color3.fromRGB(91,139,168)
+               	 	load.BorderSizePixel = 1
+            	end)
+           		load.MouseLeave:Connect(function()
+               		load.BackgroundColor3 = color
+               	 	load.BorderColor3 = bordercolor
+               	 	load.BorderSizePixel = bordersize
+           		 end)
+		end)
+
+		end
+	end)
+	
+	
+	
+	task.spawn(function()
+		
+		for i,v in pairs(yes.Main.MainFunc.ScriptHub:GetChildren()) do
+        	if v:IsA("TextButton") then
+        		local color = v.BackgroundColor3
+            	local bordercolor = v.BorderColor3
+            	local bordersize = v.BorderSizePixel
+            	v.MouseEnter:Connect(function()
+               	 	v.BackgroundColor3 = Color3.fromRGB(0,47,80)
+               	 	v.BorderColor3 = Color3.fromRGB(91,139,168)
+               	 	v.BorderSizePixel = 1
+            	end)
+           		 v.MouseLeave:Connect(function()
+               		 v.BackgroundColor3 = color
+               	 	v.BorderColor3 = bordercolor
+               	 	v.BorderSizePixel = bordersize
+           		 end)
+           	end
+        end
+	
+	end)
+   for i,v in pairs(G2L["1"]:GetDescendants()) do
+        if (v:IsA("TextButton") and v.Parent.Parent.Name ~= "Tabs" and v.Parent.Name ~= "Tabs") or (v:IsA("ImageButton")) then
+            task.spawn(function()
+            	local color = v.BackgroundColor3
+            	local bordercolor = v.BorderColor3
+            	local bordersize = v.BorderSizePixel
+            	v.BackgroundTransparency = 0
+            	v.MouseEnter:Connect(function()
+               	 	v.BackgroundColor3 = Color3.fromRGB(0,47,80)
+               	 	v.BorderColor3 = Color3.fromRGB(91,139,168)
+               	 	v.BorderSizePixel = 1
+            	end)
+           		 v.MouseLeave:Connect(function()
+               		 v.BackgroundColor3 = color
+               	 	v.BorderColor3 = bordercolor
+               	 	v.BorderSizePixel = bordersize
+           		 end)
+            end)
+        end
+   end
+   
+end;
+task.spawn(C_93);
+
+return G2L["1"], require;
