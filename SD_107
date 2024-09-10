@@ -2,7 +2,7 @@ local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzH
 
 local Window = redzlib:MakeWindow({"سكربت عربي", "السكربت متنوع من ناحيه السكربتات", "testando-redzLibv5.json"})
 Window:AddMinimizeButton({
-  Button = { Image = redzlib:GetIcon("Apple"), BackgroundTransparency = 0 },
+  Button = { Image = redzlib:GetIcon("Sword"), BackgroundTransparency = 0 },
   Corner = { CornerRadius = UDim.new(0, 6) }
 })
 
@@ -35,9 +35,24 @@ Tab1:AddButton({"سكربت هيت بوكس", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
 end})
 
+Tab1:AddButton({"🧐سكربت البحث عن السكربتات الاخرى🧐", function()
+  redzlib:SetTheme("🧐سكربت البحث عن السكربتات الاخرى🧐")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/Hub/main/anyahubV1.lua'))()
+end})
+
+Tab1:AddButton({"📱سكربت الهاتف📱", function()
+  redzlib:SetTheme("📱سكربت الهاتف📱")
+loadstring(game:HttpGet('https://sirius.menu/script'))();
+end})
+
 Tab1:AddButton({"⭐️سكربت هاك Arceus v3⭐️", function()
   redzlib:SetTheme("⭐️سكربت هاك Arceus v3⭐️")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))()
+end})
+
+Tab1:AddButton({"⚔️سكربت حرب السيوف أسرق الوقت من الاخرين⚔️", function()
+  redzlib:SetTheme("⚔️سكربت حرب السيوف أسرق الوقت من الاخرين⚔️")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/swordgame/main/anya.lua'))()
 end})
 
 Tab1:AddButton({"سكربت التنقل بندون كتابة اسم", function()
@@ -76,6 +91,6 @@ end
 Tab3:AddDiscordInvite({
   Name = "سيرفرنا الديسكورد | SD ON TOP",
   Description = "لا تنسا تخش سيرفرنا الديسكورد | فيه كل الي تحتاج من السكربتات",
-  Logo = "rbxassetid://15298567397",
+  Logo = "rbxassetid://10734886496",
   Invite = "https://discord.com/invite/paP49xFJ"
 })
