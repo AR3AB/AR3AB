@@ -1,0 +1,81 @@
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
+
+local Window = redzlib:MakeWindow({"سكربت عربي", "السكربت متنوع من ناحيه السكربتات", "testando-redzLibv5.json"})
+Window:AddMinimizeButton({
+  Button = { Image = redzlib:GetIcon("Apple"), BackgroundTransparency = 0 },
+  Corner = { CornerRadius = UDim.new(0, 6) }
+})
+
+local Tab1 = Window:MakeTab({"السكربتات", "Sword"})
+local Tab2 = Window:MakeTab({"الاعدادات", "User"})
+local Tab3 = Window:MakeTab({"سيرفرنا الديسكورد", "cherry"})
+
+Tab1:AddButton({"🏃‍♂️سكربت سرعه عربي🏃‍♂️", function()
+  redzlib:SetTheme("🏃‍♂️سكربت سرعه عربي🏃‍♂️")
+loadstring(game:HttpGet("https://pastebin.com/raw/0m52kRnj"))()
+end})
+
+Tab1:AddButton({"🔥سكربت طيران🔥", function()
+  redzlib:SetTheme("🔥سكربت طيران🔥")
+loadstring(game:HttpGet('https://github.com/HUBSXOBOX/HUBSXOBOX/raw/main/Hussin%20Danis'))()
+end})
+
+Tab1:AddButton({"🕶سكربت مراقبه🕶", function()
+  redzlib:SetTheme("🕶سكربت مراقبه🕶")
+loadstring(game:HttpGet('https://pastebin.com/raw/wyvdb7gr'))()
+end})
+
+Tab1:AddButton({"❄سكربت ماب البيوت العرب هوب انيا❄", function()
+  redzlib:SetTheme("❄سكربت ماب البيوت العرب هوب انيا❄")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/ARBrookHaven/main/ARBrookHaven.lua'))()
+end})
+
+Tab1:AddButton({"سكربت هيت بوكس", function()
+  redzlib:SetTheme("سكربت هيت بوكس")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
+end})
+
+Tab1:AddButton({"⭐️سكربت هاك Arceus v3⭐️", function()
+  redzlib:SetTheme("⭐️سكربت هاك Arceus v3⭐️")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))()
+end})
+
+Tab1:AddButton({"سكربت التنقل بندون كتابة اسم", function()
+  redzlib:SetTheme("سكربت التنقل بندون كتابة اسم")
+loadstring(game:HttpGet("https://gist.githubusercontent.com/DagerFild/b4776075a0d26ef04394133ee6bd2081/raw/0ed51ac94057d2d9a9f00e1b037b9011c76ca54a/tpGUI", true))()
+end})
+
+Tab1:AddButton({"👻سكربت الاختفاء👻", function()
+  redzlib:SetTheme("👻سكربت الاختفاء👻")
+loadstring(game:HttpGet('https://pastebin.com/raw/AYtzGEPb'))()
+end})
+
+Tab1:AddButton({"🌀سكربت جرافيكس🌀", function()
+  redzlib:SetTheme("🌀سكربت جرافيكس🌀")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/moh3mah/KATAKORI.ZR/main/Geeetho"))()
+end})
+
+
+local TextBox = Tab2:AddTextBox({
+  Name = "🏃‍♂️السرعه🏃‍♂️",
+  Description = "🏃‍♂️السرعه🏃‍♂️",
+  PlaceholderText = "السرعه الي ممكن تختارهم: 25/100",
+  Callback = function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+  end
+})
+
+TextBox.OnChanging = function(Text)
+  local Number = tonumber(Text)
+  if Number then
+    return math.clamp(Number, 25, 100)
+  end
+  return 25
+end
+
+Tab3:AddDiscordInvite({
+  Name = "سيرفرنا الديسكورد | SD ON TOP",
+  Description = "لا تنسا تخش سيرفرنا الديسكورد | فيه كل الي تحتاج من السكربتات",
+  Logo = "rbxassetid://15298567397",
+  Invite = "https://discord.com/invite/paP49xFJ"
+})
