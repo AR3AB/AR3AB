@@ -1,14 +1,17 @@
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
 
-local Window = redzlib:MakeWindow({"سكربت عربي", "السكربت متنوع من ناحيه السكربتات", "testando-redzLibv5.json"})
+local Window = redzlib:MakeWindow({"سكربت عربي", "السكربت متنوع من ناحيه السكربتات :)", "testando-redzLibv5.json"})
 Window:AddMinimizeButton({
   Button = { Image = redzlib:GetIcon("Sword"), BackgroundTransparency = 0 },
   Corner = { CornerRadius = UDim.new(0, 6) }
 })
 
-local Tab1 = Window:MakeTab({"السكربتات", "Sword"})
-local Tab2 = Window:MakeTab({"الاعدادات", "User"})
-local Tab3 = Window:MakeTab({"سيرفرنا الديسكورد", "cherry"})
+local Tab1 = Window:MakeTab({"سكربتات متنوعه", "symlink"})
+local Tab2 = Window:MakeTab({"سكربتات المابات", "Apple"})
+local Tab3 = Window:MakeTab({"الاعب", "User"})
+local Tab4 = Window:MakeTab({"سيرفرنا الديسكورد", "cherry"})
+local Tab5 = Window:MakeTab({"سكربتاتي", "plus"})
+
 
 Tab1:AddButton({"🏃‍♂️سكربت سرعه عربي🏃‍♂️", function()
   redzlib:SetTheme("🏃‍♂️سكربت سرعه عربي🏃‍♂️")
@@ -25,14 +28,29 @@ Tab1:AddButton({"🕶سكربت مراقبه🕶", function()
 loadstring(game:HttpGet('https://pastebin.com/raw/wyvdb7gr'))()
 end})
 
-Tab1:AddButton({"❄سكربت ماب البيوت العرب هوب انيا❄", function()
-  redzlib:SetTheme("❄سكربت ماب البيوت العرب هوب انيا❄")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/ARBrookHaven/main/ARBrookHaven.lua'))()
-end})
-
 Tab1:AddButton({"سكربت هيت بوكس", function()
   redzlib:SetTheme("سكربت هيت بوكس")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
+end})
+
+Tab1:AddButton({"سكربت تخريب", function()
+  redzlib:SetTheme("سكربت تخريب")
+loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Haxker666-Script-hub-9666"))()
+end})
+
+Tab1:AddButton({"سكربت مشيات", function()
+  redzlib:SetTheme("سكربت مشيات")
+loadstring(game:HttpGet("https://pastebin.com/raw/Uq8vajaM"))()
+end})
+
+Tab1:AddButton({"☠️سكربت عندما تملس شخص تقتله☠️", function()
+  redzlib:SetTheme("☠️سكربت عندما تملس شخص تقتله☠️")
+loadstring(game:HttpGet('https://pastebin.com/raw/TXMNj1yy'))()
+end})
+
+Tab1:AddButton({"سكربت تحول من R15 ل R6", function()
+  redzlib:SetTheme("سكربت تحول من R15 ل R6")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua"))()
 end})
 
 Tab1:AddButton({"🧐سكربت البحث عن السكربتات الاخرى🧐", function()
@@ -45,14 +63,39 @@ Tab1:AddButton({"📱سكربت الهاتف📱", function()
 loadstring(game:HttpGet('https://sirius.menu/script'))();
 end})
 
+Tab1:AddButton({"سكربت كاميرا درون📷", function()
+  redzlib:SetTheme("سكربت كاميرا درون📷")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Break%20Camera'))()
+end})
+
 Tab1:AddButton({"⭐️سكربت هاك Arceus v3⭐️", function()
   redzlib:SetTheme("⭐️سكربت هاك Arceus v3⭐️")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))()
 end})
 
-Tab1:AddButton({"⚔️سكربت حرب السيوف أسرق الوقت من الاخرين⚔️", function()
-  redzlib:SetTheme("⚔️سكربت حرب السيوف أسرق الوقت من الاخرين⚔️")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/swordgame/main/anya.lua'))()
+Tab1:AddButton({"🎈سكربت هاك Synapse X🎈", function()
+  redzlib:SetTheme("🎈سكربت هاك Synapse X🎈")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AR3AB/AR3AB/main/README.md"))()
+end})
+
+Tab1:AddButton({"🎇سكربت هاك كرنل🎇", function()
+  redzlib:SetTheme("🎇سكربت هاك كرنل🎇")
+loadstring(game:HttpGet("https://pastebin.com/raw/HqRRqVPb"))()
+end})
+
+Tab1:AddButton({"🎆سكربت هاك فليكس🎆", function()
+  redzlib:SetTheme("🎆سكربت هاك فليكس🎆")
+loadstring(game:HttpGet("https://pastebin.com/raw/mw4AqAs8"))()
+end})
+
+Tab1:AddButton({"🎞سكربت ادمن🎞", function()
+  redzlib:SetTheme("🎞سكربت ادمن🎞")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end})
+
+Tab1:AddButton({"💻سكربت كيبورد💻", function()
+  redzlib:SetTheme("💻سكربت كيبورد💻")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
 end})
 
 Tab1:AddButton({"سكربت التنقل بندون كتابة اسم", function()
@@ -70,8 +113,86 @@ Tab1:AddButton({"🌀سكربت جرافيكس🌀", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/moh3mah/KATAKORI.ZR/main/Geeetho"))()
 end})
 
+Tab2:AddButton({"سكربت بلوكس فروت 1 🍇", function()
+  redzlib:SetTheme("سكربت بلوكس فروت 1 🍇")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Domadicoof/Domadicoof/main/Domadichub/NottoGay/Start.ranscript"))()
+end})
 
-local TextBox = Tab2:AddTextBox({
+Tab2:AddButton({"سكربت بلوكس فروت 2 🍇", function()
+  redzlib:SetTheme("سكربت بلوكس فروت 2 🍇")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+end})
+
+Tab2:AddButton({"سكربت كينق لجسي 1 🍇", function()
+  redzlib:SetTheme("سكربت كينق لجسي 1 🍇")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DookDekDEE/Hyper/main/script.lua"))()
+end})
+
+Tab2:AddButton({"سكربت ون بيس قيم 1 🍇", function()
+  redzlib:SetTheme("سكربت ون بيس قيم 1 🍇")
+  loadstring(game:HttpGet("https://rawscripts.net/raw/loader_1038"))()
+end})
+
+Tab2:AddButton({"سكربت ون بيس قيم 1 🍇", function()
+  redzlib:SetTheme("سكربت ام ام تو 1 ⚔")
+  loadstring(game:HttpGet("https://rawscripts.net/raw/loader_1038"))()
+end})
+
+Tab2:AddButton({"سكربت حرب السيوف أسرق الوقت من الاخرين 1 ⚔️", function()
+  redzlib:SetTheme("سكربت حرب السيوف أسرق الوقت من الاخرين 1 ⚔️")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/swordgame/main/anya.lua'))()
+end})
+
+Tab2:AddButton({"سكربت ام ام تو 1 ⚔️", function()
+  redzlib:SetTheme("سكربت ام ام تو 1 ⚔️")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Au0yX/Community/main/XhubMM2"))()
+end})
+
+Tab2:AddButton({"سكربت ماب البيوت العرب هوب انيا 1 ❄", function()
+  redzlib:SetTheme("سكربت ماب البيوت العرب هوب انيا 1 ❄")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/ARBrookHaven/main/ARBrookHaven.lua'))()
+end})
+
+Tab2:AddButton({"سكربت ماب بت سمليتر السكربت فيه سكربتات الماب كلها 1 🐱🐶", function()
+  redzlib:SetTheme("سكربت ماب بت سمليتر السكربت فيه سكربتات الماب كلها 1 🐱🐶")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerScripter/Game-Hub/main/loader"))()
+end})
+
+Tab2:AddButton({"سكربت ماب شاليه محمد 1 🕺", function()
+  redzlib:SetTheme("سكربت ماب شاليه محمد 1 🕺")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Au0yX/ArabXHub/main/ChaletMuhammad.Lua"))
+end})
+
+Tab5:AddButton({"سكربت احلام العصدر درجه اولى من صنعي 🤤", function()
+  redzlib:SetTheme("سكربت احلام العصدر درجه اولى من صنعي 🤤")
+  loadstring(game:HttpGet("https://pastebin.com/raw/cAnE3imB"))()
+end})
+
+Tab5:AddButton({"سكربت شات تدمير الشات من صنعي", function()
+  redzlib:SetTheme("سكربت شات تدمير الشات من صنعي")
+-- RX ALMAHRI --
+    -- ALMAHRI IS HERE --
+    _G.Autofarm = true
+
+    while _G.Autofarm == true do
+
+while wait() do
+
+local args = {
+       [1] = ".. \226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184"
+      .."\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187\226\184\187",
+  [2] = "All"
+}
+
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+wait()
+end
+end
+end})
+
+
+
+local TextBox = Tab3:AddTextBox({
   Name = "🏃‍♂️السرعه🏃‍♂️",
   Description = "🏃‍♂️السرعه🏃‍♂️",
   PlaceholderText = "السرعه الي ممكن تختارهم: 25/100",
@@ -88,9 +209,9 @@ TextBox.OnChanging = function(Text)
   return 25
 end
 
-Tab3:AddDiscordInvite({
+Tab4:AddDiscordInvite({
   Name = "سيرفرنا الديسكورد | SD ON TOP",
   Description = "لا تنسا تخش سيرفرنا الديسكورد | فيه كل الي تحتاج من السكربتات",
-  Logo = "rbxassetid://10734886496",
+  Logo = "rbxassetid://10734975692",
   Invite = "https://discord.com/invite/paP49xFJ"
 })
