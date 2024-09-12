@@ -98,6 +98,11 @@ Tab1:AddButton({"💻سكربت كيبورد💻", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
 end})
 
+Tab1:AddButton({"سكربت تيليسكوب🔭", function()
+  redzlib:SetTheme("سكربت تيليسكوب🔭")
+  loadstring(game:HttpGet('https://pastebin.com/raw/8T0STS4f'))()
+end})
+
 Tab1:AddButton({"سكربت التنقل بندون كتابة اسم", function()
   redzlib:SetTheme("سكربت التنقل بندون كتابة اسم")
 loadstring(game:HttpGet("https://gist.githubusercontent.com/DagerFild/b4776075a0d26ef04394133ee6bd2081/raw/0ed51ac94057d2d9a9f00e1b037b9011c76ca54a/tpGUI", true))()
@@ -190,6 +195,16 @@ end
 end
 end})
 
+Tab5:AddButton({"سكربت حرب السيوف أسرق الوقت من الاخرين من صنعي ⚔", function()
+  redzlib:SetTheme("سكربت حرب السيوف أسرق الوقت من الاخرين من صنعي ⚔")
+  loadstring(game:HttpGet("https://pastebin.com/raw/Fa4sSJic"))()
+end})
+
+Tab5:AddButton({"سكربت بليد بول من صنعي 🗡", function()
+  redzlib:SetTheme("سكربت بليد بول من صنعي 🗡")
+  loadstring(game:HttpGet("https://pastebin.com/raw/HKeee9wP"))()
+end})
+
 
 
 local TextBox = Tab3:AddTextBox({
@@ -214,4 +229,11 @@ Tab4:AddDiscordInvite({
   Description = "لا تنسا تخش سيرفرنا الديسكورد | فيه كل الي تحتاج من السكربتات",
   Logo = "rbxassetid://10734975692",
   Invite = "https://discord.com/invite/paP49xFJ"
+})
+
+Tab4:AddDiscordInvite({
+  Name = "المطور محمد ناصر عبدالله علي المهري",
+  Description = "مطور سكربتات عربيه",
+  Logo = "rbxassetid://10734975692",
+  Invite = ""
 })
