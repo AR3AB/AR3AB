@@ -11,6 +11,8 @@ local Tab2 = Window:MakeTab({"سكربتات المابات", "Apple"})
 local Tab3 = Window:MakeTab({"الاعب", "User"})
 local Tab4 = Window:MakeTab({"سيرفرنا الديسكورد", "cherry"})
 local Tab5 = Window:MakeTab({"سكربتاتي", "plus"})
+local Tab6 = Window:MakeTab({"الاعدادات", "archive"})
+local Tab7 = Window:MakeTab({"قائمة احلام :)", "check"})
 
 
 Tab1:AddButton({"🏃‍♂️سكربت سرعه عربي🏃‍♂️", function()
@@ -231,9 +233,12 @@ Tab4:AddDiscordInvite({
   Invite = "https://discord.com/invite/paP49xFJ"
 })
 
-Tab4:AddDiscordInvite({
-  Name = "المطور محمد ناصر عبدالله علي المهري",
-  Description = "مطور سكربتات عربيه",
-  Logo = "rbxassetid://10734975692",
-  Invite = ""
-})
+Tab6:AddButton({"سكربت كشف اماكن 👀 / السكربتات الي هنا فقط الي ب الي الاعب", function()
+  redzlib:SetTheme("سكربت كشف اماكن 👀 / السكربتات الي هنا فقط الي ب الي الاعب")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
+end})
+
+Tab6:AddButton({"🕷سكربت سبايدر مان🕸 / السكربت يغير سكنك ل سبايدر مان", function()
+  redzlib:SetTheme("🕷سكربت سبايدر مان🕸 / السكربت يغير سكنك ل سبايدر مان")
+  loadstring(game:HttpGet(('https://pastebin.com/raw/2X0hKUgq'),true))()
+end})
