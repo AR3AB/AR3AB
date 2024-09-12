@@ -1,3 +1,13 @@
+print("سكربت عربي ما قد شفت اقوى منه / السكربت من صنعي و تعبت عليه مره مره فا")
+print("قدر تعبي بانك تساعدني بالسكربتات")
+
+wait(0.1)
+game.StarterGui:SetCore("SendNotification", {
+Title = "تم التشغيل";
+Text = "تم تشغيل السكربت"; -- ARAB TEAM
+Duration = 5;
+})
+
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
 
 local Window = redzlib:MakeWindow({"سكربت عربي", "السكربت متنوع من ناحيه السكربتات :)", "testando-redzLibv5.json"})
