@@ -1,5 +1,4 @@
-print("سكربت عربي ما قد شفت اقوى منه / السكربت من صنعي و تعبت عليه مره مره فا")
-print("قدر تعبي بانك تساعدني بالسكربتات")
+print("Al3rab")
 
 wait(0.1)
 game.StarterGui:SetCore("SendNotification", {
@@ -10,7 +9,7 @@ Duration = 5;
 
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
 
-local Window = redzlib:MakeWindow({"سكربت عربي", "السكربت متنوع من ناحيه السكربتات :)", "testando-redzLibv5.json"})
+local Window = redzlib:MakeWindow({"👑 Al3rab 👑", "السكربت متنوع من ناحيه السكربتات :)", "testando-redzLibv5.json"})
 Window:AddMinimizeButton({
   Button = { Image = redzlib:GetIcon("Sword"), BackgroundTransparency = 0 },
   Corner = { CornerRadius = UDim.new(0, 6) }
@@ -22,7 +21,8 @@ local Tab3 = Window:MakeTab({"الاعب", "User"})
 local Tab4 = Window:MakeTab({"سيرفرنا الديسكورد", "cherry"})
 local Tab5 = Window:MakeTab({"سكربتاتي", "plus"})
 local Tab6 = Window:MakeTab({"الاعدادات", "archive"})
-local Tab7 = Window:MakeTab({"قائمة احلام :)", "check"})
+local Tab7 = Window:MakeTab({"قائمة احلام", "check"})
+local Tab8 = Window:MakeTab({"تحذير", "warning"})
 
 
 Tab1:AddButton({"🏃‍♂️سكربت سرعه عربي🏃‍♂️", function()
@@ -243,7 +243,7 @@ Tab4:AddDiscordInvite({
   Invite = "https://discord.com/invite/paP49xFJ"
 })
 
-Tab6:AddButton({"سكربت كشف اماكن 👀 / السكربتات الي هنا فقط الي ب الي الاعب", function()
+Tab6:AddButton({"سكربت كشف اماكن 👀 / السكربتات الي هنا فقط الي ب الاعب", function()
   redzlib:SetTheme("سكربت كشف اماكن 👀 / السكربتات الي هنا فقط الي ب الي الاعب")
   loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
 end})
@@ -251,4 +251,9 @@ end})
 Tab6:AddButton({"🕷سكربت سبايدر مان🕸 / السكربت يغير سكنك ل سبايدر مان", function()
   redzlib:SetTheme("🕷سكربت سبايدر مان🕸 / السكربت يغير سكنك ل سبايدر مان")
   loadstring(game:HttpGet(('https://pastebin.com/raw/2X0hKUgq'),true))()
+end})
+
+Tab8:AddButton({"صاحب السكربت غير مسوؤل (اذا اخذت باند او تصفير ب بلوكس فروت)", function()
+  redzlib:SetTheme("صاحب السكربت غير مسوؤل (اذا اخذت باند او تصفير ب بلوكس فروت)")
+
 end})
